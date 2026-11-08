@@ -1,0 +1,53 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Cabecera común de las páginas interiores.
+interface Props {
+  antetitulo?: string;
+  titulo: string;
+  entrada?: string;
+  estrecha?: boolean;
+}
+const { antetitulo, titulo, entrada, estrecha = false } = Astro.props;
+---
+
+<header class:list={['cabecera', { estrecha }]}>
+  <div class="contenedor">
+    {antetitulo && <p class="antetitulo entrar">{antetitulo}</p>}
+    <h1 class="display entrar" style="--d:1">{titulo}</h1>
+    {entrada && <p class="entrada entrar" style="--d:2">{entrada}</p>}
+    <slot />
+  </div>
+</header>
+
+<style>
+  .cabecera {
+    padding-block: clamp(3rem, 7vw, 6rem) clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--borde);
+  }
+
+  h1 {
+    font-size: var(--t-3xl);
+    max-width: 16ch;
+  }
+
+  .estrecha h1 {
+    font-size: var(--t-2xl);
+    max-width: 22ch;
+  }
+
+  .entrada {
+    margin-top: 1.5rem;
+  }
+
+  .entrar {
+    animation: entrar 1000ms var(--curva) both;
+    animation-delay: calc(var(--d, 0) * 100ms + 40ms);
+  }
+
+  @keyframes entrar {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+</style>

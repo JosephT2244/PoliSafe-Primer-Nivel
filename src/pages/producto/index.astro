@@ -1,0 +1,365 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Producto: funciones por módulo. Todo el contenido sale de src/datos/modulos.ts.
+import { Icon } from 'astro-icon/components';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import Telefono from '../../components/Telefono.astro';
+import Ventana from '../../components/Ventana.astro';
+import { modulos } from '../../datos/modulos';
+import { sitio } from '../../datos/sitio';
+import tableta from '../../assets/capturas/tableta-seguimiento.png';
+
+const limites = [
+  'No diagnostica ni indica tratamientos: un valor fuera de meta es una referencia de la norma, no un diagnóstico.',
+  'No está validada médicamente; las metas se tomaron literalmente de las NOM vigentes y cada una cita su numeral.',
+  'No guarda nombres, CURP ni datos de contacto, y no envía datos a internet.',
+  'No calcula dosis pediátricas ni neonatales a partir de la dosis de adulto.',
+  'No sustituye los protocolos de la institución ni la valoración profesional.',
+];
+---
+
+<Base
+  titulo="Funciones"
+  descripcion="Módulos de PoliSafe Primer Nivel: seguimiento de crónicos con las metas de las NOM, Jalisco en datos, PAE con NANDA-I, NIC y NOC, 18 cálculos clínicos, 155 fichas de medicamentos, área quirúrgica, estudio, búsqueda y perfiles con PIN."
+>
+  <CabeceraPagina
+    antetitulo="Producto"
+    titulo="Todo PoliSafe, con el seguimiento que pide el primer nivel."
+    entrada="Nueve módulos conectados entre sí. Cada función que describimos aquí existe hoy en la versión 2.0.0 y se muestra con capturas reales tomadas con datos de demostración ficticios."
+  >
+    <nav class="indice" aria-label="Módulos de PoliSafe Primer Nivel">
+      <ul>
+        {
+          modulos.map((m) => (
+            <li>
+              <a href={`#${m.id}`}>
+                <Icon name={m.icono} aria-hidden="true" />
+                {m.nombre}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </CabeceraPagina>
+
+  {
+    modulos.map((m, i) => (
+      <section class:list={['modulo', { invertido: i % 2 === 1 }]} id={m.id} aria-labelledby={`t-${m.id}`}>
+        <div class="contenedor modulo-rejilla">
+          <div class="modulo-texto" data-revelar>
+            <span class="modulo-icono">
+              <Icon name={m.icono} aria-hidden="true" />
+            </span>
+            {m.nuevo && <span class="nuevo">Nuevo en Primer Nivel</span>}
+            <h2 id={`t-${m.id}`}>{m.nombre}</h2>
+            <p class="entrada">{m.resumen}</p>
+            <ul class="capacidades">
+              {m.capacidades.map((c) => (
+                <li>
+                  <Icon name="ph:check-light" aria-hidden="true" />
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class:list={['modulo-visual', `n-${m.capturas.length}`]} data-revelar style="--orden:1">
+            {m.capturas.map((c, j) => (
+              <Telefono imagen={c.imagen} alt={c.alt} clase={`t-${j}`} tamanos="(max-width: 860px) 60vw, 300px" />
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="seccion escritorio" aria-labelledby="t-escritorio">
+    <div class="contenedor">
+      <h2 id="t-escritorio" class="titulo-seccion" data-revelar>En tableta, con más espacio para la unidad.</h2>
+      <p class="entrada" data-revelar>
+        A partir de 600 píxeles de ancho la app cambia la barra inferior por un riel lateral y muestra más información a la
+        vista. Útil en la tableta de la unidad o en la junta de jurisdicción.
+      </p>
+      <div class="escritorio-visual" data-revelar>
+        <Ventana
+          imagen={tableta}
+          titulo="PoliSafe Primer Nivel en tableta"
+          alt="PoliSafe Primer Nivel en una tableta: seguimiento de crónicos con el indicador de la unidad, los pendientes y el riel de navegación."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion alcance" aria-labelledby="t-alcance">
+    <div class="contenedor alcance-rejilla">
+      <div data-revelar>
+        <h2 id="t-alcance" class="titulo-seccion">Alcance clínico.</h2>
+        <p class="entrada">{sitio.avisoAcademico}</p>
+      </div>
+      <ul class="limites" data-revelar style="--orden:1">
+        {
+          limites.map((l) => (
+            <li>
+              <Icon name="ph:info-light" aria-hidden="true" />
+              <span>{l}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="contenedor cierre-fila" data-revelar>
+      <p>Disponible gratis para Android.</p>
+      <a class="boton" href="/descargas/">
+        <Icon name="ph:download-simple-light" aria-hidden="true" />
+        Ir a descargas
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nuevo {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+    font-size: var(--t-xs);
+    font-weight: 600;
+  }
+
+  .indice ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .indice a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    padding: 0.5rem 1rem 0.5rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--borde);
+    background: var(--superficie);
+    text-decoration: none;
+    font-size: var(--t-sm);
+    font-weight: 560;
+    transition:
+      border-color var(--rapido) var(--curva),
+      color var(--rapido) var(--curva);
+  }
+
+  .indice a:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+  }
+
+  .indice svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--acento);
+  }
+
+  .modulo {
+    padding-block: clamp(4rem, 8vw, 7rem);
+    border-bottom: 1px solid var(--borde);
+    scroll-margin-top: 4rem;
+  }
+
+  .modulo:nth-of-type(even) {
+    background: var(--superficie-2);
+  }
+
+  .modulo-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .invertido .modulo-texto {
+    order: 2;
+  }
+
+  .modulo-icono {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+  }
+
+  .modulo-icono svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  h2 {
+    margin-top: 1.5rem;
+    font-size: var(--t-xl);
+    font-stretch: 80%;
+    font-weight: 660;
+  }
+
+  .modulo-texto .entrada {
+    margin-top: 1rem;
+  }
+
+  .capacidades {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .capacidades li {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.75rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .capacidades svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--acento);
+    margin-top: 0.1rem;
+  }
+
+  .modulo-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .modulo-visual :global(.telefono) {
+    max-width: 300px;
+  }
+
+  .n-2 :global(.t-1),
+  .n-3 :global(.t-1),
+  .n-3 :global(.t-2) {
+    position: absolute;
+    width: 62%;
+    max-width: 250px;
+    opacity: 0.95;
+  }
+
+  .n-2 :global(.t-0),
+  .n-3 :global(.t-0) {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+  }
+
+  .n-2 :global(.t-1) {
+    right: 0;
+    top: 12%;
+  }
+
+  .n-3 :global(.t-1) {
+    left: 0;
+    top: 10%;
+  }
+
+  .n-3 :global(.t-2) {
+    right: 0;
+    top: 18%;
+  }
+
+  .escritorio .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .escritorio-visual {
+    margin-top: 3rem;
+  }
+
+  .alcance {
+    background: var(--banda);
+    color: var(--banda-texto);
+  }
+
+  .alcance .entrada {
+    color: var(--banda-texto-2);
+    margin-top: 1.25rem;
+  }
+
+  .alcance-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+  }
+
+  .limites {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .limites li {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    border-radius: var(--r-md);
+    background: rgb(248 236 226 / 0.07);
+  }
+
+  .limites svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .cierre {
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+
+  .cierre-fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .cierre-fila p {
+    font-size: var(--t-lg);
+    font-weight: 650;
+    font-stretch: 85%;
+  }
+
+  @media (max-width: 860px) {
+    .modulo-rejilla,
+    .alcance-rejilla {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .invertido .modulo-texto {
+      order: 0;
+    }
+
+    .modulo-visual {
+      max-width: 420px;
+      margin-inline: auto;
+      width: 100%;
+    }
+  }
+</style>

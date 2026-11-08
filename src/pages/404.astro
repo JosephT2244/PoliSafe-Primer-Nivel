@@ -1,0 +1,49 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+import { Icon } from 'astro-icon/components';
+import Base from '../layouts/Base.astro';
+---
+
+<Base titulo="Página no encontrada" indexar={false}>
+  <section class="contenedor no-encontrada">
+    <p class="codigo">Error 404</p>
+    <h1 class="display">No encontramos esta página.</h1>
+    <p class="entrada">La dirección puede estar incompleta o el contenido ya no está disponible.</p>
+    <div class="acciones">
+      <a class="boton" href="/">Volver al inicio</a>
+      <a class="boton boton-secundario" href="/descargas/">
+        <Icon name="ph:download-simple-light" aria-hidden="true" />
+        Ir a descargas
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .no-encontrada {
+    padding-block: clamp(5rem, 12vw, 10rem);
+    min-height: 60vh;
+  }
+
+  .codigo {
+    font-weight: 650;
+    color: var(--acento);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: var(--t-3xl);
+    max-width: 14ch;
+  }
+
+  .entrada {
+    margin-top: 1.5rem;
+  }
+
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+</style>

@@ -1,0 +1,289 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Cómo usar PoliSafe Primer Nivel: guía paso a paso con capturas reales de la app (src/datos/guia.ts).
+import { Icon } from 'astro-icon/components';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import Telefono from '../../components/Telefono.astro';
+import { pasos, capturaOscura } from '../../datos/guia';
+import { sitio } from '../../datos/sitio';
+
+const instalar = [
+  {
+    icono: 'ph:android-logo-light',
+    titulo: 'Android',
+    texto: 'Descarga el APK desde Descargas, ábrelo y permite la instalación desde esa fuente cuando el teléfono lo pida.',
+  },
+  {
+    icono: 'ph:hand-waving-light',
+    titulo: 'Primer inicio',
+    texto: 'La bienvenida te presenta la app y su alcance. No hay cuentas ni registro: entras directo y todo se guarda en el teléfono.',
+  },
+  {
+    icono: 'ph:flask-light',
+    titulo: 'Pruébala con datos ficticios',
+    texto: 'En Ajustes, Seguimiento de crónicos, carga 24 pacientes de demostración para recorrer la app. Sus folios empiezan con DEMO- y se quitan en un toque.',
+  },
+];
+---
+
+<Base
+  titulo="Cómo usar"
+  descripcion="Guía paso a paso para usar PoliSafe Primer Nivel: agregar pacientes por folio, registrar consultas, leer los valores fuera de meta, revisar pendientes, consultar Jalisco y usar el resto de PoliSafe."
+>
+  <CabeceraPagina
+    antetitulo="Cómo usar"
+    titulo="PoliSafe Primer Nivel, paso a paso."
+    entrada="Todo lo que necesitas para empezar, con capturas reales de la versión 2.0.0 tomadas con datos de demostración ficticios."
+  >
+    <nav class="indice" aria-label="Pasos de la guía">
+      <ol>
+        {
+          pasos.map((p, i) => (
+            <li>
+              <a href={`#${p.id}`}>
+                <span class="num">{i + 1}</span>
+                {p.titulo}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+  </CabeceraPagina>
+
+  <section class="seccion instalar" aria-labelledby="t-instalar">
+    <div class="contenedor">
+      <h2 id="t-instalar" class="titulo-seccion" data-revelar>Antes de empezar: instala la app.</h2>
+      <ul class="tarjetas">
+        {
+          instalar.map((x, i) => (
+            <li data-revelar style={`--orden:${i}`}>
+              <Icon name={x.icono} aria-hidden="true" />
+              <h3>{x.titulo}</h3>
+              <p>{x.texto}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="boton" href="/descargas/" data-revelar>
+        <Icon name="ph:download-simple-light" aria-hidden="true" />
+        Ir a descargas
+      </a>
+    </div>
+  </section>
+
+  {
+    pasos.map((p, i) => (
+      <section class:list={['paso', { invertido: i % 2 === 1 }]} id={p.id} aria-labelledby={`t-${p.id}`}>
+        <div class="contenedor paso-rejilla">
+          <div class="paso-texto" data-revelar>
+            <span class="paso-numero">Paso {i + 1}</span>
+            <h2 id={`t-${p.id}`}>{p.titulo}</h2>
+            <p class="entrada">{p.texto}</p>
+            <ul class="consejos">
+              {p.consejos.map((c) => (
+                <li>
+                  <Icon name="ph:lightbulb-light" aria-hidden="true" />
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="paso-visual" data-revelar style="--orden:1">
+            <Telefono imagen={p.captura.imagen} alt={p.captura.alt} tamanos="(max-width: 860px) 70vw, 320px" />
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="seccion oscuro" aria-labelledby="t-oscuro">
+    <div class="contenedor paso-rejilla">
+      <div data-revelar>
+        <h2 id="t-oscuro" class="titulo-seccion">También de noche.</h2>
+        <p class="entrada">
+          El modo oscuro cambia toda la app a tonos suaves para los turnos nocturnos y las jornadas de campo. Lo activas en Ajustes, en Tema.
+        </p>
+        <p class="aviso">{sitio.avisoAcademico}</p>
+      </div>
+      <div class="paso-visual" data-revelar style="--orden:1">
+        <Telefono imagen={capturaOscura.imagen} alt={capturaOscura.alt} tamanos="(max-width: 860px) 70vw, 320px" />
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .indice ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .indice a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.4rem 1rem 0.4rem 0.45rem;
+    border-radius: 999px;
+    border: 1px solid var(--borde);
+    background: var(--superficie);
+    text-decoration: none;
+    font-size: var(--t-sm);
+    font-weight: 560;
+    transition:
+      border-color var(--rapido) var(--curva),
+      color var(--rapido) var(--curva);
+  }
+
+  .indice a:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+  }
+
+  .num {
+    display: grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: var(--acento-tinte);
+    color: var(--acento);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .instalar {
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .tarjetas {
+    list-style: none;
+    margin: 2.5rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .tarjetas li {
+    padding: 1.5rem;
+    border-radius: var(--r-md);
+    border: 1px solid var(--borde);
+    background: var(--superficie);
+  }
+
+  .tarjetas svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--acento);
+  }
+
+  .tarjetas h3 {
+    margin-top: 0.9rem;
+    font-size: var(--t-lg);
+    font-weight: 650;
+  }
+
+  .tarjetas p {
+    margin-top: 0.5rem;
+    color: var(--texto-2);
+  }
+
+  .paso {
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+    border-bottom: 1px solid var(--borde);
+    scroll-margin-top: 4rem;
+  }
+
+  .paso:nth-of-type(odd) {
+    background: var(--superficie-2);
+  }
+
+  .paso-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .invertido .paso-texto {
+    order: 2;
+  }
+
+  .paso-numero {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+    font-size: var(--t-sm);
+    font-weight: 650;
+  }
+
+  h2 {
+    margin-top: 1.1rem;
+    font-size: var(--t-xl);
+    font-stretch: 80%;
+    font-weight: 660;
+  }
+
+  .paso-texto .entrada,
+  .oscuro .entrada {
+    margin-top: 1rem;
+  }
+
+  .consejos {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .consejos li {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0.75rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .consejos svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--acento);
+    margin-top: 0.1rem;
+  }
+
+  .paso-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .paso-visual :global(.telefono) {
+    max-width: 300px;
+  }
+
+  .aviso {
+    margin-top: 1.5rem;
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  @media (max-width: 860px) {
+    .paso-rejilla,
+    .tarjetas {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .invertido .paso-texto {
+      order: 0;
+    }
+  }
+</style>

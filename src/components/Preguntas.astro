@@ -1,0 +1,72 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Preguntas frecuentes con <details>: accesible sin JavaScript.
+import { Icon } from 'astro-icon/components';
+interface Props {
+  lista: { pregunta: string; respuesta: string }[];
+}
+const { lista } = Astro.props;
+---
+
+<div class="preguntas-lista">
+  {
+    lista.map((p, i) => (
+      <details data-revelar style={`--orden:${i % 4}`}>
+        <summary>
+          <span>{p.pregunta}</span>
+          <Icon name="ph:caret-down-light" aria-hidden="true" />
+        </summary>
+        <p>{p.respuesta}</p>
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  .preguntas-lista {
+    border-top: 1px solid var(--borde);
+  }
+
+  details {
+    border-bottom: 1px solid var(--borde);
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    min-height: 64px;
+    padding: 1rem 0.25rem;
+    font-weight: 650;
+    font-size: var(--t-base);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex: none;
+    color: var(--acento);
+    transition: transform var(--medio) var(--curva);
+  }
+
+  details[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  summary:hover span {
+    color: var(--acento);
+  }
+
+  details p {
+    padding: 0 2.5rem 1.4rem 0.25rem;
+    color: var(--texto-2);
+    max-width: 65ch;
+  }
+</style>

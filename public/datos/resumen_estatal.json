@@ -1,0 +1,25 @@
+{
+  "defunciones_registradas": {
+    "2023": 52709,
+    "2024": 54987
+  },
+  "defunciones_cronicas": {
+    "2023": 31559,
+    "2024": 32838
+  },
+  "defunciones_cronicas_promedio_anual": 32198.5,
+  "pct_cronicas_del_total": 59.8,
+  "pct_cronicas_menores_60": 24.3,
+  "defunciones_cronicas_municipio_no_especificado": 23,
+  "poblacion_2020": 8348151,
+  "municipios": 125,
+  "jurisdicciones": 13,
+  "unidades_publicas_primer_nivel": 854,
+  "unidades_moviles": 10,
+  "unidades_sin_coordenadas_validas": 0,
+  "pct_poblacion_mas_5km": 3.51,
+  "pct_poblacion_mas_10km": 0.56,
+  "personas_mas_10km": 46582,
+  "tasa_estatal_18_59": 159.7,
+  "tasa_estatal_60_mas": 2438.9
+}

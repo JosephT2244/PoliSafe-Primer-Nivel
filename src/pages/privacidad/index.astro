@@ -1,0 +1,87 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Aviso de privacidad de PoliSafe Primer Nivel: la app no tiene cuentas ni permiso de internet.
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import Legal from '../../components/Legal.astro';
+import { sitio } from '../../datos/sitio';
+
+const secciones = [
+  { id: 'responsable', titulo: 'Responsable' },
+  { id: 'app', titulo: 'Datos en la app' },
+  { id: 'pacientes', titulo: 'Datos de pacientes' },
+  { id: 'no-enviados', titulo: 'Datos que no se envían' },
+  { id: 'sitio', titulo: 'Sitio y descargas' },
+  { id: 'jalisco', titulo: 'Datos de Jalisco' },
+  { id: 'derechos', titulo: 'Acceso y eliminación' },
+  { id: 'cambios', titulo: 'Cambios' },
+];
+---
+
+<Base titulo="Aviso de privacidad" descripcion="Qué datos guarda PoliSafe Primer Nivel en el teléfono, por qué no pide nombres de pacientes y qué datos trata este sitio.">
+  <CabeceraPagina
+    antetitulo="Privacidad de la app y del sitio"
+    titulo="Los datos de tus pacientes se quedan en tu teléfono."
+    entrada="Vigente desde el 7 de noviembre de 2026."
+    estrecha
+  />
+  <Legal secciones={secciones}>
+    <h2 id="responsable">Responsable</h2>
+    <p>
+      El responsable de PoliSafe Primer Nivel y de este sitio es Joseph Ubaldo Trejo Hernández. Para consultas o solicitudes
+      sobre tus datos, escribe a <a href={`mailto:${sitio.correo}`}>{sitio.correo}</a>.
+    </p>
+
+    <h2 id="app">Datos en la app</h2>
+    <p>
+      La app no tiene cuentas ni registro. Todo lo que capturas (pacientes en seguimiento, consultas, PAE, cálculos,
+      favoritos, recordatorios y preferencias) se guarda solo en el almacenamiento del teléfono, separado por perfil. Si
+      proteges un perfil, el PIN se guarda cifrado con PBKDF2 y la huella o el rostro los valida el propio Android.
+    </p>
+
+    <h2 id="pacientes">Datos de pacientes</h2>
+    <p>
+      El seguimiento identifica a cada paciente por el folio o número de expediente de la unidad. La app guarda el folio, el
+      sexo, el grupo de edad, la talla, los padecimientos y las mediciones de cada consulta. No tiene campos para nombre,
+      CURP, domicilio ni teléfono, y rechaza un folio que parezca un nombre o una CURP. El resumen en PDF tampoco lleva
+      nombres. La relación entre folio y persona permanece en el expediente de la unidad, bajo sus propias reglas.
+    </p>
+
+    <h2 id="no-enviados">Datos que no se envían</h2>
+    <p>
+      La app no tiene permiso de internet: no envía datos a ningún servidor, no usa analítica, publicidad ni inteligencia
+      artificial. Solo cuando tú lo pides, abre otra app del teléfono: el mapa, para ver la ubicación de una unidad, o el
+      navegador, para ver la fuente de un cálculo.
+    </p>
+    <p>
+      La versión web se descarga de este sitio, pero lo que capturas se guarda en el almacenamiento de ese navegador y
+      no se envía al servidor. Si borras los datos del navegador, se borran también los de la app.
+    </p>
+
+    <h2 id="sitio">Sitio y descargas</h2>
+    <p>
+      Este sitio es estático: no tiene formularios, cuentas, analítica, publicidad ni cookies. El servicio de alojamiento
+      registra datos técnicos de cada solicitud, como la dirección IP, para servir y proteger el sitio. El APK y los
+      archivos de datos se descargan desde este mismo sitio.
+    </p>
+
+    <h2 id="jalisco">Datos de Jalisco</h2>
+    <p>
+      Las cifras de Jalisco que muestran la app y este sitio son agregadas por municipio, jurisdicción o estado y salen de
+      fuentes públicas (INEGI, Secretaría de Salud y CONAPO). No contienen datos de ninguna persona.
+    </p>
+
+    <h2 id="derechos">Acceso y eliminación</h2>
+    <p>
+      Como los datos solo existen en tu teléfono, tú los controlas: en Ajustes puedes borrar los datos de un perfil o de
+      todo el dispositivo, y al desinstalar la app se eliminan. El equipo no tiene copia de ellos y no puede recuperarlos.
+      Si tienes dudas, escribe a <a href={`mailto:${sitio.correo}`}>{sitio.correo}</a>.
+    </p>
+
+    <h2 id="cambios">Cambios</h2>
+    <p>
+      Si en el futuro se agrega sincronización u otro tratamiento de datos, actualizaremos este aviso antes de habilitarlo y
+      mostraremos la fecha de vigencia correspondiente.
+    </p>
+  </Legal>
+</Base>

@@ -1,0 +1,258 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Tarjeta de una plataforma con su lanzamiento vigente o "Próximamente".
+import { Icon } from 'astro-icon/components';
+import manifiesto from '../datos/lanzamientos.json';
+import { vigente, megabytes, fechaLarga, plataformas } from '../lib/lanzamientos.mjs';
+
+interface Props {
+  plataforma: 'android' | 'windows' | 'ios' | 'macos';
+  detalle?: boolean;
+}
+const { plataforma, detalle = false } = Astro.props;
+const item = vigente(manifiesto, plataforma);
+const iconos = {
+  android: 'ph:android-logo-light',
+  windows: 'ph:windows-logo-light',
+  ios: 'ph:apple-logo-light',
+  macos: 'ph:apple-logo-light',
+};
+const acciones: Record<string, string> = {
+  apk: 'Descargar APK',
+  'zip-windows': 'Descargar para Windows',
+  'instalador-windows': 'Descargar instalador',
+  'google-play': 'Abrir Google Play',
+  'microsoft-store': 'Abrir Microsoft Store',
+  'app-store': 'Abrir App Store',
+  testflight: 'Abrir TestFlight',
+  dmg: 'Descargar DMG',
+  'mac-app-store': 'Abrir Mac App Store',
+};
+const formatos: Record<string, string> = {
+  apk: 'APK para instalación directa',
+  'zip-windows': 'Carpeta portable en ZIP',
+};
+const proximos: Record<string, string> = {
+  ios: 'Se publicará en App Store. No ofrecemos archivos IPA.',
+  macos: 'Se publicará en Mac App Store o como imagen firmada y notarizada.',
+  android: 'La versión de prueba se publica aquí junto con la entrega del concurso, el 15 de noviembre de 2026.',
+  windows: 'La siguiente versión aparecerá aquí cuando esté verificada.',
+};
+const nombre = plataformas[plataforma].nombre;
+---
+
+<article class:list={['tarjeta', { disponible: item, detalle }]} id={detalle ? plataforma : undefined}>
+  <div class="cabeza">
+    <span class="icono"><Icon name={iconos[plataforma]} aria-hidden="true" /></span>
+    <div>
+      <h3>{nombre}</h3>
+      {item ? <p class="formato">{formatos[item.canal] ?? item.canal}</p> : <p class="formato">En preparación</p>}
+    </div>
+    {
+      item ? (
+        <span class="estado estado-ok">
+          <Icon name="ph:check-circle-light" aria-hidden="true" />
+          Disponible
+        </span>
+      ) : (
+        <span class="estado estado-pendiente">
+          <Icon name="ph:clock-light" aria-hidden="true" />
+          Próximamente
+        </span>
+      )
+    }
+  </div>
+
+  {
+    item ? (
+      <>
+        <dl class="datos">
+          <div>
+            <dt>Versión</dt>
+            <dd>
+              {item.version} ({item.build})
+            </dd>
+          </div>
+          <div>
+            <dt>Fecha</dt>
+            <dd>{fechaLarga(item.fecha)}</dd>
+          </div>
+          <div>
+            <dt>Tamaño</dt>
+            <dd>{megabytes(item.tamanoBytes)}</dd>
+          </div>
+        </dl>
+        <p class="requisitos">{item.requisitos}</p>
+        {detalle && <p class="notas">{item.notas}</p>}
+        {detalle && (
+          <div class="hash">
+            <p class="hash-titulo" id={`sha-${plataforma}`}>
+              SHA-256 de <code>{item.archivo}</code>
+            </p>
+            <div class="hash-fila">
+              <code class="hash-valor" aria-labelledby={`sha-${plataforma}`}>
+                {item.sha256}
+              </code>
+              <button class="copiar" type="button" data-copiar={item.sha256} aria-label={`Copiar el SHA-256 de ${nombre}`}>
+                <Icon name="ph:copy-light" aria-hidden="true" />
+                <span data-copiar-texto>Copiar</span>
+              </button>
+            </div>
+          </div>
+        )}
+        <a class="boton" href={item.url} download={item.archivo} data-descarga={plataforma}>
+          <Icon name="ph:download-simple-light" aria-hidden="true" />
+          {acciones[item.canal]}
+        </a>
+      </>
+    ) : (
+      <p class="proximo">{proximos[plataforma]}</p>
+    )
+  }
+</article>
+
+<style>
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra-1);
+    height: 100%;
+  }
+
+  .tarjeta:not(.disponible) {
+    background: transparent;
+    box-shadow: none;
+    border-style: dashed;
+  }
+
+  .cabeza {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .cabeza > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .icono {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex: none;
+    border-radius: 16px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+  }
+
+  .icono svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  h3 {
+    font-size: var(--t-md);
+    font-weight: 700;
+  }
+
+  .formato {
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  .datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, max-content));
+    gap: 0.5rem 2rem;
+    margin: 0;
+    padding: 1rem 0;
+    border-block: 1px solid var(--borde);
+  }
+
+  dt {
+    font-size: var(--t-xs);
+    color: var(--texto-2);
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .requisitos,
+  .notas,
+  .proximo {
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  .hash {
+    padding: 1rem;
+    border-radius: var(--r-md);
+    background: var(--superficie-2);
+  }
+
+  .hash-titulo {
+    font-size: var(--t-xs);
+    color: var(--texto-2);
+    margin-bottom: 0.5rem;
+  }
+
+  .hash-fila {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .hash-valor {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    word-break: break-all;
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  }
+
+  .copiar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 44px;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--borde-fuerte);
+    border-radius: 999px;
+    background: var(--superficie);
+    font-size: var(--t-sm);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .copiar svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .tarjeta .boton {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  @media (max-width: 480px) {
+    .hash-fila {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .tarjeta .boton {
+      align-self: stretch;
+    }
+  }
+</style>

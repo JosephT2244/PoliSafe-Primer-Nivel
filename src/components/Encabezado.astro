@@ -1,0 +1,312 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import icono from '../assets/marca/icono_app.png';
+import { navegacion } from '../datos/sitio';
+
+const ruta = Astro.url.pathname;
+const activo = (href: string) => ruta.startsWith(href);
+---
+
+<header class="encabezado" data-encabezado>
+  <div class="contenedor barra">
+    <a class="marca" href="/" aria-label="PoliSafe Primer Nivel, ir a Inicio">
+      <Image src={icono} alt="" width={384} height={384} loading="eager" class="marca-icono" />
+      <span class="marca-nombre">PoliSafe <span class="marca-variante">Primer Nivel</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        {
+          navegacion.map((item) => (
+            <li>
+              <a href={item.href} aria-current={activo(item.href) ? 'page' : undefined}>
+                {item.texto}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="acciones">
+      <a class="boton boton-secundario boton-descargar" href="/app/">
+        <Icon name="ph:globe-light" aria-hidden="true" />
+        Abrir web
+      </a>
+      <a class="boton boton-descargar" href="/descargas/">
+        <Icon name="ph:download-simple-light" aria-hidden="true" />
+        Descargar
+      </a>
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-boton>
+        <span class="solo-lector">Abrir menú</span>
+        <span class="hamburguesa" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="menu-movil" id="menu-movil" data-menu hidden>
+    <nav class="contenedor" aria-label="Menú">
+      <ul>
+        {
+          [...navegacion, { href: '/contacto/', texto: 'Contacto' }].map((item, i) => (
+            <li style={`--i:${i}`}>
+              <a href={item.href} aria-current={activo(item.href) ? 'page' : undefined}>
+                {item.texto}
+                <Icon name="ph:arrow-right-light" aria-hidden="true" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="boton" href="/descargas/">
+        <Icon name="ph:download-simple-light" aria-hidden="true" />
+        Descargar para Android
+      </a>
+      <a class="boton boton-secundario" href="/app/">
+        <Icon name="ph:globe-light" aria-hidden="true" />
+        Abrir versión web
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import '../scripts/menu';
+</script>
+
+<style>
+  .encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    transition:
+      background-color var(--medio) var(--curva),
+      box-shadow var(--medio) var(--curva),
+      border-color var(--medio) var(--curva);
+    border-bottom: 1px solid transparent;
+  }
+
+  .encabezado.desplazado {
+    background: color-mix(in srgb, var(--fondo) 82%, transparent);
+    backdrop-filter: saturate(1.4) blur(14px);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    border-bottom-color: var(--borde);
+  }
+
+  .barra {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 72px;
+  }
+
+  .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    margin-right: auto;
+    border-radius: 999px;
+  }
+
+  .marca :global(.marca-icono) {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--borde);
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .marca-nombre {
+    font-size: 1.35rem;
+    font-weight: 760;
+    font-stretch: 72%;
+    letter-spacing: -0.01em;
+    color: var(--acento);
+  }
+
+  .marca-variante {
+    font-weight: 600;
+    color: var(--texto-2);
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 560;
+    font-size: var(--t-sm);
+    text-decoration: none;
+    color: var(--texto-2);
+    transition:
+      color var(--rapido) var(--curva),
+      background-color var(--rapido) var(--curva);
+  }
+
+  .nav a:hover {
+    color: var(--texto);
+    background: var(--superficie-2);
+  }
+
+  .nav a[aria-current='page'] {
+    color: var(--acento);
+    background: var(--acento-tinte);
+  }
+
+  .acciones {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .boton-descargar {
+    min-height: 44px;
+    padding-inline: 1.1rem;
+    font-size: var(--t-sm);
+  }
+
+  .menu-boton {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--borde-fuerte);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    place-items: center;
+  }
+
+  .hamburguesa {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 12px;
+  }
+
+  .hamburguesa span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--texto);
+    transition:
+      transform var(--medio) var(--curva-salida),
+      top var(--medio) var(--curva-salida);
+  }
+
+  .hamburguesa span:first-child {
+    top: 1px;
+  }
+
+  .hamburguesa span:last-child {
+    top: 9px;
+  }
+
+  [aria-expanded='true'] .hamburguesa span:first-child {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+
+  [aria-expanded='true'] .hamburguesa span:last-child {
+    top: 5px;
+    transform: rotate(-45deg);
+  }
+
+  .menu-movil {
+    position: fixed;
+    inset: 72px 0 0;
+    background: color-mix(in srgb, var(--fondo) 94%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    overflow-y: auto;
+    padding-block: 1.5rem 3rem;
+  }
+
+  .menu-movil ul {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+  }
+
+  .menu-movil li {
+    border-bottom: 1px solid var(--borde);
+    opacity: 0;
+    transform: translateY(16px);
+    animation: entrar-menu 520ms var(--curva) forwards;
+    animation-delay: calc(var(--i) * 45ms + 40ms);
+  }
+
+  .menu-movil li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0.25rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-stretch: 70%;
+    text-decoration: none;
+  }
+
+  .menu-movil li a[aria-current='page'] {
+    color: var(--acento);
+  }
+
+  .menu-movil li svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--texto-2);
+  }
+
+  .menu-movil .boton {
+    width: 100%;
+  }
+
+  .menu-movil .boton + .boton {
+    margin-top: 0.75rem;
+  }
+
+  @keyframes entrar-menu {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .nav {
+      display: none;
+    }
+
+    .menu-boton {
+      display: grid;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .boton-descargar,
+    .marca-variante {
+      display: none;
+    }
+  }
+
+  @media (min-width: 921px) {
+    .menu-movil {
+      display: none;
+    }
+  }
+</style>

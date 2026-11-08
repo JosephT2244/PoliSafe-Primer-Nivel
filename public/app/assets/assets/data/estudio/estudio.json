@@ -1,0 +1,3813 @@
+{
+ "version": 1,
+ "consulta": "03/10/2026",
+ "fuentes": {
+  "decs": "DeCS/MeSH: Descriptores en Ciencias de la Salud. São Paulo: BIREME/OPS/OMS. https://decs.bvsalud.org",
+  "dof": "Diario Oficial de la Federación.",
+  "vigencia": "Vigencia revisada el 03/10/2026."
+ },
+ "terminos": [
+  {
+   "id": "equipo:cefalea",
+   "titulo": "Cefalea",
+   "definicion": "Dolor o sensación desagradable en cualquier parte de la cabeza, incluyendo la parte superior o posterior de la cabeza y la cara. Comúnmente conocido como dolor de cabeza.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "6412",
+    "descriptor": "Cefalea",
+    "definicion": "Sintoma de DOLOR en la región craneal. Puede ser un síntoma aislado y benigno o una manifestación de una gran variedad de TRASTORNOS DE CEFALALGIA.",
+    "mesh": "D006261",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6412",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:mialgia",
+   "titulo": "Mialgia",
+   "definicion": "Dolor o malestar que afecta a uno o varios músculos del cuerpo. Puede ser resultado de sobreesfuerzo, procesos inflamatorios o enfermedades sistémicas.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "55208",
+    "descriptor": "Mialgia",
+    "definicion": "Sensación dolorosa en los músculos.",
+    "mesh": "D063806",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=55208",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:artralgia",
+   "titulo": "Artralgia",
+   "definicion": "Dolor localizado en las articulaciones. A diferencia de la artritis, la artralgia se refiere específicamente al síntoma del dolor, independientemente de si existe inflamación visible o no.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "32350",
+    "descriptor": "Artralgia",
+    "definicion": "Dolor en la articulación.",
+    "mesh": "D018771",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=32350",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:lumbalgia",
+   "titulo": "Lumbalgia",
+   "definicion": "Dolor situado en la región lumbar de la espalda (la parte baja). Es una de las causas más frecuentes de consulta y puede ser de origen muscular, óseo o nervioso.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "30665",
+    "descriptor": "Dolor de la Región Lumbar",
+    "definicion": "Dolor agudo o crónico en las regiones lumbar o sacra, el cual puede asociarse con ESGUINCES Y DISTENSIONES musculo-ligamentosas, DESPLAZAMIENTO DEL DISCO INTERVERTEBRAL y otras afecciones.",
+    "mesh": "D017116",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=30665",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:dolor_abdominal",
+   "titulo": "Dolor abdominal",
+   "definicion": "Sensación dolorosa que se percibe en el área comprendida entre el tórax y la pelvis. En clínica, suele dividirse por cuadrantes para facilitar el diagnóstico diferencial.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "24501",
+    "descriptor": "Dolor Abdominal",
+    "definicion": "Sensación de malestar, molestia o agonía en la región abdominal.",
+    "mesh": "D015746",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=24501",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:dolor_toracico",
+   "titulo": "Dolor torácico",
+   "definicion": "Dolor o molestia que se siente en cualquier punto de la parte frontal del cuerpo, entre el cuello y la parte superior del abdomen. Es un síntoma crítico que requiere descartar causas cardiacas o pulmonares de urgencia.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "19100",
+    "descriptor": "Dolor en el Pecho",
+    "definicion": "Opresión, ardor o adormecimiento en el pecho.",
+    "mesh": "D002637",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=19100",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:nausea",
+   "titulo": "Náusea",
+   "definicion": "Sensación subjetiva de malestar e incomodidad en la parte superior del abdomen, que suele preceder al vómito y a menudo se acompaña de salivación, sudoración y mareo.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "9517",
+    "descriptor": "Náusea",
+    "definicion": "Sensación desagradable en el estómago acompañada generalmente de la necesidad de vomitar. Las causas comunes son embarazo temprano, mareo por mar o por movimiento, estrés emocional, dolor intenso, envenenamiento alimenticio y varios enterovirus.",
+    "mesh": "D009325",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=9517",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:emesis",
+   "titulo": "Emesis",
+   "definicion": "El acto de expulsar de forma forzada el contenido gástrico a través de la boca. Es el término médico para el vómito.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "15241",
+    "descriptor": "Vómitos",
+    "definicion": "Expulsión forzada del contenido del ESTÓMAGO a través de la BOCA.",
+    "mesh": "D014839",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=15241",
+    "revision": "09/07/2003",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:diarrea",
+   "titulo": "Diarrea",
+   "definicion": "Alteración de las evacuaciones intestinales caracterizada por un aumento en la frecuencia (habitualmente más de 3 veces al día) y una disminución en la consistencia de las heces (líquidas o semilíquidas).",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "3994",
+    "descriptor": "Diarrea",
+    "definicion": "Aumento de la liquidez o disminución de la consistencia de las HECES, con deposiciones seguidas. La consistencia fecal está relacionada con la capacidad del agua de contener sólidos insolubles en agua total, mas que en la cantidad de agua. La diarrea no es una hiperdefecación o un aumento del peso fecal.",
+    "mesh": "D003967",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3994",
+    "revision": "09/07/2013",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:distension_abdominal",
+   "titulo": "Distensión abdominal",
+   "definicion": "Aumento del volumen del abdomen debido a la acumulación de gas, líquidos o sólidos en el tracto gastrointestinal. Comúnmente el paciente lo describe como estar “hinchado” o “aventado”.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": null
+  },
+  {
+   "id": "equipo:hematemesis",
+   "titulo": "Hematemesis",
+   "definicion": "Vómito de sangre fresca (roja brillante) o digerida (con aspecto de “posos de café”). Indica una hemorragia digestiva alta, generalmente por encima del ángulo de Treitz.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "28066",
+    "descriptor": "Hematemesis",
+    "definicion": "Vómitos de sangre reciente de color rojo claro o heces de café mas viejas. Generalmente indica un sangrado del TRACTO GASTROINTESTINAL SUPERIOR.",
+    "mesh": "D006396",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=28066",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:melena",
+   "titulo": "Melena",
+   "definicion": "Evacuación de heces negras, alquitranadas y de olor fétido debido a la presencia de sangre digerida. Suele indicar sangrado del tracto digestivo superior.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "28168",
+    "descriptor": "Melena",
+    "definicion": "HECES oscuras, alquitranadas, mal olientes que contienen sangre digerida.",
+    "mesh": "D008551",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=28168",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:hematoquecia",
+   "titulo": "Hematoquecia",
+   "definicion": "Expulsión de sangre roja brillante o rutilante a través del ano, sola o mezclada con las heces. Generalmente sugiere una hemorragia digestiva baja.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "6623",
+    "descriptor": "Hemorragia Gastrointestinal",
+    "definicion": "Sangrado en cualquier segmento del TRACTO GASTROINTESTINAL, desde el ESÓFAGO hasta el RECTO.",
+    "mesh": "D006471",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6623",
+    "revision": "05/07/2006",
+    "relacion": "relacionado"
+   }
+  },
+  {
+   "id": "equipo:mareo",
+   "titulo": "Mareo",
+   "definicion": "Sensación de inseguridad, aturdimiento o inestabilidad espacial, sin que exista una sensación de movimiento rotatorio. Es un término subjetivo y menos específico que el vértigo.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "4307",
+    "descriptor": "Mareo",
+    "definicion": "Término impreciso que puede referirse a una sensación de desorientación espacial, movimiento del entorno, o sensación de mareo.",
+    "mesh": "D004244",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4307",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:vertigo",
+   "titulo": "Vértigo",
+   "definicion": "Sensación errónea de movimiento, habitualmente rotatorio, ya sea de uno mismo o del entorno (sentir que “todo da vueltas”). Generalmente está relacionado con alteraciones en el sistema vestibular (oído interno).",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "27888",
+    "descriptor": "Vértigo",
+    "definicion": "Ilusión de movimiento, bien del mundo externo que se mueve alrededor del individuo o del individuo que se mueve en el espacio. El vértigo puede estar asociado con trastornos del OIDO INTERNO, NERVIO VESTIBULAR, TRONCO ENCEFÁLICO y CORTEZA CEREBRAL. Las lesiones en el LÓBULO TEMPORAL y el LÓBULO PARIETAL pueden asociarse con CONVULSIONES focales, que pueden ocasionar vértigo como manifestación ictal (Adaptación del original: Adams et al., Principles of Neurology, 6th ed, pp300-1).",
+    "mesh": "D014717",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27888",
+    "revision": "20/06/2014",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:sincope",
+   "titulo": "Síncope",
+   "definicion": "Pérdida brusca y temporal de la conciencia y del tono muscular, de corta duración y con recuperación espontánea completa. Se debe a una disminución transitoria del flujo sanguíneo cerebral.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "13955",
+    "descriptor": "Síncope",
+    "definicion": "Pérdida transitoria de la conciencia y del tono postural que se origina por disminución del flujo sanguíneo cerebral (es decir, ISQUEMIA CEREBRAL). El presíncope se refiere a la sensación de ligereza en la cabeza y pérdida de la fuerza que precede a un síncope o que acompaña a un síncope incompleto.",
+    "mesh": "D013575",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13955",
+    "revision": "26/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:convulsiones",
+   "titulo": "Convulsiones",
+   "definicion": "Alteraciones eléctricas repentinas y descontroladas en el cerebro que pueden causar cambios en el comportamiento, los movimientos, los sentimientos y en los niveles de conciencia.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "13024",
+    "descriptor": "Convulsiones",
+    "definicion": "Trastornos clínicos o subclínicos de la función cortical producidos por una descarga súbita, anormal, excesiva y desorganizada de las células cerebrales. Las manifestaciones clínicas incluyen fenómenos motores, sensoriales y psíquicos anormales. Las convulsiones recurrentes normalmente son denominadas EPILEPSIA o trastorno convulsivo.",
+    "mesh": "D012640",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13024",
+    "revision": "25/02/2020",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:parestesias",
+   "titulo": "Parestesias",
+   "definicion": "Sensación anormal de hormigueo, adormecimiento o “pinchazos” en la piel, que ocurre sin un estímulo externo evidente.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "10481",
+    "descriptor": "Parestesia",
+    "definicion": "Sensaciones cutáneas subjetivas (ejemplo, frío, calor, hormigueo, presión, etc.) que se experimentan espontáneamente en ausencia de estímulo.",
+    "mesh": "D010292",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=10481",
+    "revision": "08/07/2013",
+    "relacion": "relacionado"
+   }
+  },
+  {
+   "id": "equipo:debilidad_muscular",
+   "titulo": "Debilidad muscular",
+   "definicion": "Reducción de la fuerza en uno o más músculos, que impide realizar tareas que normalmente el paciente podría ejecutar.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "32676",
+    "descriptor": "Debilidad Muscular",
+    "definicion": "Queja vaga de debilidad, fatiga o cansancio atribuible a debilidad de varios músculos. La debilidad puede caracterizarse como subaguda o crónica, a menudo progresiva, y es manifestación de muchas enfermedades musculares y neuromusculares.",
+    "mesh": "D018908",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=32676",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:disnea",
+   "titulo": "Disnea",
+   "definicion": "Sensación subjetiva de falta de aire o dificultad para respirar.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "4479",
+    "descriptor": "Disnea",
+    "definicion": "Respiración difícil o laboriosa.",
+    "mesh": "D004417",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4479",
+    "revision": "18/10/2021",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:tos",
+   "titulo": "Tos",
+   "definicion": "Reflejo defensivo del cuerpo para limpiar las vías respiratorias de mucosidad, sustancias extrañas o irritantes.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "3386",
+    "descriptor": "Tos",
+    "definicion": "Expulsión súbita y audible del aire de los pulmones a través de una glotis parcialmente cerrada, precedida por la inhalación. Es una respuesta protectora que sirve para limpiar la tráquea, bronquios, y/o pulmones de irritantes y secreciones, o para evitar la aspiración de materiales extraños hacia los pulmones.",
+    "mesh": "D003371",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3386",
+    "revision": "08/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:expectoracion",
+   "titulo": "Expectoración",
+   "definicion": "Acto de arrancar y arrojar por la boca las flemas y secreciones.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": null
+  },
+  {
+   "id": "equipo:hemoptisis",
+   "titulo": "Hemoptisis",
+   "definicion": "Expulsión de sangre roja y espumosa procedente de las vías respiratorias inferiores.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "6621",
+    "descriptor": "Hemoptisis",
+    "definicion": "Expectoración o esputo de sangre, procedentes de cualquier parte del tracto respiratorio, generalmente de hemorragias en la parénquima pulmonar (ALVÉOLOS PULMONARES) y de las ARTERIAS BRONQUIALES.",
+    "mesh": "D006469",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6621",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:sibilancias",
+   "titulo": "Sibilancias",
+   "definicion": "Sonidos agudos y silbantes durante la respiración cuando las vías aéreas están estrechadas.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "27799",
+    "descriptor": "Ruidos Respiratorios",
+    "definicion": "Ruidos, normales y anormales, que se oyen a la auscultación en cualquier parte del SISTEMA RESPIRATORIO.",
+    "mesh": "D012135",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27799",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:ortopnea",
+   "titulo": "Ortopnea",
+   "definicion": "Disnea que ocurre cuando el paciente está acostado y que le obliga a sentarse para respirar mejor.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "4479",
+    "descriptor": "Disnea",
+    "definicion": "Respiración difícil o laboriosa.",
+    "mesh": "D004417",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4479",
+    "revision": "18/10/2021",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:dolor_precordial",
+   "titulo": "Dolor precordial",
+   "definicion": "Dolor o malestar localizado en la parte anterior del tórax, por delante del corazón.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "19100",
+    "descriptor": "Dolor en el Pecho",
+    "definicion": "Opresión, ardor o adormecimiento en el pecho.",
+    "mesh": "D002637",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=19100",
+    "revision": "20/06/2017",
+    "relacion": "relacionado"
+   }
+  },
+  {
+   "id": "equipo:palpitaciones",
+   "titulo": "Palpitaciones",
+   "definicion": "Percepción subjetiva del latido cardiaco, como vibración o latidos fuertes.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": null
+  },
+  {
+   "id": "equipo:edema",
+   "titulo": "Edema",
+   "definicion": "Acumulación anormal de líquido en los tejidos, provocando hinchazón visible.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "4555",
+    "descriptor": "Edema",
+    "definicion": "Acumulación anormal de líquido en los TEJIDOS o cavidades corporales. La mayoría de los edemas se encuentran debajo de la PIEL en el TEJIDO SUBCUTÁNEO.",
+    "mesh": "D004487",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4555",
+    "revision": "24/06/2011",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:cianosis",
+   "titulo": "Cianosis",
+   "definicion": "Coloración azulada o violácea de la piel y las mucosas debido a oxigenación insuficiente.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "3510",
+    "descriptor": "Cianosis",
+    "definicion": "Coloración azulada o purpúrea de la piel y membranas mucosas debido a un aumento en la cantidad de hemoglobina desoxigenada en la sangre o a un defecto estructural en la molécula de hemoglobina.",
+    "mesh": "D003490",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3510",
+    "revision": "08/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:disuria",
+   "titulo": "Disuria",
+   "definicion": "Dolor, ardor o escozor al orinar.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "52157",
+    "descriptor": "Disuria",
+    "definicion": "MICCIÓN dolorosa. Con frecuencia se asocia a infecciones del TRACTO URINARIO inferior.",
+    "mesh": "D053159",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=52157",
+    "revision": "24/06/2011",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:polaquiuria",
+   "titulo": "Polaquiuria",
+   "definicion": "Aumento en la frecuencia de micciones con bajo volumen.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": null
+  },
+  {
+   "id": "equipo:hematuria",
+   "titulo": "Hematuria",
+   "definicion": "Presencia de sangre en la orina.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "6566",
+    "descriptor": "Hematuria",
+    "definicion": "Presencia de sangre en la orina.",
+    "mesh": "D006417",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6566",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:oliguria",
+   "titulo": "Oliguria",
+   "definicion": "Disminución de producción de orina por debajo de lo normal.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "10032",
+    "descriptor": "Oliguria",
+    "definicion": "Manifestación clínica del sistema urinario que consiste en disminución de la cantidad de orina secretada.",
+    "mesh": "D009846",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=10032",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:anuria",
+   "titulo": "Anuria",
+   "definicion": "Ausencia casi total de eliminación de orina.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "1007",
+    "descriptor": "Anuria",
+    "definicion": "Incapacidad de formar o excretar orina.",
+    "mesh": "D001002",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1007",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:fiebre",
+   "titulo": "Fiebre",
+   "definicion": "Elevación de temperatura corporal generalmente mayor a 38 °C.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "5444",
+    "descriptor": "Fiebre",
+    "definicion": "Elevación anormal de la temperatura corporal, usualmente como resultado de un proceso patológico.",
+    "mesh": "D005334",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=5444",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:astenia",
+   "titulo": "Astenia",
+   "definicion": "Sensación generalizada de cansancio y fatiga.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "1255",
+    "descriptor": "Astenia",
+    "definicion": "Signos o síntomas clínicos manifestados como debilidad o falta o pérdida de fuerza y energía.",
+    "mesh": "D001247",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1255",
+    "revision": "01/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:adinamia",
+   "titulo": "Adinamia",
+   "definicion": "Falta de fuerza o dificultad para iniciar actividad física.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": null
+  },
+  {
+   "id": "equipo:anorexia",
+   "titulo": "Anorexia",
+   "definicion": "Pérdida del apetito.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "23944",
+    "descriptor": "Anorexia",
+    "definicion": "Disminución o pérdida del APETITO, acompañado de una aversión a los alimentos y la imposibilidad de comer. Es una característica específica de la alteración de ANOREXIA NERVIOSA.",
+    "mesh": "D000855",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=23944",
+    "revision": "30/06/2005",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "equipo:diaforesis",
+   "titulo": "Diaforesis",
+   "definicion": "Sudoración excesiva no relacionada con calor.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "13927",
+    "descriptor": "Sudoración",
+    "definicion": "Proceso de secreción exocrina de las GLÁNDULAS SUDORÍPARAS, incluyendo el sudor acuoso de las GLÁNDULAS ECRINAS y el complejo de líquidos viscosos de las GLÁNDULAS APOCRINAS.",
+    "mesh": "D013546",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13927",
+    "revision": "23/06/2016",
+    "relacion": "relacionado"
+   }
+  },
+  {
+   "id": "equipo:perdida_de_peso_involuntaria",
+   "titulo": "Pérdida de peso involuntaria",
+   "definicion": "Reducción de peso sin dieta o ejercicio; significativa si supera 5–10 % en 6 meses.",
+   "fuente": "Texto del equipo PoliSafe (material de estudio).",
+   "decs": {
+    "id": "23862",
+    "descriptor": "Pérdida de Peso",
+    "definicion": "Disminución del PESO CORPORAL que se tiene.",
+    "mesh": "D015431",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=23862",
+    "revision": "17/06/2016",
+    "relacion": "relacionado"
+   }
+  },
+  {
+   "id": "decs:13993",
+   "titulo": "Taquicardia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "13993",
+    "descriptor": "Taquicardia",
+    "definicion": "Latidos cardiacos anormalmente rápidos, por lo general con una FRECUENCIA CARDIACA superior a 100 latidos por minuto en adultos. La taquicardia que se acompaña de trastornos en la despolarizacvión cardiaca (arritmias cardiacas) recibe la denominación de taquiarritmia.",
+    "mesh": "D013610",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13993",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:1945",
+   "titulo": "Bradicardia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "1945",
+    "descriptor": "Bradicardia",
+    "definicion": "Arritmias cardiacas caracterizadas por una FRECUENCIA CARDIACA excesivamente lenta, por lo general por debajo de 50 latidos por minuto en adultos humanos. Pueden clasificarse en sentido amplio en disfunción del NÓDULO SINOAURICULAR y BLOQUEO AURICULOVENTRICULAR.",
+    "mesh": "D001919",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1945",
+    "revision": "09/07/2007",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7202",
+   "titulo": "Hipotensión",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7202",
+    "descriptor": "Hipotensión",
+    "definicion": "PRESIÓN ARTERIAL anormalmente baja que puede determinar el suministro insuficiente de sange al encéfalo o a órganos vitales. El síntoma más común es el MAREO, aunque las consecuencias más negativas para el organismo aparecen cuando se produce deprivación prolongada de oxígeno y nutrientes.",
+    "mesh": "D007022",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7202",
+    "revision": "09/07/2007",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:54500",
+   "titulo": "Taquipnea",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "54500",
+    "descriptor": "Taquipnea",
+    "definicion": "Aumento de la FRECUENCIA RESPIRATORIA.",
+    "mesh": "D059246",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=54500",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:1056",
+   "titulo": "Apnea",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "1056",
+    "descriptor": "Apnea",
+    "definicion": "Ausencia transitoria de respiración espontánea.",
+    "mesh": "D001049",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1056",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:23977",
+   "titulo": "Trastornos de Deglución",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "23977",
+    "descriptor": "Trastornos de Deglución",
+    "definicion": "Dificultad de DEGLUCIÓN que puede estar ocasionada por una alteración neuromuscular o una obstrucción mecánica. La disfagia se clasifica en dos tipos distintos: disfagia orofaríngea debida a una mala función de la FARINGE y el ESFINTER ESOFÁGICO SUPERIOR; y la disfagia esofágica debida a una mala función del ESÓFAGO.",
+    "mesh": "D003680",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=23977",
+    "revision": "07/07/2004",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:4464",
+   "titulo": "Disartria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "4464",
+    "descriptor": "Disartria",
+    "definicion": "Trastornos de la articulación del habla originados por coordinación imperfecta entre faringe, laringe, lengua y músculos de la cara. Puede producirse por ENFERMEDADES DE LOS NERVIOS CRANEALES; ENFERMEDADES NEUROMUSCULARES; ENFERMEDADES DEL CEREBELO; ENFERMEDADES DE LOS GANGLIOS BASALES; enfermedades del TRONCO CEREBRAL; o enfermedades de los tractos corticobulbares (ver TRACTOS PIRAMIDALES). Los centros de lenguaje cortical están intactos en esta afección (Traducción libre del original: Adams et al., Principles of Neurology, 6th ed, p489).",
+    "mesh": "D004401",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4464",
+    "revision": "30/07/2005",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7734",
+   "titulo": "Ictericia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7734",
+    "descriptor": "Ictericia",
+    "definicion": "Manifestación clínica de HIPERBILIRRUBINEMIA, caracterizada por la coloración amarillenta de la PIEL, MEMBRANA MUCOSA y ESCLERA. La ictericia clínica generalmente es un signo de disfunción del HIGADO.",
+    "mesh": "D007565",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7734",
+    "revision": "03/07/2012",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:11976",
+   "titulo": "Prurito",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "11976",
+    "descriptor": "Prurito",
+    "definicion": "Intensa sensación de escozor que produce urgencia de frotar o rascar la piel para obtener alivio.",
+    "mesh": "D011537",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=11976",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:4977",
+   "titulo": "Eritema",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "4977",
+    "descriptor": "Eritema",
+    "definicion": "Enrojecimiento de la piel producido por la congestión de los capilares. Esta condición puede ser el resultado de una variedad de procesos de enfermedad.",
+    "mesh": "D004890",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4977",
+    "revision": "20/06/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:4502",
+   "titulo": "Equimosis",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "4502",
+    "descriptor": "Equimosis",
+    "definicion": "Extravasación de sangre en la piel, que produce un parche no elevado, redondeado o irregular, azul o púrpura, mayor que una petequia.",
+    "mesh": "D004438",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=4502",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3681",
+   "titulo": "Úlcera por Presión",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3681",
+    "descriptor": "Úlcera por Presión",
+    "definicion": "Úlcera producida por presión prolongada sobre la PIEL y TEJIDOS cuando se permanece en una posición durante un período prolongado, como cuando se está en cama. Las áreas óseas del cuerpo son las más frecuentemente afectadas, volviéndose isquémicas (ISQUEMIA) por la presión sostenida y constante.",
+    "mesh": "D003668",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3681",
+    "revision": "03/07/2012",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3694",
+   "titulo": "Deshidratación",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3694",
+    "descriptor": "Deshidratación",
+    "definicion": "Afección resultante de una pérdida excesiva de agua por parte de un organismo vivo.",
+    "mesh": "D003681",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3694",
+    "revision": "09/07/2013",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7181",
+   "titulo": "Hipoglucemia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7181",
+    "descriptor": "Hipoglucemia",
+    "definicion": "Síndrome con un nivel anormalmente bajo de GLUCEMIA. La hipoglucemia clínica tiene diversas etiologías. La hipoglucemia grave a veces conduce a una deprivación de glucosa del SISTEMA NERVIOSO CENTRAL dando lugar a HAMBRE, SUDORACIÓN, PARESTESIA, alteración de la función mental, CONVULSIONES, COMA e incluso la MUERTE.",
+    "mesh": "D007003",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7181",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7124",
+   "titulo": "Hiperglucemia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7124",
+    "descriptor": "Hiperglucemia",
+    "definicion": "Nivel alto anormal de la GLUCEMIA.",
+    "mesh": "D006943",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7124",
+    "revision": "09/07/2013",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:11582",
+   "titulo": "Poliuria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "11582",
+    "descriptor": "Poliuria",
+    "definicion": "Gran volumen de orina con incremento de la frecuencia urinaria, se presenta comúnmente en la diabetes.",
+    "mesh": "D011141",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=11582",
+    "revision": "05/07/2006",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:54543",
+   "titulo": "Polidipsia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "54543",
+    "descriptor": "Polidipsia",
+    "definicion": "Sed excesiva que se manifiesta por la excesiva ingesta de líquidos. Es característica de muchas enfermedades como la DIABETES MELLITUS; DIABETES INSÍPIDA; y DIABETES INSÍPIDA NEFROGÉNICA. La condición puede ser de origen psicogénico.",
+    "mesh": "D059606",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=54543",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:14949",
+   "titulo": "Incontinencia Urinaria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "14949",
+    "descriptor": "Incontinencia Urinaria",
+    "definicion": "Incapacidad de controlar el transito de la ORINA.",
+    "mesh": "D014549",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=14949",
+    "revision": "24/06/2011",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:29144",
+   "titulo": "Retención Urinaria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "29144",
+    "descriptor": "Retención Urinaria",
+    "definicion": "Imposibilidad para orinar. La etiología de este trastorno incluye causas obstructivas, neurogénicas, farmacológicas y psicogénicas.",
+    "mesh": "D016055",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=29144",
+    "revision": "06/02/2018",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3267",
+   "titulo": "Estreñimiento",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3267",
+    "descriptor": "Estreñimiento",
+    "definicion": "Evacuación infrecuente o difícil de las HECES. estos sintomas están asociados a distintas causas como el bajo consumo de FIBRA ALIMENTAR, trastornos emocionales o nerviosas, alteraciones sistémicas o funcionales, agravío inducido por fármacos, e infecciones.",
+    "mesh": "D003248",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3267",
+    "revision": "09/07/2003",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:6506",
+   "titulo": "Pirosis",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "6506",
+    "descriptor": "Pirosis",
+    "definicion": "Dolor o sensación de ardor subesternal, usualmente asociada con regurgitación de jugo gástrico en el esófago.",
+    "mesh": "D006356",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6506",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7215",
+   "titulo": "Hipotermia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7215",
+    "descriptor": "Hipotermia",
+    "definicion": "Temperatura corporal más baja que la normal, especialmente en animales de sangre caliente.",
+    "mesh": "D007035",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7215",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:35319",
+   "titulo": "Escalofríos",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "35319",
+    "descriptor": "Escalofríos",
+    "definicion": "La sensación repentina de tener frío. Puede estar acompañada por TIRITONA.",
+    "mesh": "D023341",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=35319",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3245",
+   "titulo": "Confusión",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3245",
+    "descriptor": "Confusión",
+    "definicion": "Estado mental que se caracteriza por confusión, trastornos emocionales, falta de un pensamiento claro, y desorientación perceptiva.",
+    "mesh": "D003221",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3245",
+    "revision": "25/07/2001",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3707",
+   "titulo": "Delirio",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3707",
+    "descriptor": "Delirio",
+    "definicion": "Trastorno que se caracteriza por CONFUSIÓN; falta de atención; desorientación; ILUSIONES; ALUCINACIONES; agitación; y en algunos casos hiperactividad del sistema nervioso autonómico. Puede producirse por afecciones tóxico/metabólicas o lesiones estructurales del cerebro. (Traducción libre del original: Adams et al., Principles of Neurology, 6th ed, pp411-2)",
+    "mesh": "D003693",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3707",
+    "revision": "30/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:3159",
+   "titulo": "Coma",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "3159",
+    "descriptor": "Coma",
+    "definicion": "Profundo estado de inconsciencia asociado con depresión de la actividad cerebral de la cual no puede sacarse al individuo. El coma generalmente ocurre cuando hay disfunción o lesión que afecta a ambos hemisferios cerebrales o a la FORMACIÓN RETICULAR del tronco cerebral.",
+    "mesh": "D003128",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=3159",
+    "revision": "09/07/2013",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:6579",
+   "titulo": "Hemiplejía",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "6579",
+    "descriptor": "Hemiplejía",
+    "definicion": "Pérdida severa o completa de la función motora de un lado del cuerpo. Esta afección usualmente es producida por ENFERMEDADES CEREBRALES que se localizan en el hemisferio cerebral opuesto al lado afectado. Con menos frecuencia, lesiones del TRONCO CEREBRAL; ENFERMEDADES DE LA MÉDULA ESPINAL cervical; ENFERMEDADES DEL SISTEMA NERVIOSO PERIFÉRICO y otras afecciones pueden manifestarse por hemiplejía. El término hemiparesia (ver PARESIA) se refiere a la forma leve a moderada de debilidad que fecta a un lado del cuerpo.",
+    "mesh": "D006429",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6579",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:13147",
+   "titulo": "Choque",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "13147",
+    "descriptor": "Choque",
+    "definicion": "Afección que se manifiesta por un fallo en la perfusión u oxigenación de órganos vitales.",
+    "mesh": "D012769",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13147",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:32031",
+   "titulo": "Sepsis",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "32031",
+    "descriptor": "Sepsis",
+    "definicion": "Presencia de diversos microorganismos formadores de pus y otros patógenos, o sus toxinas, en la sangre o los tejidos. La SEPTICEMIA, enfermedad sistémica causada por la multiplicación de microorganismos en la sangre circulante, es un tipo común de sepsis.",
+    "mesh": "D018805",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=32031",
+    "revision": "06/02/2020",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:10883",
+   "titulo": "Flebitis",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "10883",
+    "descriptor": "Flebitis",
+    "definicion": "Inflamación de una vena, frecuentemente de las piernas. La flebitis asociada a un coágulo de sangre se denomina (TROMBOFLEBITIS).",
+    "mesh": "D010689",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=10883",
+    "revision": "09/07/2007",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:5219",
+   "titulo": "Extravasación de Materiales Terapéuticos y Diagnósticos",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "5219",
+    "descriptor": "Extravasación de Materiales Terapéuticos y Diagnósticos",
+    "definicion": "Salida de material diagnóstico o terapéutico desde los vasos que se introduce en el tejido o la cavidad corporal que lo rodea.",
+    "mesh": "D005119",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=5219",
+    "revision": "25/06/2010",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:27923",
+   "titulo": "Asepsia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "27923",
+    "descriptor": "Asepsia",
+    "definicion": "Prevención de acceso de organismos infectantes al sitio de una infección potencial.",
+    "mesh": "D001207",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27923",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:27916",
+   "titulo": "Antisepsia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "27916",
+    "descriptor": "Antisepsia",
+    "definicion": "Destrucción de los germenes causantes de enfermedades.",
+    "mesh": "D000985",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27916",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:27840",
+   "titulo": "Esterilización",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "27840",
+    "descriptor": "Esterilización",
+    "definicion": "La destrucción de todas las formas de vida, especialmente microorganismos, por calor, producto químico u otros medios.",
+    "mesh": "D013242",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27840",
+    "revision": "24/06/2011",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:27987",
+   "titulo": "Desinfección",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "27987",
+    "descriptor": "Desinfección",
+    "definicion": "Neutralización de patógenos mediante el uso de calor, antisépticos, agentes antibacterianos, etc.",
+    "mesh": "D004203",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=27987",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:28477",
+   "titulo": "Infección Hospitalaria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "28477",
+    "descriptor": "Infección Hospitalaria",
+    "definicion": "Cualquier infección que un paciente contrae en una institución de salud.",
+    "mesh": "D003428",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=28477",
+    "revision": "24/02/2017",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:13912",
+   "titulo": "Infección de la Herida Quirúrgica",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "13912",
+    "descriptor": "Infección de la Herida Quirúrgica",
+    "definicion": "Infección que ocurre en el sitio de la incisión quirúrgica.",
+    "mesh": "D013530",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13912",
+    "revision": "09/01/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:15343",
+   "titulo": "Cicatrización de Heridas",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "15343",
+    "descriptor": "Cicatrización de Heridas",
+    "definicion": "Restauración de la integridad del tejido traumatizado.",
+    "mesh": "D014945",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=15343",
+    "revision": "23/06/2016",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:13911",
+   "titulo": "Dehiscencia de la Herida Operatoria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "13911",
+    "descriptor": "Dehiscencia de la Herida Operatoria",
+    "definicion": "Proceso patológico que consiste en la separación parcial o completa de capas de una herida quirúrgica.",
+    "mesh": "D013529",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=13911",
+    "revision": "03/11/1999",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:23500",
+   "titulo": "Cateterismo Urinario",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "23500",
+    "descriptor": "Cateterismo Urinario",
+    "definicion": "El paso de un CATETER en la VEJIGA URINARIA o los riñones.",
+    "mesh": "D014546",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=23500",
+    "revision": "22/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:53683",
+   "titulo": "Signos Vitales",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "53683",
+    "descriptor": "Signos Vitales",
+    "definicion": "Los signos de vida que pueden ser seguidos o medidos, es decir, la frecuencia del pulso, frecuencia respiratoria, temperatura corporal y presión arterial.",
+    "mesh": "D055986",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=53683",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:55111",
+   "titulo": "Presión Arterial",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "55111",
+    "descriptor": "Presión Arterial",
+    "definicion": "La presión de la sangre en las ARTERIAS. Comúnmente se midió con un ESFIGMOMANÓMETRO en la parte superior del brazo que representa la presión arterial en la ARTERIA BRAQUIAL.",
+    "mesh": "D062186",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=55111",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:6493",
+   "titulo": "Frecuencia Cardíaca",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "6493",
+    "descriptor": "Frecuencia Cardíaca",
+    "definicion": "Número de veces que se contraen los VENTRÍCULOS CARDÍACOS por unidad de tiempo, normalmente por minuto.",
+    "mesh": "D006339",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6493",
+    "revision": "30/06/2020",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:53684",
+   "titulo": "Frecuencia Respiratoria",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "53684",
+    "descriptor": "Frecuencia Respiratoria",
+    "definicion": "El número de veces que un organismo respira con los pulmones (RESPIRACIÓN) por unidad de tiempo, generalmente por minuto.",
+    "mesh": "D056152",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=53684",
+    "revision": "17/06/2016",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:1856",
+   "titulo": "Temperatura Corporal",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "1856",
+    "descriptor": "Temperatura Corporal",
+    "definicion": "La medida del nível de calor de un animal, incluyendose el hombre.",
+    "mesh": "D001831",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1856",
+    "revision": "06/07/2009",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:22594",
+   "titulo": "Oximetría",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "22594",
+    "descriptor": "Oximetría",
+    "definicion": "Determinación de la saturación sanguínea de oxígeno-hemoglobina, bien al tomar una muestra y pasarla a través de un oxímetro fotoeléctrico clásico o por electrodos unidos a una parte translúcida del cuerpo humano como los dedos, lóbulos de la oreja o un pliegue cutáneo. Incluye el monitoreo no invasivo del oxígeno por oximetría de pulso.",
+    "mesh": "D010092",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=22594",
+    "revision": "01/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:24697",
+   "titulo": "Escala de Coma de Glasgow",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "24697",
+    "descriptor": "Escala de Coma de Glasgow",
+    "definicion": "Escala que evalúa la respuesta a estímulos en pacientes con lesiones cráneocerebrales. Los parámetros son la apertura de los ojos, la respuesta motora y la respuesta verbal.",
+    "mesh": "D015600",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=24697",
+    "revision": "29/06/2018",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:28838",
+   "titulo": "Triaje",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "28838",
+    "descriptor": "Triaje",
+    "definicion": "La separación y clasificación de pacientes o victimas para determinar prioridad de necesidades y tratamiento en sitio apropiado.",
+    "mesh": "D014218",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=28838",
+    "revision": "29/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:30213",
+   "titulo": "Reanimación Cardiopulmonar",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "30213",
+    "descriptor": "Reanimación Cardiopulmonar",
+    "definicion": "Sustitución artificial de la acción cardíaca y pulmonar según está indicado para el PARO CARDIACO que se produce en el shock eléctrico, AHOGAMIENTO, paro respiratorio y otras causas. Los dos componentes principales de la resucitación cardiopulmonar son la RESPIRACIÓN ARTIFICIAL y el MASAJE CARDIACO a tórax cerrado.",
+    "mesh": "D016887",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=30213",
+    "revision": "30/06/2005",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:6475",
+   "titulo": "Paro Cardíaco",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "6475",
+    "descriptor": "Paro Cardíaco",
+    "definicion": "Cese de las pulsaciones cardíacas o CONTRACCIÓN MIOCÁRDICA. Si tratado en algunos minutos, este paro cardíaco puede ser revertido en la maior parte de las veces al rítmo cardíaco normal y circulación eficaz.",
+    "mesh": "D006323",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6475",
+    "revision": "09/07/2007",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:6622",
+   "titulo": "Hemorragia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "6622",
+    "descriptor": "Hemorragia",
+    "definicion": "Sangramiento o escape de sangre de un vaso.",
+    "mesh": "D006470",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=6622",
+    "revision": "25/07/2001",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:755",
+   "titulo": "Anemia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "755",
+    "descriptor": "Anemia",
+    "definicion": "Reducción en el número de ERITROCITOS circulantes o en la cantidad de HEMOGLOBINA.",
+    "mesh": "D000740",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=755",
+    "revision": "08/07/2013",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:721",
+   "titulo": "Anafilaxia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "721",
+    "descriptor": "Anafilaxia",
+    "definicion": "Reacción de hipersensibilidad aguda producida por la exposición a ANTIGENOS a los que ha estado expuesto previamente. La reacción puede incluir una URTICARIA rápidamente progresiva, insuficiencia respiratoria, colapso vascular, CHOQUE sistémico y muerte.",
+    "mesh": "D000707",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=721",
+    "revision": "10/01/2020",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:29592",
+   "titulo": "Vacunación",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "29592",
+    "descriptor": "Vacunación",
+    "definicion": "Administración de vacunas para estimulación de respuesta inmune del huesped. Esto incluye cualquier preparación que objetive la profilaxis inmunológica activa.",
+    "mesh": "D014611",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=29592",
+    "revision": "26/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:29758",
+   "titulo": "Precauciones Universales",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "29758",
+    "descriptor": "Precauciones Universales",
+    "definicion": "Medidas preventivas prudentes estándares a ser tomadas por el personal profesional y otro personal de la salud que esté en contacto con personas con una enfermedad contagiosa, para evitar contraer la enfermedad por contagio o infección. Las precauciones son especialmente aplicables en el diagnóstico y cuidado de los pacientes de SIDA.",
+    "mesh": "D016635",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=29758",
+    "revision": "08/07/2008",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:56066",
+   "titulo": "Equipo de Protección Personal",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "56066",
+    "descriptor": "Equipo de Protección Personal",
+    "definicion": "Ropa o equipo especializado para protección contra riesgos para la salud. El equipo de protección personal puede incluir MASCARAS, DISPOSITIVOS DE PROTECCIÓN RESPIRATORIA, DISPOSITIVOS DE PROTECCIÓN DE LA CABEZA, DISPOSITIVOS DE PROTECCIÓN DE LOS OJOS, DISPOSITIVOS DE PROTECCIÓN DE LOS OÍDOS, ROPA DE PROTECCIÓN y calzado de protección.",
+    "mesh": "D000067393",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=56066",
+    "revision": "27/05/2020",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:55164",
+   "titulo": "Higiene de las Manos",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "55164",
+    "descriptor": "Higiene de las Manos",
+    "definicion": "Prácticas implicadas en la prevención de la transmisión de enfermedades a mano.",
+    "mesh": "D063373",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=55164",
+    "revision": "24/11/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:54857",
+   "titulo": "Seguridad del Paciente",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "54857",
+    "descriptor": "Seguridad del Paciente",
+    "definicion": "Los esfuerzos para reducir el riesgo, para tratar y reducir los incidentes y accidentes que pueden afectar negativamente a los consumidores de salud.",
+    "mesh": "D061214",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=54857",
+    "revision": null,
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:8675",
+   "titulo": "Errores de Medicación",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "8675",
+    "descriptor": "Errores de Medicación",
+    "definicion": "Errores en la prescripción, preparación o administración de medicamentos lo que hace que el paciente no reciba la droga correcta o la dosis apropiada indicada del medicamento.",
+    "mesh": "D008508",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=8675",
+    "revision": "29/06/2018",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:7435",
+   "titulo": "Consentimiento Informado",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "7435",
+    "descriptor": "Consentimiento Informado",
+    "definicion": "Autorización voluntaria dada por un paciente o sujeto de investigación, con total comprensión de los riesgos que implican los procedimientos diagnósticos y de investigación y el tratamiento médico o quirúrgico.",
+    "mesh": "D007258",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=7435",
+    "revision": "06/07/2009",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:9922",
+   "titulo": "Proceso de Enfermería",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "9922",
+    "descriptor": "Proceso de Enfermería",
+    "definicion": "Todas las actividades de enfermería, incluyendo desde la identificación de necesidades hasta la evaluación (la efectividad de la atención prestada).",
+    "mesh": "D009736",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=9922",
+    "revision": "05/05/1994",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:19270",
+   "titulo": "Diagnóstico de Enfermería",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "19270",
+    "descriptor": "Diagnóstico de Enfermería",
+    "definicion": "Conclusiones provenientes de evaluación de enfermería que establece un perfil del estado de salud del paciente y de lo cual puede ser pedida la intervención de enfermería.",
+    "mesh": "D009733",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=19270",
+    "revision": "05/05/1994",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:10353",
+   "titulo": "Cuidados Paliativos",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "10353",
+    "descriptor": "Cuidados Paliativos",
+    "definicion": "El planteamiento que mejora la calidad de vida de los pacientes (adultos y niños) y sus allegados cuando afrontan problemas inherentes a una enfermedad potencialmente mortal. Previenen y alivian el sufrimiento a través de la identificación temprana, la evaluación y el tratamiento correctos del dolor y otros problemas, sean estos de orden físico, psicosocial o espiritual.",
+    "mesh": "D010166",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=10353",
+    "revision": "26/02/2018",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:19050",
+   "titulo": "Accidentes por Caídas",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "19050",
+    "descriptor": "Accidentes por Caídas",
+    "definicion": "Caídas causadas por resbalar o tropezar y que pueden producir lesión.",
+    "mesh": "D000058",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=19050",
+    "revision": "16/06/2015",
+    "relacion": "equivalente"
+   }
+  },
+  {
+   "id": "decs:1043",
+   "titulo": "Afasia",
+   "definicion": null,
+   "fuente": "DeCS/MeSH, BIREME/OPS/OMS.",
+   "decs": {
+    "id": "1043",
+    "descriptor": "Afasia",
+    "definicion": "Trastorno cognitivo que se caracteriza por un defecto en la capacidad de comprender o expresar el lenguaje en sus formas escrita o hablada. Esta afección se origina por enfermedades que afectan las áreas del lenguaje del hemisferio dominante. Las características clínicas se utilizan para clasificar los diversos subtipos de esta enfermedad. La categoría general incluye formas receptiva, expresiva, y mixtas de afasia.",
+    "mesh": "D001037",
+    "url": "https://decs.bvsalud.org/es/ths/resource/?id=1043",
+    "revision": "27/05/2020",
+    "relacion": "equivalente"
+   }
+  }
+ ],
+ "tablas": [
+  {
+   "id": "cateter",
+   "titulo": "Cómo elegir el catéter adecuado",
+   "imagen": "assets/estudio/tablas/cateter.webp",
+   "palabrasClave": "cateter calibre venoclisis",
+   "fuente": "Código de colores por calibre: ISO 10555-5. Usos: material de estudio del equipo PoliSafe."
+  },
+  {
+   "id": "5_momentos",
+   "titulo": "Los 5 momentos para la higiene de las manos",
+   "imagen": "assets/estudio/tablas/5_momentos.webp",
+   "palabrasClave": "5 momentos higiene manos",
+   "fuente": "Acción Esencial 5 para la Seguridad del Paciente (DOF, 16/06/2023), con base en la OMS."
+  },
+  {
+   "id": "imc",
+   "titulo": "Índice de masa corporal",
+   "imagen": "assets/estudio/tablas/imc.webp",
+   "palabrasClave": "imc peso talla",
+   "fuente": "NOM-008-SSA3-2017 y clasificación de la OMS."
+  },
+  {
+   "id": "lavado_manos",
+   "titulo": "¿Cómo lavarse las manos?",
+   "imagen": "assets/estudio/tablas/lavado_manos.webp",
+   "palabrasClave": "lavado manos higiene",
+   "fuente": "Técnica de la OMS citada en la Acción Esencial 5 (DOF, 16/06/2023)."
+  }
+ ],
+ "normas": [
+  {
+   "id": "NOM-022-SSA3-2012",
+   "tipo": "nom",
+   "clave": "NOM-022-SSA3-2012",
+   "titulo": "Que instituye las condiciones para la administración de la terapia de infusión en los Estados Unidos Mexicanos.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Medicamentos y terapia de infusión",
+   "publicacion": "18/09/2012",
+   "entradaVigor": "17/11/2012",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/4875/salud3a14_C/salud3a14_C.html",
+   "imagen": "assets/estudio/normas/1.webp",
+   "infografia": "equipo",
+   "objetivo": "Establecer los criterios para la instalación, mantenimiento, vigilancia y retiro de vías de acceso venoso periférico y central, así como, los requisitos que deberá cumplir el personal de salud que participa en la administración de la terapia de infusión intravenosa con fines profilácticos, diagnósticos y terapéuticos, para disminuir las complicaciones y costos asociados a esta práctica.",
+   "puntos": [
+    {
+     "numeral": "5",
+     "etiqueta": "Personal que aplica la terapia",
+     "texto": "La terapia de infusión intravenosa preferentemente deberá ser aplicada por personal profesional de salud, en caso de que no se cuente con personal profesional podrán aplicar la terapia de infusión los técnicos del área de la salud."
+    },
+    {
+     "numeral": "6.1.1",
+     "etiqueta": "Verificación de insumos",
+     "texto": "Todos los insumos necesarios para la terapia de infusión intravenosa deben de estar sellados en su envase primario y antes de utilizar deben verificar los siguientes datos: estéril, desechable, libre de pirógenos, la fecha de caducidad, el número de lote y los datos del fabricante."
+    },
+    {
+     "numeral": "6.7.1.3",
+     "etiqueta": "Prescripción médica por escrito",
+     "texto": "Contar con la prescripción médica por escrito, la cual debe señalar: los datos del paciente, el nombre del médico que la prescribe, la fecha, la hora, la solución o sustancia, el tiempo en que se debe infundir, la frecuencia y la vía."
+    },
+    {
+     "numeral": "6.10.2",
+     "etiqueta": "Técnica aséptica",
+     "texto": "Se deberán preparar y administrar las soluciones y medicamentos con técnica aséptica."
+    },
+    {
+     "numeral": "7.1",
+     "etiqueta": "Información al paciente",
+     "texto": "Se debe proporcionar información al paciente y a su familiar sobre el procedimiento, sus riesgos, cuidados, así como su participación."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "6.2.2",
+     "etiqueta": "Etiquetado del contenedor",
+     "texto": "Antes de iniciar la administración, el personal de salud debe etiquetar el contenedor de la solución con los siguientes datos: nombre del paciente, número de cama, fecha, nombre de la solución intravenosa, hora de inicio, hora de término, frecuencia y nombre completo de quién la instaló."
+    },
+    {
+     "numeral": "6.11.1",
+     "etiqueta": "Vigilancia del sitio de inserción",
+     "texto": "El personal de salud debe monitorizar la administración de la terapia de infusión intravenosa y evaluar el sitio de inserción como mínimo una vez por turno."
+    },
+    {
+     "numeral": "7.3",
+     "etiqueta": "Registro de la instalación",
+     "texto": "La instalación de la terapia debe ser registrada en el expediente clínico con los siguientes datos: fecha, hora, tipo y calibre del catéter, nombre anatómico del sitio de punción, número de intentos e incidentes ocurridos, así como el nombre completo de la persona que instaló."
+    },
+    {
+     "numeral": "7.7",
+     "etiqueta": "Registro del retiro",
+     "texto": "Al retiro del catéter deben registrarse en el expediente los siguientes datos: fecha, hora, motivo del retiro, integridad del catéter, condiciones del sitio de punción, si se tomó cultivo y el nombre completo de la persona que retiró el catéter."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-022-SSA3-2012.json"
+  },
+  {
+   "id": "NOM-072-SSA1-2012",
+   "tipo": "nom",
+   "clave": "NOM-072-SSA1-2012",
+   "titulo": "Etiquetado de medicamentos y de remedios herbolarios.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Medicamentos y terapia de infusión",
+   "publicacion": "21/11/2012",
+   "entradaVigor": "01/04/2013",
+   "estado": "vigente",
+   "avisos": [
+    "Hay un proyecto que la sustituiría: PROY-NOM-072-SSA1-2025, con aviso de consulta pública en el DOF del 05/01/2026. Mientras no se publique la norma definitiva, sigue vigente esta."
+   ],
+   "url": "https://dof.gob.mx/normasOficiales/4940/SALUD/SALUD.html",
+   "imagen": "assets/estudio/normas/2.webp",
+   "infografia": "equipo",
+   "objetivo": "Establecer los requisitos que deberá contener el etiquetado de los medicamentos y los remedios herbolarios que se comercializan o suministran en el territorio nacional, sus instructivos y el etiquetado de las muestras médicas de los mismos.",
+   "puntos": [
+    {
+     "numeral": "5.2",
+     "etiqueta": "Denominación genérica legible",
+     "texto": "La denominación genérica y la denominación distintiva o marca de los medicamentos, deberán estar impresas en forma legible y color contrastante con respecto al fondo, tanto en el envase primario como en el secundario"
+    },
+    {
+     "numeral": "5.14",
+     "etiqueta": "Número de lote",
+     "texto": "En todas las unidades de una producción se deberá expresar el lote en términos tales como: \"Lote___” o “Lot. ___\"."
+    },
+    {
+     "numeral": "5.16.1",
+     "etiqueta": "Lote y caducidad",
+     "texto": "El lote y la fecha de caducidad deberán figurar en forma independiente tanto en envase primario como en el secundario."
+    },
+    {
+     "numeral": "6.1.6.2",
+     "etiqueta": "Reporte de reacciones adversas",
+     "texto": "“Reporte las sospechas de reacción adversa al correo: farmacovigilancia@cofepris.gob.mx”."
+    },
+    {
+     "numeral": "7.5",
+     "etiqueta": "Instructivo en lenguaje claro",
+     "texto": "Para los medicamentos o remedios herbolarios que requieren de instructivo, inserto o prospecto, éste deberá estar redactado en lenguaje claro y sencillo"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.10",
+     "etiqueta": "Vía de administración",
+     "texto": "Deberá expresarse aquella que se autorizó al otorgarse el registro sanitario del medicamento, conforme a lo establecido en la FEUM, como sigue: “Vía de administración:____”, y se deberá señalar la que corresponda sin abreviaturas"
+    },
+    {
+     "numeral": "5.10.2.9",
+     "etiqueta": "Soluciones parenterales",
+     "texto": "En las soluciones para administrar por vía parenteral se deberá expresar, en su caso: \"Si no se administra todo el producto, deséchese el sobrante”; “No se administre si la solución no es transparente, si contiene partículas en suspensión o sedimentos\";"
+    },
+    {
+     "numeral": "5.11.3",
+     "etiqueta": "Conservación en refrigeración",
+     "texto": "Cuando se requiera de refrigeración, se indicará el intervalo de temperatura, de acuerdo a lo que establece la FEUM, y la leyenda: \"No se congele\", cuando proceda."
+    },
+    {
+     "numeral": "5.10.2.11",
+     "etiqueta": "Dilución previa",
+     "texto": "En las soluciones que deben diluirse antes de su administración deberá expresar: “Dilúyase con ____ al volumen indicado\" y deberá referirse al diluyente y volumen recomendados."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-072-SSA1-2012.json"
+  },
+  {
+   "id": "NOM-073-SSA1-2015",
+   "tipo": "nom",
+   "clave": "NOM-073-SSA1-2015",
+   "titulo": "Estabilidad de fármacos y medicamentos, así como de remedios herbolarios.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Medicamentos y terapia de infusión",
+   "publicacion": "07/06/2016",
+   "entradaVigor": "04/12/2016",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/6039/salud3a12_C/salud3a12_C.html",
+   "imagen": "assets/estudio/normas/3.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma establece las especificaciones y los requisitos de los estudios de estabilidad, su diseño y ejecución, que deben de efectuarse a los fármacos, medicamentos, así como a los remedios herbolarios para uso humano, que se comercialicen en territorio nacional, así como aquellos medicamentos con fines de investigación.",
+   "puntos": [
+    {
+     "numeral": "4.1.8",
+     "etiqueta": "Concepto de estabilidad",
+     "texto": "Estabilidad: a la capacidad de un fármaco, un medicamento o un remedio herbolario contenido en un sistema contenedor-cierre de determinado material, para mantener, durante el tiempo de almacenamiento y uso, las especificaciones de calidad establecidas."
+    },
+    {
+     "numeral": "4.1.9",
+     "etiqueta": "Estudios de estabilidad",
+     "texto": "Estudios de estabilidad: a las pruebas que se efectúan a un fármaco, a un medicamento o a un remedio herbolario por un tiempo determinado, bajo la influencia de temperatura, humedad o luz en el envase que lo contiene"
+    },
+    {
+     "numeral": "4.1.26",
+     "etiqueta": "Periodo de caducidad",
+     "texto": "Periodo de caducidad o vida útil: al tiempo durante el cual un medicamento o un remedio herbolario contenido en el sistema contenedor-cierre autorizado y conservado en las condiciones indicadas en la etiqueta, permanece dentro de las especificaciones establecidas."
+    },
+    {
+     "numeral": "10.8",
+     "etiqueta": "Vida útil tentativa",
+     "texto": "Si los estudios de estabilidad presentados para la obtención del registro o clave alfanumérica, bajo las condiciones establecidas en este documento son satisfactorios, se otorgará una vida útil tentativa de 24 meses."
+    },
+    {
+     "numeral": "10.24",
+     "etiqueta": "Buenas prácticas de laboratorio",
+     "texto": "Todos los análisis que se lleven a cabo durante el estudio de estabilidad, deben hacerse conforme a las Buenas Prácticas de Laboratorio incluidas como Apéndice V de la FEUM y reportarse con métodos indicativos de estabilidad."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "4.1.2",
+     "etiqueta": "Condiciones de almacenamiento",
+     "texto": "Condiciones de almacenamiento: a las que se indican en la etiqueta del fármaco, del medicamento o del remedio herbolario."
+    },
+    {
+     "numeral": "4.1.12",
+     "etiqueta": "Excursión de temperatura",
+     "texto": "Excursión de temperatura: a la condición en que los medicamentos son expuestos a temperaturas fuera de los límites especificados en la cadena de frío, y se pone de manifiesto a través del registro continuo de temperatura, durante los procesos de producción, almacenamiento y transportación."
+    },
+    {
+     "numeral": "10.5",
+     "etiqueta": "Mezcla de medicamentos",
+     "texto": "En el caso de medicamentos en los que el fabricante indique que para su administración pueden o deben ser mezclados con otro medicamento u otra sustancia, se debe llevar a cabo el estudio de estabilidad de la mezcla obtenida"
+    },
+    {
+     "numeral": "4.1.16",
+     "etiqueta": "Fecha de caducidad",
+     "texto": "Fecha de caducidad: a la que indica el fin del periodo de vida útil del medicamento o remedio herbolario."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-073-SSA1-2015.json"
+  },
+  {
+   "id": "NOM-045-SSA2-2005",
+   "tipo": "nom",
+   "clave": "NOM-045-SSA2-2005",
+   "titulo": "Para la vigilancia epidemiológica, prevención y control de las infecciones nosocomiales.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "20/11/2009",
+   "entradaVigor": "21/11/2009",
+   "estado": "vigente",
+   "avisos": [
+    "Hay un proyecto que la sustituiría: PROY-NOM-045-SSA-2026, con aviso de consulta pública en el DOF del 20/04/2026. Mientras no se publique la norma definitiva, sigue vigente esta."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5120943&fecha=20/11/2009",
+   "imagen": "assets/estudio/normas/4.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma Oficial Mexicana establece los criterios que deberán seguirse para la prevención, vigilancia y control epidemiológicos de las infecciones nosocomiales que afectan la salud de la población usuaria de los servicios médicos prestados por los hospitales.",
+   "puntos": [
+    {
+     "numeral": "4.1",
+     "etiqueta": "Sistema de vigilancia",
+     "texto": "La vigilancia epidemiológica de infecciones nosocomiales deberá realizarse a través de un sistema que unifique criterios para la recopilación dinámica, sistemática y continua de la información generada por cada unidad de atención médica"
+    },
+    {
+     "numeral": "4.3",
+     "etiqueta": "Confidencialidad de la información",
+     "texto": "Su manejo observará los principios de confidencialidad para proteger la identidad individual de los pacientes."
+    },
+    {
+     "numeral": "5.4",
+     "etiqueta": "Notificación obligatoria",
+     "texto": "Serán objeto de notificación obligatoria mensual, las enfermedades mencionadas en el Capítulo 6 de esta NOM, cuando cumplan con los criterios de caso de infección nosocomial."
+    },
+    {
+     "numeral": "7.3.14",
+     "etiqueta": "Funciones del CODECIN",
+     "texto": "El CODECIN será el órgano consultor técnico del hospital en los aspectos relacionados con la vigilancia epidemiológica, prevención y control de las infecciones nosocomiales así como de la evaluación del uso de antibióticos y la resistencia antimicrobiana en el hospital."
+    },
+    {
+     "numeral": "10.6.5.1",
+     "etiqueta": "Precauciones estándar",
+     "texto": "Desde el primer contacto con el paciente y en todas las áreas del hospital debe cumplirse con las precauciones estándar y contar con tarjetones en los que se especifiquen los cuidados necesarios para precauciones específicas"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "10.6.1.1",
+     "etiqueta": "Higiene de manos",
+     "texto": "Todo el personal de salud al entrar en contacto con el ambiente hospitalario debe lavarse las manos con agua corriente y jabón, y secarse con toallas desechables. Se debe realizar higiene de manos antes y después de revisar a cada paciente y/o al realizar algún procedimiento."
+    },
+    {
+     "numeral": "10.6.3.1",
+     "etiqueta": "Rotulación del equipo de infusión",
+     "texto": "El equipo de infusión deberá ser rotulado con la fecha, hora y nombre de la persona que lo instaló. Tanto el equipo de infusión como el catéter periférico deben cambiarse cada 72 horas o antes, en caso de sospecha de contaminación."
+    },
+    {
+     "numeral": "10.6.2.4",
+     "etiqueta": "Sonda urinaria",
+     "texto": "Una vez instalada la sonda y conectada al sistema de drenaje no se debe desconectar hasta su retiro. Debe de rotularse la fecha de instalación."
+    },
+    {
+     "numeral": "10.6.4.6",
+     "etiqueta": "Aspiración de secreciones",
+     "texto": "En cada episodio de aspiración de secreciones debe utilizarse material y técnica estéril."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-045-SSA2-2005.json"
+  },
+  {
+   "id": "NOM-017-SSA2-2012",
+   "tipo": "nom",
+   "clave": "NOM-017-SSA2-2012",
+   "titulo": "Para la vigilancia epidemiológica.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "19/02/2013",
+   "entradaVigor": "20/02/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5033/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/5.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma Oficial Mexicana establece los criterios, especificaciones y directrices de operación del Sistema Nacional de Vigilancia Epidemiológica, para la recolección sistemática, continua, oportuna y confiable de información relevante y necesaria sobre las condiciones de salud de la población y sus determinantes.",
+   "puntos": [
+    {
+     "numeral": "4.1",
+     "etiqueta": "Definición de vigilancia",
+     "texto": "Mediante la vigilancia epidemiológica se realiza la recolección sistemática, continúa, oportuna y confiable de información necesaria sobre las condiciones de salud de la población y sus determinantes, su análisis e interpretación para la toma de decisiones y su difusión."
+    },
+    {
+     "numeral": "4.2",
+     "etiqueta": "Órgano rector del SINAVE",
+     "texto": "La Secretaría de Salud es el órgano rector del SINAVE y funge como la instancia responsable de recopilar, procesar y difundir toda la información generada por el SNS."
+    },
+    {
+     "numeral": "6.1",
+     "etiqueta": "Componentes de la vigilancia",
+     "texto": "Conforme a esta Norma los componentes de la vigilancia epidemiológica son: vigilancia de la morbilidad, vigilancia de la mortalidad, vigilancia especial, vigilancia de emergencias en salud pública y vigilancia internacional."
+    },
+    {
+     "numeral": "6.2.4",
+     "etiqueta": "Clasificación de casos",
+     "texto": "Para los efectos de esta Norma, los casos objeto de notificación se clasifican en confirmado, probable y sospechoso de acuerdo con lo establecido en los numerales 3.1.6, 3.1.8 y 3.1.9 respectivamente."
+    },
+    {
+     "numeral": "6.2.7",
+     "etiqueta": "Periodicidad de la notificación",
+     "texto": "La periodicidad de la notificación de la vigilancia epidemiológica es inmediata, diaria y semanal de acuerdo a lo señalado en el numeral 8 de esta Norma."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "6.2.2",
+     "etiqueta": "Responsable de notificar",
+     "texto": "El médico o personal de salud que diagnóstica el caso es el responsable de realizar la notificación a la instancia de salud correspondiente."
+    },
+    {
+     "numeral": "8.1.5",
+     "etiqueta": "Notificación y toma de muestra",
+     "texto": "La notificación, llenado del estudio epidemiológico y aseguramiento de toma de muestra es responsabilidad del médico tratante."
+    },
+    {
+     "numeral": "7.4",
+     "etiqueta": "Infecciones nosocomiales",
+     "texto": "La vigilancia de las infecciones nosocomiales se debe realizar acorde a la Norma Oficial Mexicana, citada en el numeral 2.31 del apartado de Referencias."
+    },
+    {
+     "numeral": "13.2",
+     "etiqueta": "Capacitación del personal",
+     "texto": "El personal que desarrolle actividades de vigilancia epidemiológica debe contar con una inducción al puesto y una capacitación anual en materia de vigilancia epidemiológica."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-017-SSA2-2012.json"
+  },
+  {
+   "id": "NOM-087-ECOL-SSA1-2002",
+   "tipo": "nom",
+   "clave": "NOM-087-ECOL-SSA1-2002",
+   "titulo": "Protección ambiental - Salud ambiental - Residuos peligrosos biológico-infecciosos - Clasificación y especificaciones de manejo.",
+   "emisor": "Secretaría de Medio Ambiente y Recursos Naturales y Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "17/02/2003",
+   "entradaVigor": "18/04/2003",
+   "estado": "vigente",
+   "avisos": [
+    "En el Catálogo Mexicano de Normas aparece como NOM-087-SEMARNAT-SSA1-2002."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=704675&fecha=17/02/2003",
+   "imagen": "assets/estudio/normas/6.webp",
+   "infografia": "equipo",
+   "objetivo": "La presente Norma Oficial Mexicana establece la clasificación de los residuos peligrosos biológico-infecciosos así como las especificaciones para su manejo.",
+   "puntos": [
+    {
+     "numeral": "6.2.1",
+     "etiqueta": "Separación y envasado",
+     "texto": "En las áreas de generación de los establecimientos generadores, se deberán separar y envasar todos los residuos peligrosos biológico-infecciosos, de acuerdo con sus características físicas y biológicas infecciosas, conforme a la tabla 2 de esta Norma Oficial Mexicana."
+    },
+    {
+     "numeral": "6.3.1",
+     "etiqueta": "Almacenamiento temporal",
+     "texto": "Se deberá destinar un área para el almacenamiento temporal de los residuos peligrosos biológico-infecciosos."
+    },
+    {
+     "numeral": "6.3.2",
+     "etiqueta": "Contenedores rotulados",
+     "texto": "Los residuos peligrosos biológico-infecciosos envasados deberán almacenarse en contenedores metálicos o de plástico con tapa y ser rotulados con el símbolo universal de riesgo biológico, con la leyenda RESIDUOS PELIGROSOS BIOLOGICO-INFECCIOSOS ."
+    },
+    {
+     "numeral": "6.5.1",
+     "etiqueta": "Tratamiento de residuos",
+     "texto": "Los residuos peligrosos biológico-infecciosos deben ser tratados por métodos físicos o químicos que garanticen la eliminación de microorganismos patógenos y deben hacerse irreconocibles para su disposición final en los sitios autorizados."
+    },
+    {
+     "numeral": "6.7",
+     "etiqueta": "Programa de contingencias",
+     "texto": "Los establecimientos generadores de residuos peligrosos biológico-infecciosos y los prestadores de servicios deberán contar con un programa de contingencias en caso de derrames, fugas o accidentes relacionados con el manejo de estos residuos."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "4.4.2",
+     "etiqueta": "Materiales de curación",
+     "texto": "Los materiales de curación, empapados, saturados, o goteando sangre o cualquiera de los siguientes fluidos corporales: líquido sinovial, líquido pericárdico, líquido pleural, líquido Céfalo-Raquídeo o líquido peritoneal."
+    },
+    {
+     "numeral": "4.5.1",
+     "etiqueta": "Objetos punzocortantes",
+     "texto": "Los que han estado en contacto con humanos o animales o sus muestras biológicas durante el diagnóstico y tratamiento, únicamente: tubos capilares, navajas, lancetas, agujas de jeringas desechables, agujas hipodérmicas, de sutura, de acupuntura y para tatuaje, bisturís y estiletes de catéter"
+    },
+    {
+     "numeral": "6.2.1",
+     "etiqueta": "Llenado de bolsas",
+     "texto": "Las bolsas se llenarán al 80 por ciento (80%) de su capacidad, cerrándose antes de ser transportadas al sitio de almacenamiento temporal y no podrán ser abiertas o vaciadas."
+    },
+    {
+     "numeral": "6.2.2",
+     "etiqueta": "Recipientes para punzocortantes",
+     "texto": "Los recipientes para los residuos peligrosos punzocortantes y líquidos se llenarán hasta el 80% (ochenta por ciento) de su capacidad, asegurándose los dispositivos de cierre y no deberán ser abiertos o vaciados."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-087-ECOL-SSA1-2002.json"
+  },
+  {
+   "id": "NOM-004-SSA3-2012",
+   "tipo": "nom",
+   "clave": "NOM-004-SSA3-2012",
+   "titulo": "Del expediente clínico.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Práctica de enfermería y registros",
+   "publicacion": "15/10/2012",
+   "entradaVigor": "13/12/2012",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5272787&fecha=15/10/2012",
+   "imagen": "assets/estudio/normas/7.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta norma, establece los criterios científicos, éticos, tecnológicos y administrativos obligatorios en la elaboración, integración, uso, manejo, archivo, conservación, propiedad, titularidad y confidencialidad del expediente clínico.",
+   "puntos": [
+    {
+     "numeral": "5.1",
+     "etiqueta": "Integración del expediente",
+     "texto": "Los prestadores de servicios de atención médica de los establecimientos de carácter público, social y privado, estarán obligados a integrar y conservar el expediente clínico"
+    },
+    {
+     "numeral": "5.3",
+     "etiqueta": "Obligación del personal",
+     "texto": "El médico, así como otros profesionales o personal técnico que intervengan en la atención del paciente, tendrán la obligación de cumplir las disposiciones de esta norma, en forma ética y profesional."
+    },
+    {
+     "numeral": "5.4",
+     "etiqueta": "Conservación del expediente",
+     "texto": "Por lo anterior, por tratarse de documentos elaborados en interés y beneficio del paciente, deberán ser conservados por un periodo mínimo de 5 años, contados a partir de la fecha del último acto médico."
+    },
+    {
+     "numeral": "5.7",
+     "etiqueta": "Confidencialidad del expediente",
+     "texto": "En los establecimientos para la atención médica, la información contenida en el expediente clínico será manejada con discreción y confidencialidad, por todo el personal del establecimiento"
+    },
+    {
+     "numeral": "5.4",
+     "etiqueta": "Titularidad del paciente",
+     "texto": "Sin perjuicio de lo anterior, el paciente en tanto aportante de la información y beneficiario de la atención médica, tiene derechos de titularidad sobre la información para la protección de su salud, así como para la protección de la confidencialidad de sus datos"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "9.1",
+     "etiqueta": "Hoja de enfermería",
+     "texto": "Deberá elaborarse por el personal en turno, según la frecuencia establecida por las normas internas del establecimiento y las órdenes del médico"
+    },
+    {
+     "numeral": "9.1.3",
+     "etiqueta": "Ministración de medicamentos",
+     "texto": "Ministración de medicamentos, fecha, hora, cantidad y vía prescrita;"
+    },
+    {
+     "numeral": "5.10",
+     "etiqueta": "Identificación de las notas",
+     "texto": "Todas las notas en el expediente clínico deberán contener fecha, hora y nombre completo de quien la elabora, así como la firma autógrafa, electrónica o digital, según sea el caso;"
+    },
+    {
+     "numeral": "5.11",
+     "etiqueta": "Redacción de las notas",
+     "texto": "Las notas en el expediente deberán expresarse en lenguaje técnico-médico, sin abreviaturas, con letra legible, sin enmendaduras ni tachaduras y conservarse en buen estado."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-004-SSA3-2012.json"
+  },
+  {
+   "id": "NOM-019-SSA3-2013",
+   "tipo": "nom",
+   "clave": "NOM-019-SSA3-2013",
+   "titulo": "Para la práctica de enfermería en el Sistema Nacional de Salud.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Práctica de enfermería y registros",
+   "publicacion": "02/09/2013",
+   "entradaVigor": "01/11/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5196/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/8.webp",
+   "infografia": "equipo",
+   "objetivo": "Establecer las características y especificaciones mínimas para la prestación del servicio de enfermería en los establecimientos de atención médica del Sistema Nacional de Salud, así como para la prestación de dicho servicio que en forma independiente otorgan las personas físicas con base en su formación académica.",
+   "puntos": [
+    {
+     "numeral": "5.1",
+     "etiqueta": "Ámbito de prestación",
+     "texto": "La prestación del servicio de enfermería se realizará en establecimientos para la atención médica en los sectores público, social y privado del Sistema Nacional de Salud, así como los que otorgan servicios en forma independiente"
+    },
+    {
+     "numeral": "5.2",
+     "etiqueta": "Actividades por grado académico",
+     "texto": "Las actividades mencionadas en los puntos 6.1 al 6.7 de esta norma, están ordenadas según su grado de complejidad, las mismas deberán ser realizadas por el personal de enfermería que se menciona en cada punto"
+    },
+    {
+     "numeral": "5.3",
+     "etiqueta": "Reconocimiento de estudios",
+     "texto": "En los establecimientos del Sistema Nacional de Salud, así como, para los que prestan sus servicios de forma independiente, sólo se reconocerán los estudios de formación y capacitación en enfermería de las instituciones pertenecientes al Sistema Educativo Nacional"
+    },
+    {
+     "numeral": "5.7.3",
+     "etiqueta": "Funciones fuera de competencia",
+     "texto": "Evitar emplear al personal de enfermería en funciones fuera de sus competencias y capacidades, salvo en caso de urgencia con la condición de que sea: a título provisional; que cuente con la experiencia suficiente;"
+    },
+    {
+     "numeral": "5.7.1",
+     "etiqueta": "Certificación profesional",
+     "texto": "Procurar que el personal de enfermería cuente con la certificación profesional vigente expedida por los organismos colegiados que han obtenido el reconocimiento de idoneidad, expedido por el Consejo Consultivo de Certificación Profesional."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.8.1",
+     "etiqueta": "Verificación del equipo",
+     "texto": "Verificar oportunamente la existencia y funcionamiento óptimo del equipo que se utiliza para proporcionar el cuidado de enfermería y, en su caso, reportar los faltantes y las fallas que representen un riesgo para los usuarios de los servicios de salud o para el propio personal."
+    },
+    {
+     "numeral": "5.8.2",
+     "etiqueta": "Aplicación de las normas",
+     "texto": "Conocer y aplicar, cuando corresponda, las Normas Oficiales Mexicanas citadas en el apartado 3 de esta norma, de acuerdo a su ámbito de su competencia;"
+    },
+    {
+     "numeral": "5.8.3",
+     "etiqueta": "Actualización de conocimientos",
+     "texto": "Asumir el compromiso responsable de actualizar y aplicar los conocimientos científicos, técnicos, éticos y humanísticos de acuerdo a su ámbito de competencia;"
+    },
+    {
+     "numeral": "6.4",
+     "etiqueta": "Licenciado en enfermería",
+     "texto": "La prestación de los servicios de enfermería con predominio de acciones independientes derivadas de la aplicación del proceso de atención de enfermería en los ámbitos hospitalario o comunitario, corresponde al licenciado en enfermería"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-019-SSA3-2013.json"
+  },
+  {
+   "id": "NOM-036-SSA2-2012",
+   "tipo": "nom",
+   "clave": "NOM-036-SSA2-2012",
+   "titulo": "Prevención y control de enfermedades. Aplicación de vacunas, toxoides, faboterápicos (sueros) e inmunoglobulinas en el humano.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "28/09/2012",
+   "entradaVigor": "29/09/2012",
+   "estado": "vigente",
+   "avisos": [
+    "Incluye la aclaración publicada en el DOF el 12/10/2012."
+   ],
+   "url": "https://dof.gob.mx/normasOficiales/4894/SALUD/SALUD.html",
+   "imagen": "assets/estudio/normas/9.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma tiene por objeto homologar los criterios y procedimientos para la aplicación, manejo, conservación de los biológicos y prestación de los servicios de vacunación, así como para el desarrollo de las actividades en materia de control, eliminación y erradicación de las enfermedades que se evitan mediante la vacunación.",
+   "puntos": [
+    {
+     "numeral": "5.2",
+     "etiqueta": "Vacunas y grupos de edad",
+     "texto": "Las vacunas aplicadas rutinariamente en el país, así como los grupos de edad y riesgo que las recibirán, serán las establecidas en los lineamientos emitidos por la Secretaría de Salud, de acuerdo con las disposiciones jurídicas aplicables."
+    },
+    {
+     "numeral": "5.7",
+     "etiqueta": "Requisitos de red de frío",
+     "texto": "Todas las personas físicas o morales que administren vacunas están obligadas a cumplir con los requisitos sanitarios y de Red de Frío de acuerdo a lo establecido con esta Norma y lo dispuesto en el Manual de Vacunación disponible en www.censia.salud.gob.mx."
+    },
+    {
+     "numeral": "5.11",
+     "etiqueta": "Esquema básico de vacunación",
+     "texto": "El esquema básico de vacunación debe completarse en los niños a los 12 meses de edad; cuando esto no sea posible, se ampliará el periodo de vacunación, hasta los 4 años con 11 meses de edad."
+    },
+    {
+     "numeral": "9.1",
+     "etiqueta": "Vigilancia de cadena de frío",
+     "texto": "Las instituciones y servicios de salud de los sectores público, social y privado en el país que integran el SNS, deberán vigilar el funcionamiento adecuado de la red o cadena de frío, en todas sus unidades de salud y áreas administrativas o de distribución"
+    },
+    {
+     "numeral": "12.1",
+     "etiqueta": "Notificación de eventos asociados",
+     "texto": "Las instituciones y servicios de salud públicos, privados y sociales que integran el SNS, incluyendo a todo el personal que administre productos biológicos, están obligados a notificar la presencia de eventos temporalmente asociados a la vacunación, clasificados como moderados o graves"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.4",
+     "etiqueta": "Aplicación y registro",
+     "texto": "Todos los productos biológicos deben ser aplicados por personal capacitado, mismo que deberá entregar a cada beneficiario el comprobante específico o registrarlo en la Cartilla Nacional de Salud correspondiente"
+    },
+    {
+     "numeral": "5.10",
+     "etiqueta": "Sitio de aplicación",
+     "texto": "Los biológicos motivo de esta norma no deben aplicarse en la región glútea en ningún grupo etario."
+    },
+    {
+     "numeral": "9.5",
+     "etiqueta": "Registro de temperatura",
+     "texto": "El registro de la temperatura interna de las unidades refrigerantes (cámaras frías o refrigeradores) y en termos se registrará como mínimo dos veces durante la jornada laboral o más frecuentemente si se cuenta con termómetros en las unidades refrigerantes los 365 días del año."
+    },
+    {
+     "numeral": "11.7",
+     "etiqueta": "Revisión de la cartilla",
+     "texto": "El personal de salud, enfermera y/o promotor de las instituciones públicas, privadas y sociales que integran el SNS, en cada consulta revisará la Cartilla Nacional de Salud, identificando y aplicando las vacunas correspondientes, de acuerdo con el esquema de vacunación y la edad"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-036-SSA2-2012.json"
+  },
+  {
+   "id": "NOM-006-SSA2-2013",
+   "tipo": "nom",
+   "clave": "NOM-006-SSA2-2013",
+   "titulo": "Para la prevención y control de la tuberculosis.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "13/11/2013",
+   "entradaVigor": "14/11/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5249/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/10.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma tiene por objeto establecer y uniformar los criterios, procedimientos y lineamientos para la prevención, detección, diagnóstico, tratamiento y atención integral de la tuberculosis, así como, las medidas de control necesarias en materia de salud pública",
+   "puntos": [
+    {
+     "numeral": "5.3.4",
+     "etiqueta": "Notificación de casos",
+     "texto": "La tuberculosis meníngea es de notificación inmediata dentro de las siguientes veinticuatro horas de que se tenga conocimiento del caso y debe acompañarse del estudio epidemiológico correspondiente;"
+    },
+    {
+     "numeral": "6.5.2",
+     "etiqueta": "Búsqueda de casos",
+     "texto": "La búsqueda de casos se debe realizar entre consultantes sintomáticos respiratorios, sin importar el motivo de la demanda de consulta, entre los contactos de un caso de tuberculosis"
+    },
+    {
+     "numeral": "6.5.4.2",
+     "etiqueta": "Baciloscopia seriada",
+     "texto": "En todos los sintomáticos respiratorios o casos probables, se debe realizar en tres muestras de expectoración seriadas. La fijación del frotis debe realizarse exclusivamente en el laboratorio o por personal capacitado por el laboratorio correspondiente."
+    },
+    {
+     "numeral": "6.6.4",
+     "etiqueta": "Tratamiento primario acortado",
+     "texto": "El tratamiento primario acortado incluye los siguientes fármacos: H, R, Z y E y se aplica a todo caso diagnosticado por primera vez."
+    },
+    {
+     "numeral": "6.9.1",
+     "etiqueta": "Estudio de contactos",
+     "texto": "Se realizará a todos los contactos inmediatamente después de conocerse el caso confirmado de tuberculosis y durante el tratamiento; se deben realizar los siguientes estudios: clínico y epidemiológico."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "6.6.10",
+     "etiqueta": "Tratamiento supervisado",
+     "texto": "El personal de salud o personal capacitado por el mismo, debe vigilar la administración y deglución de cada dosis, de acuerdo a lo establecido en esta Norma."
+    },
+    {
+     "numeral": "6.6.8",
+     "etiqueta": "Riesgo de abandono",
+     "texto": "A todos los pacientes con tuberculosis confirmada se deberá realizar evaluación de riesgo de abandono antes de iniciar el tratamiento para tomar las medidas pertinentes para garantizar el apego al tratamiento."
+    },
+    {
+     "numeral": "6.2.1.1",
+     "etiqueta": "Identificación de sintomáticos",
+     "texto": "Identificar oportunamente a las personas con sintomatología respiratoria en salas de espera y servicios de urgencias antes de ingresar a hospitalización."
+    },
+    {
+     "numeral": "6.2.3.2",
+     "etiqueta": "Protección respiratoria",
+     "texto": "Asegurar el uso de respiradores N95 entre los trabajadores de salud y los familiares que se encuentran en áreas de alto riesgo de transmisión de TB."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-006-SSA2-2013.json"
+  },
+  {
+   "id": "NOM-253-SSA1-2012",
+   "tipo": "nom",
+   "clave": "NOM-253-SSA1-2012",
+   "titulo": "Para la disposición de sangre humana y sus componentes con fines terapéuticos.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Medicamentos y terapia de infusión",
+   "publicacion": "26/10/2012",
+   "entradaVigor": "25/12/2012",
+   "estado": "vigente",
+   "avisos": [
+    "Se publicó un proyecto de norma que la sustituiría (DOF, 08/11/2024). Mientras no se publique la norma definitiva, sigue vigente esta.",
+    "Incluye la modificación publicada en el DOF el 18/09/2015."
+   ],
+   "url": "https://dof.gob.mx/normasOficiales/4917/salud3a/salud3a.html",
+   "imagen": "assets/estudio/normas/11.webp",
+   "infografia": "equipo",
+   "objetivo": "Esta Norma tiene por objeto establecer las actividades, criterios, estrategias y técnicas operativas del Sistema Nacional de Salud, en relación con la disposición de sangre humana y sus componentes con fines terapéuticos.",
+   "puntos": [
+    {
+     "numeral": "4.2",
+     "etiqueta": "Requisitos de calidad",
+     "texto": "La sangre y componentes sanguíneos para uso terapéutico deberán reunir los requisitos de calidad necesarios a fin de que resulten inocuos o no patogénicos, funcionales y, en su caso, viables."
+    },
+    {
+     "numeral": "4.8",
+     "etiqueta": "Trazabilidad y registro",
+     "texto": "Todas las actividades relativas a la disposición de sangre y componentes sanguíneos deberán registrarse, de forma que permitan garantizar la trazabilidad de las unidades, desde su extracción hasta su uso terapéutico o destino final y viceversa."
+    },
+    {
+     "numeral": "4.10",
+     "etiqueta": "Donación voluntaria",
+     "texto": "Toda donación de sangre o componentes sanguíneos deberá ser voluntaria, libre de coacción y no remunerada. No deberá otorgarse al donante pago alguno, tanto en dinero en efectivo ni en formas equivalentes."
+    },
+    {
+     "numeral": "4.18",
+     "etiqueta": "Medidas ante eventos adversos",
+     "texto": "Ante eventos o efectos adversos e inesperados de la donación o transfusión, los bancos de sangre, los servicios de transfusión y los establecimientos de atención médica, deberán implementar medidas de carácter preventivo o correctivo."
+    },
+    {
+     "numeral": "4.12.3",
+     "etiqueta": "Personal calificado y formado",
+     "texto": "Personal suficiente, calificado y formado para el desempeño de sus actividades. Cada integrante conocerá las medidas de protección necesarias para minimizar los riesgos laborales."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "14.5",
+     "etiqueta": "Identificación del receptor",
+     "texto": "La identificación del paciente que va a recibir una transfusión deberá hacerse por dos personas"
+    },
+    {
+     "numeral": "14.7",
+     "etiqueta": "Registro en el expediente",
+     "texto": "El médico que indique una transfusión deberá registrar o supervisar que el personal que la aplique, registre en el expediente clínico del receptor las transfusiones que se hayan aplicado, anotando como mínimo, la información que señala el apartado 19.3.4.11 de esta Norma."
+    },
+    {
+     "numeral": "14.4",
+     "etiqueta": "Aplicación y vigilancia",
+     "texto": "El médico tratante será el responsable de la indicación de las transfusiones, mismas que podrán aplicarse y supervisarse por otros trabajadores de la salud, tales como médicos o personal de enfermería, capacitados en la aplicación y vigilancia de las transfusiones."
+    },
+    {
+     "numeral": "14.16",
+     "etiqueta": "Reacción transfusional",
+     "texto": "Ante síntomas o signos de una reacción transfusional, el médico tratante o el personal de salud deberá interrumpir inmediatamente la transfusión en lo que se esclarece su causa y se investiga un posible error en la identificación del receptor y de la unidad."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-253-SSA1-2012.json"
+  },
+  {
+   "id": "NOM-007-SSA2-2016",
+   "tipo": "nom",
+   "clave": "NOM-007-SSA2-2016",
+   "titulo": "Para la atención de la mujer durante el embarazo, parto y puerperio, y de la persona recién nacida.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Etapas de la vida",
+   "publicacion": "07/04/2016",
+   "entradaVigor": "08/04/2016",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5950/salud12_C/salud12_C.html",
+   "imagen": "assets/estudio/normas/nom_007_ssa2_2016.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma tiene por objeto establecer los criterios mínimos para la atención médica a la mujer durante el embarazo, parto y puerperio normal y a la persona recién nacida.",
+   "puntos": [
+    {
+     "numeral": "5.1.11",
+     "etiqueta": "Atención con calidad y respeto",
+     "texto": "La atención a la mujer durante el embarazo, parto y puerperio y a la persona recién nacida debe ser proporcionada con calidad y respeto de sus derechos humanos, principalmente a su dignidad y cultura"
+    },
+    {
+     "numeral": "5.2.1.15",
+     "etiqueta": "Consultas prenatales",
+     "texto": "Promover que la embarazada de bajo riesgo reciba como mínimo cinco consultas prenatales, iniciando preferentemente en las primeras 8 semanas de gestación"
+    },
+    {
+     "numeral": "5.5.3",
+     "etiqueta": "Parto sin violencia",
+     "texto": "Ninguna persona que preste servicios de ginecología y obstetricia, discriminará o ejercerá algún tipo de violencia hacia la mujer en trabajo de parto."
+    },
+    {
+     "numeral": "5.5.14",
+     "etiqueta": "Maniobra de Kristeller",
+     "texto": "Durante el periodo expulsivo, no debe realizarse la maniobra de Kristeller ya que los riesgos para la madre y el feto son elevados."
+    },
+    {
+     "numeral": "5.8.2",
+     "etiqueta": "Lactancia materna exclusiva",
+     "texto": "Se debe promover la lactancia materna exclusiva durante los primeros 6 meses de la persona recién nacida y promover continuarla de manera complementaria hasta el segundo año de vida."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.5.12",
+     "etiqueta": "Signos vitales en el parto",
+     "texto": "El registro e interpretación de los signos vitales (pulso, presión arterial, temperatura y frecuencia respiratoria) deben hacerse cada dos horas, de acuerdo a las condiciones clínicas de la paciente."
+    },
+    {
+     "numeral": "5.6.1.2",
+     "etiqueta": "Vigilancia del puerperio",
+     "texto": "En la primera hora del puerperio, revisar a la paciente cada 15 minutos, vigilando el comportamiento de la frecuencia cardiaca, frecuencia respiratoria, presión arterial, temperatura, llenado capilar, hemorragia transvaginal, el tono y altura del útero y el reinicio de la micción espontánea."
+    },
+    {
+     "numeral": "5.7.10",
+     "etiqueta": "Alojamiento conjunto",
+     "texto": "En el alojamiento conjunto, se debe vigilar y tomar signos vitales a la persona recién nacida por lo menos una vez por turno (cada 8 horas) y evitar que la persona recién nacida esté en decúbito ventral (boca abajo), para reducir el riesgo de muerte súbita."
+    },
+    {
+     "numeral": "5.3.1.12",
+     "etiqueta": "Signos de alarma",
+     "texto": "Proporcionar información completa a la embarazada y a sus familiares, sobre signos y síntomas de alarma que ameriten una atención inmediata en el establecimiento para la atención médica"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-007-SSA2-2016.json"
+  },
+  {
+   "id": "NOM-005-SSA-2026",
+   "tipo": "nom",
+   "clave": "NOM-005-SSA-2026",
+   "titulo": "De los Servicios de Planificación Familiar y Anticoncepción.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Etapas de la vida",
+   "publicacion": "12/06/2026",
+   "entradaVigor": "09/12/2026",
+   "estado": "publicada",
+   "avisos": [
+    "Publicada el 12/06/2026; entra en vigor el 09/12/2026. Ese día deja sin efectos a la NOM-005-SSA2-1993, De los servicios de planificación familiar."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5790446&fecha=12/06/2026",
+   "imagen": "assets/estudio/normas/nom_005_ssa_2026.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma tiene como objetivo establecer los criterios para la prestación de los servicios de planificación familiar y anticoncepción en México, con perspectiva de género, pertinencia cultural, sin violencia y sin discriminación alguna y con absoluto respeto a los derechos humanos, particularmente a los derechos sexuales y a los derechos reproductivos.",
+   "puntos": [
+    {
+     "numeral": "5.1.1",
+     "etiqueta": "Calidad y trato digno",
+     "texto": "Los servicios de salud en materia de planificación familiar y anticoncepción deben ofrecerse con los más altos estándares de calidad a toda persona en edad fértil, en un ambiente de confidencialidad y privacidad, con trato digno, equitativo y respetuoso, sin discriminación de ningún tipo"
+    },
+    {
+     "numeral": "5.1.4",
+     "etiqueta": "Gratuidad de los servicios",
+     "texto": "Los servicios de planificación familiar y anticoncepción que se brinden en las instituciones públicas de salud deben ser gratuitos para todas las personas"
+    },
+    {
+     "numeral": "5.1.5",
+     "etiqueta": "Oferta sistemática de servicios",
+     "texto": "Los servicios de planificación familiar y anticoncepción deben ofrecerse sistemáticamente a toda persona en edad fértil que acuda a los servicios de salud, independientemente de la causa que motive la consulta y demanda de los servicios"
+    },
+    {
+     "numeral": "5.4.1.1",
+     "etiqueta": "Consejería anticonceptiva",
+     "texto": "La consejería en planificación familiar y anticoncepción es un proceso de acompañamiento, de análisis y comunicación interpersonal, presencial o a distancia, mediante el cual el personal de salud capacitado proporciona asesoría e información basada en evidencia científica"
+    },
+    {
+     "numeral": "5.4.2.1.1",
+     "etiqueta": "Consentimiento informado",
+     "texto": "Es un derecho de las personas usuarias de los servicios a través del cual manifiestan de manera libre, plena e informada su voluntad para la adopción de cualquier método anticonceptivo de su elección"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.4.1.1",
+     "etiqueta": "Respeto a la decisión",
+     "texto": "Las decisiones que tomen las personas deben ser respetadas por el personal de salud quien deberá verificar que la información haya sido efectivamente comprendida y por ningún motivo se inducirá o forzará a la persona a la aceptación o uso de un método anticonceptivo específico."
+    },
+    {
+     "numeral": "5.5.1",
+     "etiqueta": "Privacidad y confidencialidad",
+     "texto": "Garantizar que, al brindar la información, consejería y servicios, éstos sean en un ambiente privado, libre de interferencias y que la información y datos personales proporcionados por la persona usuaria sean tratados con confidencialidad"
+    },
+    {
+     "numeral": "5.1.8",
+     "etiqueta": "Higiene y esterilización",
+     "texto": "El instrumental y los materiales que se empleen para la prestación de los servicios de planificación familiar y anticoncepción, deben cumplir las condiciones prescritas de higiene y esterilización, de acuerdo con los procedimientos propios de cada método y las disposiciones aplicables."
+    },
+    {
+     "numeral": "5.7.2.5",
+     "etiqueta": "Valoración del riesgo reproductivo",
+     "texto": "El riesgo reproductivo deberá evaluarse en toda mujer en edad fértil y persona con capacidad de gestar, que acuda a cualquier tipo de atención médica."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-005-SSA-2026.json"
+  },
+  {
+   "id": "NOM-047-SSA2-2015",
+   "tipo": "nom",
+   "clave": "NOM-047-SSA2-2015",
+   "titulo": "Para la atención a la salud del Grupo Etario de 10 a 19 años de edad.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Etapas de la vida",
+   "publicacion": "12/08/2015",
+   "entradaVigor": "13/08/2015",
+   "estado": "vigente",
+   "avisos": [
+    "Incluye la aclaración publicada en el DOF el 18/09/2015."
+   ],
+   "url": "https://dof.gob.mx/normasOficiales/5780/salud2a11_C/salud2a11_C.html",
+   "imagen": "assets/estudio/normas/nom_047_ssa2_2015.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma tiene por objeto establecer los criterios que deben seguirse para brindar la atención integral a la salud, la prevención y el control de las enfermedades prevalentes en las personas del Grupo Etario de 10 a 19 años de edad y la promoción de la salud, con perspectiva de género, pertinencia cultural y respeto a sus derechos fundamentales.",
+   "puntos": [
+    {
+     "numeral": "5.3",
+     "etiqueta": "Consulta integral anual",
+     "texto": "El personal de salud de los establecimientos de atención médica que forman parte del Sistema Nacional de Salud deben proporcionar al menos una consulta integral anual a cada persona del Grupo Etario."
+    },
+    {
+     "numeral": "5.11",
+     "etiqueta": "Servicios amigables",
+     "texto": "La prestación de servicios de salud a las personas del Grupo Etario debe tener una estructura flexible, amigable, cálida, garantizando en todo momento la confidencialidad, la privacidad y el respeto a la dignidad, la inclusión y no discriminación"
+    },
+    {
+     "numeral": "5.14",
+     "etiqueta": "Derechos humanos",
+     "texto": "El personal de salud debe actuar en todo momento dentro del marco del respeto a los derechos humanos de las personas del Grupo Etario, con perspectiva de género y sus servicios deben salvaguardar la intimidad, la confidencialidad, la inclusión y no discriminación"
+    },
+    {
+     "numeral": "5.6",
+     "etiqueta": "Exploración física acompañada",
+     "texto": "Durante la revisión o exploración física de una persona del Grupo Etario, debe estar presente el personal médico y al menos un integrante más del personal de salud"
+    },
+    {
+     "numeral": "6.2.1",
+     "etiqueta": "Historia clínica completa",
+     "texto": "Independientemente del motivo de la consulta, el personal de salud debe realizar la historia clínica completa que comprende el interrogatorio y la exploración física según corresponda, de acuerdo a lo indicado en el Apéndice A Informativo."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.5",
+     "etiqueta": "Esquema de vacunación",
+     "texto": "Se debe revisar que su esquema de vacunación esté completo y, en su caso, se realizará la aplicación del biológico faltante correspondiente, registrándolo en la Cartilla Nacional de Salud para Adolescentes de 10 a 19 años y en el expediente clínico."
+    },
+    {
+     "numeral": "5.12",
+     "etiqueta": "Registro de consultas",
+     "texto": "Se deben registrar las consultas y todas las acciones de atención integral a las personas del Grupo Etario, en los formatos correspondientes establecidos por cada institución."
+    },
+    {
+     "numeral": "6.3.2",
+     "etiqueta": "Valoración nutricional",
+     "texto": "Realizar la valoración del estado de nutrición basándose en los indicadores antropométricos peso corporal, talla corporal, IMC, así como signos y síntomas clínicos e historia dietética."
+    },
+    {
+     "numeral": "6.9.1",
+     "etiqueta": "Detección en salud mental",
+     "texto": "El personal de salud debe estar atento a la presencia de signos y síntomas emocionales o del comportamiento, que puedan sugerir trastornos de la salud mental, a fin de detectar oportunamente los requerimientos de atención especializada"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-047-SSA2-2015.json"
+  },
+  {
+   "id": "NOM-015-SSA2-2010",
+   "tipo": "nom",
+   "clave": "NOM-015-SSA2-2010",
+   "titulo": "Para la prevención, tratamiento y control de la diabetes mellitus.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Enfermedades crónicas",
+   "publicacion": "23/11/2010",
+   "entradaVigor": "24/11/2010",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5168074&fecha=23/11/2010",
+   "imagen": "assets/estudio/normas/nom_015_ssa2_2010.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma Oficial Mexicana tiene por objeto establecer los procedimientos para la prevención, tratamiento, control de la diabetes y la prevención médica de sus complicaciones.",
+   "puntos": [
+    {
+     "numeral": "5.2",
+     "etiqueta": "Síntomas clásicos",
+     "texto": "Se consideran como síntomas clásicos de la diabetes, a la poliuria, la polidipsia, la polifagia y la pérdida de peso."
+    },
+    {
+     "numeral": "9.1",
+     "etiqueta": "Detección en población general",
+     "texto": "La detección de la prediabetes y de la diabetes mellitus tipo 2 se debe realizar en la población general a partir de los 20 años de edad o al inicio de la pubertad si presenta obesidad y factores de riesgo con periodicidad de cada 3 años"
+    },
+    {
+     "numeral": "10.2",
+     "etiqueta": "Criterios diagnósticos",
+     "texto": "Se establece el diagnóstico de diabetes si se cumple cualquiera de los siguientes criterios: presencia de síntomas clásicos y una glucemia plasmática casual > 200 mg/dl; glucemia plasmática en ayuno > 126 mg/dl;"
+    },
+    {
+     "numeral": "11.1",
+     "etiqueta": "Propósito del tratamiento",
+     "texto": "El tratamiento de la diabetes tiene como propósito aliviar los síntomas, mantener el control metabólico, prevenir las complicaciones agudas y crónicas, mejorar la calidad de vida y reducir la mortalidad por esta enfermedad o por sus complicaciones."
+    },
+    {
+     "numeral": "11.4.5",
+     "etiqueta": "Manejo no farmacológico inicial",
+     "texto": "El manejo inicial de pacientes con diabetes tipo 2 se hará mediante medidas no farmacológicas, mismas que se deberán mantener durante todo el curso del tratamiento."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "11.6.1",
+     "etiqueta": "Educación terapéutica",
+     "texto": "La mayor parte del cuidado de la diabetes depende de la persona con este padecimiento. Para lograr el control necesita ser educado en su autocuidado; la educación terapéutica es parte integral del tratamiento, debe proveerse desde el diagnóstico del padecimiento"
+    },
+    {
+     "numeral": "11.11.1.3",
+     "etiqueta": "Valoración en cada visita",
+     "texto": "En cada visita se debe evaluar el control metabólico, el plan de alimentación y la actividad física y se investiga de manera intencionada la presencia de complicaciones. Se registra el peso, la presión arterial y el resultado de la exploración de los pies;"
+    },
+    {
+     "numeral": "11.11.4.3",
+     "etiqueta": "Prevención del pie diabético",
+     "texto": "Las estrategias para prevenir el pie diabético son la educación del (la) paciente, el control de la glucemia, la inspección periódica, el autocuidado de los pies y el envío inmediato al especialista, en caso de infección."
+    },
+    {
+     "numeral": "9.4.2",
+     "etiqueta": "Glucosa capilar",
+     "texto": "La glucosa capilar se debe de realizar con un medidor de glucosa automatizado, el cual tenga las especificaciones del fabricante, el personal de salud deberá de recibir la capacitación continua."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-015-SSA2-2010.json"
+  },
+  {
+   "id": "NOM-030-SSA2-2009",
+   "tipo": "nom",
+   "clave": "NOM-030-SSA2-2009",
+   "titulo": "Para la prevención, detección, diagnóstico, tratamiento y control de la hipertensión arterial sistémica.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Enfermedades crónicas",
+   "publicacion": "31/05/2010",
+   "entradaVigor": "01/06/2010",
+   "estado": "vigente",
+   "avisos": [
+    "Se publicó como modificación de la NOM-030-SSA2-1999. En 2017 se publicó el proyecto PROY-NOM-030-SSA2-2017, que no llegó a norma definitiva."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5144642&fecha=31/05/2010",
+   "imagen": "assets/estudio/normas/nom_030_ssa2_2009.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma Oficial Mexicana tiene por objetivo establecer los procedimientos para la prevención, detección, diagnóstico, tratamiento y seguimiento del paciente, para el control de la hipertensión arterial sistémica y con ello evitar sus complicaciones a largo plazo.",
+   "puntos": [
+    {
+     "numeral": "8.2",
+     "etiqueta": "Detección periódica",
+     "texto": "La detección de HAS se llevará a cabo cada tres años a la población de adultos que acuden a las instituciones de salud, tanto públicas como privadas."
+    },
+    {
+     "numeral": "9.3",
+     "etiqueta": "Confirmación diagnóstica",
+     "texto": "El diagnóstico se basa en el promedio de por lo menos tres mediciones realizadas en intervalos de tres a cinco minutos dos semanas después de la detección inicial, con cifras igual o superior a las consideradas en el numeral 3.15."
+    },
+    {
+     "numeral": "11.7.1",
+     "etiqueta": "Metas del tratamiento",
+     "texto": "La meta principal del tratamiento consiste en lograr una PA <140/90; en el caso de las personas con diabetes o enfermedad cardiovascular establecida, mantener una PA <130-80; y en presencia de proteinuria mayor de 1.0 gr e insuficiencia renal, < 125/75."
+    },
+    {
+     "numeral": "11.5",
+     "etiqueta": "Plan de manejo integral",
+     "texto": "El médico, con apoyo del equipo de salud, tendrá bajo su responsabilidad la elaboración y aplicación del plan de manejo integral del paciente, el cual deberá ser adecuadamente registrado en el expediente clínico conforme a lo establecido en la NOM-168-SSA1-1998, Del expediente clínico."
+    },
+    {
+     "numeral": "12.4",
+     "etiqueta": "Urgencia hipertensiva",
+     "texto": "La sola elevación de la PA, en ausencia de síntomas o de daño a órgano blanco, no se considera como urgencia. El uso de nifedipino sublingual no debe realizarse por el riesgo de provocar eventos isquémicos de tipo cerebral y miocárdico."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "8.4",
+     "etiqueta": "Registro de la presión arterial",
+     "texto": "El valor de la presión arterial sistólica y diastólica que se registre corresponderá al promedio de por lo menos dos mediciones hechas con un intervalo mínimo de dos minutos."
+    },
+    {
+     "numeral": "Apéndice F",
+     "etiqueta": "Posición para la medición",
+     "texto": "La PA se registrará en posición de sentado con un buen soporte para la espalda y con el brazo descubierto y flexionado a la altura del corazón."
+    },
+    {
+     "numeral": "7.5.4",
+     "etiqueta": "Participación de enfermería",
+     "texto": "La participación de otros miembros debidamente capacitados del equipo de salud como los nutricionistas, enfermeras, trabajadoras sociales, psicólogos y profesionales del deporte son de gran importancia para auxiliar a los individuos en alto riesgo."
+    },
+    {
+     "numeral": "11.10.7.2",
+     "etiqueta": "Educación del paciente",
+     "texto": "El paciente será debidamente informado acerca de los aspectos básicos de la hipertensión arterial y sus complicaciones, factores de riesgo, manejo no conductual, componentes y metas del tratamiento, prevención de complicaciones y la necesidad de adherencia al tratamiento."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-030-SSA2-2009.json"
+  },
+  {
+   "id": "NOM-037-SSA2-2012",
+   "tipo": "nom",
+   "clave": "NOM-037-SSA2-2012",
+   "titulo": "Para la prevención, tratamiento y control de las dislipidemias.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Enfermedades crónicas",
+   "publicacion": "13/07/2012",
+   "entradaVigor": "14/07/2012",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/4802/salud/salud.html",
+   "imagen": "assets/estudio/normas/nom_037_ssa2_2012.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma Oficial Mexicana tiene por objeto establecer los procedimientos y medidas necesarias para la prevención, tratamiento y control de las dislipidemias, a fin de proteger a la población de este importante factor de riesgo de enfermedad cardiovascular, cerebrovascular y vascular periférica, además de brindar una adecuada atención médica.",
+   "puntos": [
+    {
+     "numeral": "6.1",
+     "etiqueta": "Prevención de dislipidemias",
+     "texto": "Las dislipidemias deben prevenirse mediante la recomendación de una alimentación correcta y actividad física adecuada. A excepción de las de origen genético o primarias."
+    },
+    {
+     "numeral": "6.3",
+     "etiqueta": "Control de factores de riesgo",
+     "texto": "El control integral, temprano y sostenido de los diversos factores de riesgo cardiovascular, es la principal herramienta para reducir la aparición de la enfermedad cardiovascular."
+    },
+    {
+     "numeral": "7.2.7.3",
+     "etiqueta": "Pruebas en sangre capilar",
+     "texto": "Las determinaciones de lípidos en sangre capilar (química seca o monitores de lípidos) son para fines de detección únicamente, no son para tomar decisiones terapéuticas."
+    },
+    {
+     "numeral": "8.2.1",
+     "etiqueta": "Tratamiento permanente",
+     "texto": "El tratamiento farmacológico y no farmacológico debe ser de forma permanente, en la dosis adecuada para mantener los niveles de lípidos de acuerdo al nivel de riesgo."
+    },
+    {
+     "numeral": "8.3.1",
+     "etiqueta": "Modificación conductual",
+     "texto": "La modificación conductual a un estilo de vida saludable es la base de la prevención y el tratamiento de las enfermedades cardiovasculares, por lo tanto, estas medidas son de aplicación universal y deben recomendarse desde la infancia"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "7.2.7.1",
+     "etiqueta": "Toma de la muestra",
+     "texto": "Para asegurar la validez, precisión y disminuir la variabilidad en la muestra sanguínea, antes de tomar la muestra, la persona en estudio debe permanecer sentada cinco minutos y con una aplicación de torniquete menor a un minuto."
+    },
+    {
+     "numeral": "6.16.2",
+     "etiqueta": "Orientación al paciente de riesgo",
+     "texto": "Las personas en situación de alto riesgo cardiovascular deben ser informadas y apoyadas para efectuar los cambios necesarios en sus estilos de vida y recibir información sobre la probable necesidad de tomar medicamentos por el resto de su vida."
+    },
+    {
+     "numeral": "6.16.5",
+     "etiqueta": "Capacitación del equipo de salud",
+     "texto": "El Sistema Nacional de Salud debe capacitar a otros miembros del equipo de salud como profesionales en nutrición, enfermería, trabajo social, psicología, deporte y actividad física, para orientar a pacientes en alto riesgo."
+    },
+    {
+     "numeral": "8.5.1.1",
+     "etiqueta": "Información sobre el tratamiento",
+     "texto": "Se debe informar a quienes inicien el tratamiento farmacológico de la dislipidemia, que la utilidad del mismo y de disminuir el riesgo cardiovascular es aumentar su expectativa y calidad de vida. También se debe informar, de riesgos posibles, reacciones adversas y costo."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-037-SSA2-2012.json"
+  },
+  {
+   "id": "NOM-008-SSA3-2017",
+   "tipo": "nom",
+   "clave": "NOM-008-SSA3-2017",
+   "titulo": "Para el tratamiento integral del sobrepeso y la obesidad.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Enfermedades crónicas",
+   "publicacion": "18/05/2018",
+   "entradaVigor": "16/07/2018",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/7138/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/nom_008_ssa3_2017.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma establece los criterios mínimos para el tratamiento integral del sobrepeso y la obesidad, las características mínimas que deben reunir los profesionales de las disciplinas de la salud que intervengan en el tratamiento del paciente y los requisitos mínimos de funcionamiento que deben cumplir los establecimientos para la atención médica ambulatoria y hospitalaria de los sectores público, social y privado.",
+   "puntos": [
+    {
+     "numeral": "5.1.1",
+     "etiqueta": "Tratamiento integral",
+     "texto": "Todo paciente con sobrepeso u obesidad requerirá de un tratamiento integral, en los términos previstos en esta Norma."
+    },
+    {
+     "numeral": "5.2.3",
+     "etiqueta": "Responsabilidad del tratamiento",
+     "texto": "El médico será el responsable del tratamiento integral del paciente con sobrepeso u obesidad, los profesionales en rehabilitación, nutrición y psicología serán responsables del tratamiento, en sus respectivas áreas de formación profesional"
+    },
+    {
+     "numeral": "5.2.7",
+     "etiqueta": "Evaluación del estado de nutrición",
+     "texto": "Todo tratamiento debe prescribirse previa evaluación del estado de nutrición, con base en indicadores clínicos, dietéticos, bioquímicos, antropométricos y psicológicos de cada paciente;"
+    },
+    {
+     "numeral": "5.2.8",
+     "etiqueta": "Medidas psicoconductuales",
+     "texto": "Todas las acciones terapéuticas se deben apoyar en medidas psicoconductuales y nutriológicas para modificar las conductas alimentarias nocivas a la salud del paciente."
+    },
+    {
+     "numeral": "7.2.1",
+     "etiqueta": "Prescripción de medicamentos",
+     "texto": "Será el único profesional de la salud facultado para prescribir medicamentos en los casos que así se requiera"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "7.6.1",
+     "etiqueta": "Identificación del paciente",
+     "texto": "La identificación correcta al paciente con nombre completo y fecha de nacimiento."
+    },
+    {
+     "numeral": "7.6.2",
+     "etiqueta": "Tiempo fuera",
+     "texto": "Garantizar el procedimiento correcto, al paciente correcto a través del protocolo universal denominado tiempo fuera."
+    },
+    {
+     "numeral": "7.6.3",
+     "etiqueta": "Higiene de manos",
+     "texto": "Reducir el riesgo de infecciones asociadas con la atención médica, mediante la higiene de manos."
+    },
+    {
+     "numeral": "7.6.4",
+     "etiqueta": "Prevención de caídas",
+     "texto": "Reducir el riesgo de daño a causa de caídas mediante la aplicación de la escala de valoración de riesgos para caídas."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-008-SSA3-2017.json"
+  },
+  {
+   "id": "NOM-043-SSA2-2012",
+   "tipo": "nom",
+   "clave": "NOM-043-SSA2-2012",
+   "titulo": "Servicios básicos de salud. Promoción y educación para la salud en materia alimentaria. Criterios para brindar orientación.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Enfermedades crónicas",
+   "publicacion": "22/01/2013",
+   "entradaVigor": "23/01/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5027/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/nom_043_ssa2_2012.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma Oficial Mexicana establece los criterios que deben seguirse para orientar a la población en materia de alimentación.",
+   "puntos": [
+    {
+     "numeral": "4.2",
+     "etiqueta": "Educación para la salud",
+     "texto": "La orientación alimentaria debe llevarse a cabo mediante acciones de educación para la salud, haciendo énfasis en el desarrollo de capacidades y competencias, participación social y comunicación educativa."
+    },
+    {
+     "numeral": "4.3.2",
+     "etiqueta": "El Plato del Bien Comer",
+     "texto": "Al interior de cada grupo se deben identificar los alimentos y sus productos conforme a la herramienta gráfica El Plato del Bien Comer (Apéndice Normativo A)."
+    },
+    {
+     "numeral": "4.3.2.6.1",
+     "etiqueta": "Combinación de los tres grupos",
+     "texto": "Se debe recomendar que en cada tiempo de comida se incluyan alimentos de los tres grupos (Apéndice Normativo A). Se hará énfasis en las combinaciones de alimentos que produzcan un efecto sinérgico entre sus nutrimentos, aumenten su rendimiento o su biodisponibilidad."
+    },
+    {
+     "numeral": "4.3.2.7",
+     "etiqueta": "Consumo de agua simple",
+     "texto": "Se debe promover el consumo de agua simple potable como fuente principal de hidratación."
+    },
+    {
+     "numeral": "4.4.1",
+     "etiqueta": "Enfermedades por mala alimentación",
+     "texto": "Se debe señalar que las deficiencias y los excesos en la alimentación predisponen al desarrollo de desnutrición, caries, anemia, deficiencias de nutrimentos, obesidad, ateroesclerosis, diabetes mellitus, cáncer, osteoporosis e hipertensión arterial, entre otros padecimientos."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.4.2",
+     "etiqueta": "Lactancia materna",
+     "texto": "Se debe promover el inicio de la lactancia materna en la primera media hora de vida continuando a libre demanda hasta el sexto mes en forma exclusiva. A partir de esta edad, además de iniciar la alimentación complementaria continuar la lactancia materna hasta los dos años de edad."
+    },
+    {
+     "numeral": "4.4.3.2",
+     "etiqueta": "Alimentación en infecciones",
+     "texto": "Se debe señalar que los procesos infecciosos, las diarreas y la fiebre, producen un aumento en el gasto energético, por lo cual se debe continuar con la alimentación habitual, aumentar la ingestión de líquidos, sobre todo agua y Vida Suero Oral"
+    },
+    {
+     "numeral": "4.4.7",
+     "etiqueta": "Vigilancia del estado de nutrición",
+     "texto": "Se debe promover la vigilancia del índice de masa corporal y del perímetro de la cintura en adultos, la vigilancia de las curvas de crecimiento y el índice de masa corporal en los niños y adolescentes para conocer el estado de nutrición en que se encuentran."
+    },
+    {
+     "numeral": "5.2.1",
+     "etiqueta": "Ácido fólico preconcepcional",
+     "texto": "A toda mujer en edad reproductiva se le recomendará consumir ácido fólico en los tres meses previos al embarazo y hasta la semana doce de gestación. Asimismo, se indicará que se incrementan las necesidades de hierro, fósforo, vitamina D y calcio."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-043-SSA2-2012.json"
+  },
+  {
+   "id": "NOM-010-SSA-2023",
+   "tipo": "nom",
+   "clave": "NOM-010-SSA-2023",
+   "titulo": "Para la prevención y el control de la infección por virus de la inmunodeficiencia humana.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Infecciones y vigilancia epidemiológica",
+   "publicacion": "02/06/2023",
+   "entradaVigor": "03/06/2023",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/9326/salud_1_C/salud_1_C.html",
+   "imagen": "assets/estudio/normas/nom_010_ssa_2023.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma tiene como objetivo establecer los métodos, principios y criterios de operación de los componentes del SNS, respecto de las actividades relacionadas con la prestación de servicios de atención integral para la prevención y control de las infecciones por el VIH y el cuidado de las personas que se encuentran en los diferentes estadios de la infección",
+   "puntos": [
+    {
+     "numeral": "5.3",
+     "etiqueta": "Derechos y no discriminación",
+     "texto": "El personal de salud deberá actuar, en todo momento, dentro del marco del respeto a los derechos humanos, con perspectiva de género, pertinencia cultural y de reconocimiento de las diferencias de atención según el rango de edad y deberá contribuir a evitar el estigma y la discriminación"
+    },
+    {
+     "numeral": "6.3.3",
+     "etiqueta": "Oferta de la prueba",
+     "texto": "Los establecimientos para la atención médica integrantes del SNS deberán ofrecer de forma rutinaria la prueba de detección y el diagnóstico del VIH a todas las personas, sin importar afiliación o derechohabiencia, de manera voluntaria, confidencial y gratuita"
+    },
+    {
+     "numeral": "6.3.1.2",
+     "etiqueta": "Libertad de decisión",
+     "texto": "Hacer saber en todo momento a la persona usuaria que se encuentra en libertad de decidir realizarse o no la prueba de detección, y que nadie puede obligar o condicionarle derecho alguno, ni imponer obligación, salvo que sea en acato a una orden judicial."
+    },
+    {
+     "numeral": "6.3.2",
+     "etiqueta": "Uso de la detección",
+     "texto": "Ninguna autoridad puede exigir la aplicación de pruebas de detección del VIH a ninguna persona, o los resultados de éstas, excepto en los casos en que se presente una orden judicial."
+    },
+    {
+     "numeral": "5.13",
+     "etiqueta": "Detección en el embarazo",
+     "texto": "La detección de VIH y sífilis deberá ser ofertada sistemáticamente a la mujer embarazada y a su pareja por el personal de salud"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "6.2.7",
+     "etiqueta": "Precauciones estándar",
+     "texto": "Implementar, de acuerdo con las disposiciones aplicables, las medidas de precauciones estándar o universal en los espacios de atención a la salud para evitar riesgos ocupacionales del personal de salud y garantizar la seguridad de todas las personas usuarias."
+    },
+    {
+     "numeral": "5.11",
+     "etiqueta": "Profilaxis post-exposición",
+     "texto": "Los establecimientos que forman parte del SNS deberán contar con un mecanismo eficiente para prevenir la infección por el VIH, en caso de accidente ocupacional, de violación o exposición sexual, que garantice el acceso oportuno a la profilaxis post-exposición del VIH"
+    },
+    {
+     "numeral": "6.3.1.1",
+     "etiqueta": "Consentimiento por escrito",
+     "texto": "Solicitar el consentimiento informado por escrito antes de aplicar pruebas de detección del VIH, de acuerdo con las Normas Oficiales Mexicanas citadas en los incisos 2.2 y 2.18 de esta Norma."
+    },
+    {
+     "numeral": "6.3.4.1",
+     "etiqueta": "Manejo de residuos",
+     "texto": "El personal de salud y los proveedores comunitarios de salud que realicen detección deberán seguir los procedimientos para el manejo correcto de residuos biológicos contaminantes"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-010-SSA-2023.json"
+  },
+  {
+   "id": "NOM-046-SSA2-2005",
+   "tipo": "nom",
+   "clave": "NOM-046-SSA2-2005",
+   "titulo": "Violencia familiar, sexual y contra las mujeres. Criterios para la prevención y atención.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Práctica de enfermería y registros",
+   "publicacion": "16/04/2009",
+   "entradaVigor": "17/04/2009",
+   "estado": "vigente",
+   "avisos": [
+    "Se publicó como modificación de la NOM-190-SSA1-1999. Incluye la modificación de los puntos 6.4.2.7, 6.4.2.8, 6.6.1 y 6.7.2.9 publicada en el DOF el 24/03/2016."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5087256&fecha=16/04/2009",
+   "imagen": "assets/estudio/normas/nom_046_ssa2_2005.webp",
+   "infografia": "polisafe",
+   "objetivo": "La presente Norma Oficial Mexicana tiene por objeto establecer los criterios a observar en la detección, prevención, atención médica y la orientación que se proporciona a las y los usuarios de los servicios de salud en general y en particular a quienes se encuentren involucrados en situaciones de violencia familiar o sexual, así como en la notificación de los casos.",
+   "puntos": [
+    {
+     "numeral": "5.1",
+     "etiqueta": "Atención médica obligatoria",
+     "texto": "Todas las instituciones, dependencias y organizaciones del Sistema Nacional de Salud que presten servicios de salud deberán otorgar atención médica a las personas involucradas en situación de violencia familiar o sexual"
+    },
+    {
+     "numeral": "5.9",
+     "etiqueta": "Criterios de atención",
+     "texto": "En la atención de las o los usuarios involucrados en situación de violencia familiar o sexual, las y los prestadores de servicios de salud deberán apegarse a los criterios de oportunidad, calidad técnica e interpersonal, confidencialidad, honestidad, respeto a su dignidad y a sus derechos humanos."
+    },
+    {
+     "numeral": "5.10",
+     "etiqueta": "Aviso al Ministerio Público",
+     "texto": "Las instituciones del sector público, social y privado que otorguen atención médica a las o los usuarios involucrados en situación de violencia familiar o sexual, deberán dar aviso al Ministerio Público con el formato que se anexa en el Apéndice Informativo 1 de esta Norma"
+    },
+    {
+     "numeral": "6.4.1",
+     "etiqueta": "Atención de violación sexual",
+     "texto": "Los casos de violación sexual son urgencias médicas y requieren atención inmediata."
+    },
+    {
+     "numeral": "7.1",
+     "etiqueta": "Notificación de casos",
+     "texto": "Para las unidades médicas de atención ambulatoria del Sistema Nacional de Salud, los probables casos nuevos de violencia familiar o sexual son de notificación obligatoria en el formato de vigilancia epidemiológica SUIVE-1-2000."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "6.2.1.1",
+     "etiqueta": "Tamizaje rutinario",
+     "texto": "Para la detección de los casos en pacientes ambulatorios u hospitalarios, las y los prestadores de servicios de salud realizarán el procedimiento de tamizaje de manera rutinaria y en los casos probables, llevarán a cabo procedimientos necesarios para su confirmación"
+    },
+    {
+     "numeral": "6.2.1.2",
+     "etiqueta": "Entrevista dirigida",
+     "texto": "Realizar entrevista dirigida a la o el usuario afectado por violencia familiar o sexual, en un clima de confianza, sin juicios de valor ni prejuicios, con respeto y privacidad, garantizando confidencialidad."
+    },
+    {
+     "numeral": "6.2.1.4",
+     "etiqueta": "Registro en el expediente",
+     "texto": "Registrar la entrevista y el examen físico de la o el usuario afectado por violencia familiar o sexual, en el expediente clínico en forma detallada, clara y precisa"
+    },
+    {
+     "numeral": "6.2.1.7",
+     "etiqueta": "Valoración del grado de riesgo",
+     "texto": "Forma parte de la detección y diagnóstico de la violencia familiar o sexual la valoración del grado de riesgo de la o el usuario. Para determinarlo, el personal de salud se apoyará en las herramientas y los procedimientos estandarizados para este fin."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-046-SSA2-2005.json"
+  },
+  {
+   "id": "NOM-011-SSA3-2014",
+   "tipo": "nom",
+   "clave": "NOM-011-SSA3-2014",
+   "titulo": "Criterios para la atención de enfermos en situación terminal a través de cuidados paliativos.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Servicios de atención",
+   "publicacion": "09/12/2014",
+   "entradaVigor": "07/02/2015",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5539/salud2a12_C/salud2a12_C.html",
+   "imagen": "assets/estudio/normas/nom_011_ssa3_2014.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta Norma tiene por objeto, establecer los criterios y procedimientos mínimos indispensables, que permitan prestar, a través de equipos inter y multidisciplinarios de salud, servicios de cuidados paliativos a los pacientes que padecen una enfermedad en situación terminal, a fin de contribuir a proporcionarles bienestar y una calidad de vida digna hasta el momento de su muerte",
+   "puntos": [
+    {
+     "numeral": "5.1",
+     "etiqueta": "Trato digno",
+     "texto": "Los cuidados paliativos se deberán proporcionar con absoluto respeto, trato digno y profesional a los enfermos en situación terminal, evitando en todo momento incurrir en acciones extraordinarias o desproporcionadas."
+    },
+    {
+     "numeral": "6.1",
+     "etiqueta": "Presunción de cuidados paliativos",
+     "texto": "Toda persona que padezca una enfermedad evolutiva e incurable en situación terminal, tendrá a su favor la presunción de que requiere de cuidados paliativos."
+    },
+    {
+     "numeral": "6.5",
+     "etiqueta": "Atención del dolor",
+     "texto": "Es responsabilidad del médico tratante, valorar y atender en forma oportuna, el dolor y síntomas asociados que el enfermo en situación terminal refiera"
+    },
+    {
+     "numeral": "5.8",
+     "etiqueta": "Consentimiento informado",
+     "texto": "Para poder iniciar con el plan de cuidados paliativos indicado o prescrito por el médico tratante, se deberá recabar la carta de consentimiento informado"
+    },
+    {
+     "numeral": "6.6",
+     "etiqueta": "Suspensión voluntaria",
+     "texto": "El enfermo en situación terminal, mayor de edad y en pleno uso de sus facultades mentales, tiene derecho a solicitar la suspensión voluntaria del tratamiento curativo y el inicio del tratamiento paliativo"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.9",
+     "etiqueta": "Registro en el expediente",
+     "texto": "Todas las acciones de cuidados paliativos que realice el personal de salud, deberán estar relacionadas con el plan de cuidados paliativos, deberán ser registradas, incorporadas y, en su caso, documentadas por éste en el expediente clínico del enfermo en situación terminal."
+    },
+    {
+     "numeral": "9.3",
+     "etiqueta": "Capacitación al enfermo y familia",
+     "texto": "El personal técnico de un establecimiento de atención médica hospitalaria, deberá apoyar al personal médico en la capacitación y sensibilización del enfermo en situación terminal y familiares, sobre temas de alimentación, higiene, medidas de seguridad en los cuidados directos del enfermo"
+    },
+    {
+     "numeral": "7.3",
+     "etiqueta": "Instrucciones por escrito",
+     "texto": "Con la finalidad de evitar desplazamientos innecesarios del enfermo en situación terminal a los establecimientos para la atención médica hospitalaria, éste o en su caso, sus familiares, tutor o representante legal, tendrán derecho a recibir información e instrucciones precisas por escrito"
+    },
+    {
+     "numeral": "5.2",
+     "etiqueta": "Competencia del personal",
+     "texto": "Los profesionales y técnicos de las diversas disciplinas de la salud, que presten servicios médicos, en su modalidad de cuidados paliativos, deberán tener los conocimientos académicos necesarios y la capacitación técnica, acordes con el ámbito de su competencia."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-011-SSA3-2014.json"
+  },
+  {
+   "id": "NOM-027-SSA3-2013",
+   "tipo": "nom",
+   "clave": "NOM-027-SSA3-2013",
+   "titulo": "Regulación de los servicios de salud. Que establece los criterios de funcionamiento y atención en los servicios de urgencias de los establecimientos para la atención médica.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Servicios de atención",
+   "publicacion": "04/09/2013",
+   "entradaVigor": "03/11/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5199/salud2a11_C/salud2a11_C.html",
+   "imagen": "assets/estudio/normas/nom_027_ssa3_2013.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta norma tiene por objeto, precisar las características y requerimientos mínimos de infraestructura física y equipamiento, los criterios de organización y funcionamiento del servicio de urgencias en los establecimientos para la atención médica, así como las características del personal profesional y técnico del área de la salud, idóneo para proporcionar dicho servicio.",
+   "puntos": [
+    {
+     "numeral": "5.1",
+     "etiqueta": "Médico responsable del servicio",
+     "texto": "El servicio de urgencias al que se refiere esta norma, deberá contar con un médico responsable del servicio."
+    },
+    {
+     "numeral": "5.4",
+     "etiqueta": "Valoración y prioridades",
+     "texto": "Para la recepción del paciente en el servicio de urgencias, se requiere que un médico valore y establezca las prioridades de atención del mismo."
+    },
+    {
+     "numeral": "5.6",
+     "etiqueta": "Tiempo de permanencia",
+     "texto": "Los pacientes no deberán permanecer más de 12 horas en el servicio de urgencias por causas atribuibles a la atención médica. Durante ese lapso, se deberá establecer un diagnóstico presuntivo, su manejo y pronóstico inicial"
+    },
+    {
+     "numeral": "5.5",
+     "etiqueta": "Directorio para referencia",
+     "texto": "En el servicio de urgencias se debe contar con un directorio actualizado de establecimientos para la atención médica, con el propósito de que en su caso, puedan ser referidos aquellos pacientes que requieran de servicios de mayor grado de complejidad y poder de resolución."
+    },
+    {
+     "numeral": "6.2.3",
+     "etiqueta": "Consentimiento informado",
+     "texto": "Obtener la carta de consentimiento informado del paciente, familiar, tutor o representante legal, de conformidad con lo establecido en la Norma Oficial Mexicana, referida en el numeral 3.1 de esta norma;"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.3",
+     "etiqueta": "Personal disponible permanentemente",
+     "texto": "En el servicio de urgencias, deben estar disponibles permanentemente, al menos un médico y un elemento de enfermería para atender de forma inmediata al paciente que lo requiera."
+    },
+    {
+     "numeral": "8.5",
+     "etiqueta": "Capacitación de enfermería",
+     "texto": "El personal de enfermería que labore en el servicio de urgencias, de cualquier tipo de establecimiento para la atención médica, debe demostrar documentalmente que ha acreditado cursos afines a la atención médica de urgencias."
+    },
+    {
+     "numeral": "6.2.5",
+     "etiqueta": "Continuidad en cambios de turno",
+     "texto": "Seguimiento y vigilancia de los pacientes que fueron ingresados en el servicio, que permita garantizar la continuidad de su manejo, sobre todo con motivo de los cambios de turno;"
+    },
+    {
+     "numeral": "6.1.2.3",
+     "etiqueta": "Manual de bioseguridad",
+     "texto": "Manual de bioseguridad para el personal, respecto del manejo de RPBI y de los casos de enfermedades infecto-contagiosas como Hepatitis B y C o Virus de la Inmunodeficiencia Humana;"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-027-SSA3-2013.json"
+  },
+  {
+   "id": "NOM-025-SSA3-2013",
+   "tipo": "nom",
+   "clave": "NOM-025-SSA3-2013",
+   "titulo": "Para la organización y funcionamiento de las unidades de cuidados intensivos.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Servicios de atención",
+   "publicacion": "17/09/2013",
+   "entradaVigor": "16/11/2013",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/normasOficiales/5212/salud11_C/salud11_C.html",
+   "imagen": "assets/estudio/normas/nom_025_ssa3_2013.webp",
+   "infografia": "polisafe",
+   "objetivo": "Esta norma tiene por objeto, establecer las características mínimas de infraestructura física y equipamiento, los criterios para la organización y funcionamiento de las unidades de cuidados intensivos de los establecimientos para la atención médica hospitalaria, así como las características mínimas que deberán reunir los profesionales y técnicos del servicio",
+   "puntos": [
+    {
+     "numeral": "5.1.1",
+     "etiqueta": "Médico especialista en la UCI",
+     "texto": "Las UCI según corresponda, deberán contar al menos con un médico especialista en medicina del enfermo en estado crítico o especialista en medicina del enfermo pediátrico en estado crítico o un pediatra especialista en neonatología;"
+    },
+    {
+     "numeral": "5.2.1.2",
+     "etiqueta": "Control de acceso",
+     "texto": "Control de acceso a la unidad para visitantes y familiares, filtro de acceso para lavarse las manos y colocarse barreras de protección, tales como bata, gorro y cubre boca, entre otros, ya sean desechables o reusables"
+    },
+    {
+     "numeral": "5.5.1",
+     "etiqueta": "Criterios de ingreso",
+     "texto": "El ingreso debe ser el resultado de la decisión compartida entre el médico tratante y el responsable del servicio. Los criterios de ingreso, se sustentan básicamente en dos modelos, uno basado en las funciones orgánicas y otro en las prioridades de atención"
+    },
+    {
+     "numeral": "5.6.1",
+     "etiqueta": "Egreso programado",
+     "texto": "Programado: cuando se han solucionado los problemas del paciente que motivaron su ingreso a la UCI y se traslada a otro servicio o a otra unidad hospitalaria, en donde se le otorgue la atención, de acuerdo con el concepto de cuidado progresivo del paciente"
+    },
+    {
+     "numeral": "5.3.2.2",
+     "etiqueta": "Consentimiento informado",
+     "texto": "Obtener las cartas de consentimiento informado del familiar, tutor o representante legal, de conformidad con lo establecido en la Norma Oficial Mexicana, referida en el numeral 3.1 de esta norma."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "5.1.3",
+     "etiqueta": "Registro en el expediente clínico",
+     "texto": "Todos los procedimientos, exámenes, prescripciones, medicamentos administrados, así como los formatos para el registro de las variables fisiológicas, controles y evaluaciones practicados al paciente, deben ser incorporados en el expediente clínico"
+    },
+    {
+     "numeral": "5.2.8",
+     "etiqueta": "Ubicación de la central",
+     "texto": "Los cubículos o módulos, deben estar ubicados preferentemente en torno de la central de enfermeras, a efecto de que el personal del servicio pueda observar a los pacientes y desplazarse rápidamente para la atención directa del paciente que lo requiera;"
+    },
+    {
+     "numeral": "6.1.1.2",
+     "etiqueta": "Personal de enfermería en UCIA",
+     "texto": "Personal de enfermería, preferentemente con especialidad en medicina crítica y cuidados intensivos o en su caso, licenciatura con título expedido por una institución de educación superior o institución de salud reconocida oficialmente y registrado por las autoridades educativas competentes"
+    },
+    {
+     "numeral": "6.1.1.3",
+     "etiqueta": "Capacitación en paciente crítico",
+     "texto": "El personal de enfermería profesional y técnico que labore en la UCIA, debe demostrar documentalmente haber acreditado cursos de entrenamiento y capacitación en cuidados del enfermo en estado crítico;"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-025-SSA3-2013.json"
+  },
+  {
+   "id": "NOM-220-SSA1-2016",
+   "tipo": "nom",
+   "clave": "NOM-220-SSA1-2016",
+   "titulo": "Instalación y operación de la farmacovigilancia.",
+   "emisor": "Secretaría de Salud",
+   "tema": "Medicamentos y terapia de infusión",
+   "publicacion": "19/07/2017",
+   "entradaVigor": "16/11/2017",
+   "estado": "vigente",
+   "avisos": [
+    "Se publicó el proyecto PROY-NOM-220-SSA1-2024 (DOF, 24/07/2024). Mientras no se publique la norma definitiva, sigue vigente esta.",
+    "Incluye la modificación publicada en el DOF el 30/09/2020."
+   ],
+   "url": "https://dof.gob.mx/normasOficiales/6659/salud6a11_C/salud6a11_C.html",
+   "imagen": "assets/estudio/normas/nom_220_ssa1_2016.webp",
+   "infografia": "polisafe",
+   "objetivo": "La presente Norma establece los lineamientos para la instalación y operación de la Farmacovigilancia en el territorio nacional.",
+   "puntos": [
+    {
+     "numeral": "6",
+     "etiqueta": "Estructura de la farmacovigilancia",
+     "texto": "Para llevar a cabo la Farmacovigilancia en México es necesaria una estructura sólida que permita hacer frente a las necesidades y demandas de salud pública."
+    },
+    {
+     "numeral": "7.1.3",
+     "etiqueta": "Centro de referencia",
+     "texto": "Actuar como centro de referencia en materia de Farmacovigilancia en el país."
+    },
+    {
+     "numeral": "8.1.3",
+     "etiqueta": "Calidad de la notificación",
+     "texto": "El grado mínimo de calidad de la información de la notificación, será Grado 0 y se deberá dar seguimiento obligatorio a dicha notificación hasta completar los grados de calidad subsecuentes de información que se establecen en el punto 8.1.4 de la presente Norma o hasta el cierre del caso."
+    },
+    {
+     "numeral": "7.4.1.6",
+     "etiqueta": "Información confidencial",
+     "texto": "Salvaguardar la información confidencial de los pacientes/informantes y notificadores, de conformidad con las disposiciones aplicables en materia de transparencia, acceso a la información y protección de datos personales."
+    },
+    {
+     "numeral": "7.8.1",
+     "etiqueta": "Notificación por pacientes",
+     "texto": "Informar/Notificar al CNFV o a cualquier otro integrante de la Farmacovigilancia a que se refieren los puntos 6.1 a 6.8 de la presente Norma de cualquier SRAM y/o ESAVI que se presente durante y después de la administración de los medicamentos y vacunas"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "7.7.1",
+     "etiqueta": "Notificación de casos",
+     "texto": "La recepción, registro y notificación de reportes de casos de SRAM, RAM, EA, ESAVI y cualquier otro problema de seguridad relacionado con el uso de los medicamentos y vacunas, a la UFV o al CNFV, así como los errores de medicación"
+    },
+    {
+     "numeral": "7.7.3",
+     "etiqueta": "Actualización en seguridad",
+     "texto": "Mantenerse informados y actualizados sobre los datos de seguridad relativos a vacunas y a los medicamentos que prescriban, dispensen o administren."
+    },
+    {
+     "numeral": "7.7.4",
+     "etiqueta": "Información al paciente",
+     "texto": "Retroalimentar a sus pacientes con información de la seguridad de los medicamentos y vacunas que utilizan. Además de indicarles la conducta a seguir en caso de presentar cualquier EA, SRAM, ESAVI y cualquier otro problema de seguridad relacionado con el uso de los medicamentos y vacunas."
+    },
+    {
+     "numeral": "8.1.5.1",
+     "etiqueta": "Casos graves",
+     "texto": "Graves (serias). Toda manifestación clínica que se presenta con la administración de cualquier dosis de un medicamento incluyendo vacunas"
+    }
+   ],
+   "texto": "assets/data/estudio/normas/NOM-220-SSA1-2016.json"
+  },
+  {
+   "id": "AESP-1",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 1",
+   "titulo": "Identificación correcta de los pacientes",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_1.webp",
+   "infografia": "polisafe",
+   "objetivo": "Mejorar la precisión de la identificación de pacientes, unificando este proceso en los EAM del Sector Salud, utilizando al menos dos datos para identificar al paciente (nombre completo y fecha de nacimiento) que permitan prevenir errores que involucran al paciente equivocado.",
+   "puntos": [
+    {
+     "numeral": "AE 1 A",
+     "etiqueta": "Dos identificadores",
+     "texto": "El personal de salud tiene que identificar al paciente desde el momento en que este solicita la atención, con al menos dos identificadores estandarizados en toda la organización (nombre completo y fecha de nacimiento)."
+    },
+    {
+     "numeral": "AE 1 C",
+     "etiqueta": "Momentos críticos",
+     "texto": "El personal de salud tiene que comprobar los datos de identificación del paciente justo antes de al menos los siguientes momentos críticos"
+    },
+    {
+     "numeral": "AE 1 B",
+     "etiqueta": "Ante la duda, no proceder",
+     "texto": "Cuando exista cualquier duda respecto de los dos identificadores NO se realizará ningún procedimiento o intervención, hasta corroborar dichos datos."
+    },
+    {
+     "numeral": "AE 1 A",
+     "etiqueta": "Identificadores en documentos",
+     "texto": "Es necesario escribir los dos identificadores del paciente, en todos los documentos que se generen durante el proceso de atención."
+    },
+    {
+     "numeral": "AE 1 B",
+     "etiqueta": "Identificación del recién nacido",
+     "texto": "En la persona recién nacida tiene que colocarse inmediatamente después del parto/cesárea dos brazaletes, pulseras o su equivalente, una en la muñeca derecha y otro en el tobillo izquierdo, con los datos de identificación de la madre (apellidos), la fecha de nacimiento y sexo del recién nacido."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 1 B",
+     "etiqueta": "Brazalete en la extremidad",
+     "texto": "Colocar en la extremidad, que no dificulte su atención. Cuando las condiciones del paciente no lo permitan, este medio de identificación se coloca en la tarjeta de cabecera o a pie de cama."
+    },
+    {
+     "numeral": "AE 1 A",
+     "etiqueta": "Confirmar datos con el paciente",
+     "texto": "El personal que registre los identificadores confirma con el paciente. En caso de que el paciente no esté en condiciones de responder o se trate de un menor de edad, verificar los datos con algún familiar, cuidador o acompañante"
+    },
+    {
+     "numeral": "AE 1 D",
+     "etiqueta": "Membrete de soluciones",
+     "texto": "El personal de salud tiene que registrar en los membretes de las soluciones intravenosas los datos de identificación del paciente, además del nombre de la solución y/o componentes (incluidos fármacos), duración de solución, fecha y hora de instalación."
+    },
+    {
+     "numeral": "AE 1 C",
+     "etiqueta": "Recolocar el identificador",
+     "texto": "Cuando se retire el medio para identificar al paciente, por la realización de algún procedimiento, es necesario volver a colocarlo de manera inmediata al concluir."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-1.json"
+  },
+  {
+   "id": "AESP-2",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 2",
+   "titulo": "Comunicación Efectiva",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_2.webp",
+   "infografia": "polisafe",
+   "objetivo": "Mejorar la comunicación entre los profesionales de la salud, paciente, familiar, cuidador o acompañante; a fin de obtener información correcta, oportuna y completa durante el proceso de atención y así, reducir los errores relacionados con la emisión de indicaciones verbales y/o telefónicas, mediante el uso del protocolo Escuchar-Escribir-Leer-Confirmar.",
+   "puntos": [
+    {
+     "numeral": "AE 2 A",
+     "etiqueta": "Protocolo de órdenes verbales",
+     "texto": "Implementar el protocolo Escuchar-Escribir-Leer-Confirmar, para recibir órdenes/indicaciones clínicas o resultados de laboratorio o gabinete, verbales o telefónicos."
+    },
+    {
+     "numeral": "AE 2 A",
+     "etiqueta": "Entrega en transiciones",
+     "texto": "Implementar el proceso estructurado y estandarizado de comunicación que permita entre el equipo médico llevar a cabo una entrega clara, precisa, completa y oportuna de la información del paciente durante las transiciones"
+    },
+    {
+     "numeral": "AE 2 C",
+     "etiqueta": "Técnica SAER",
+     "texto": "El personal de salud utilizará herramientas de comunicación validadas entre profesionales de la salud, por ejemplo: Técnica SAER por sus siglas en español: Situación, Antecedentes, Evaluación y Recomendación"
+    },
+    {
+     "numeral": "AE 2 D",
+     "etiqueta": "Palabras sin abreviar",
+     "texto": "Nunca tiene que abreviarse las palabras: unidad, microgramos, día, una vez al día, por razón necesaria, unidades, unidades internacionales, intranasal, subcutáneo, intravenoso, intramuscular, más, durante y por."
+    },
+    {
+     "numeral": "AE 2 E",
+     "etiqueta": "Notificación de valores críticos",
+     "texto": "Los responsables del laboratorio, patología o gabinete notifican de manera inmediata al personal clínico responsable del paciente, utilizando el protocolo escuchar-escribir-leer y confirmar, quien registrará en el expediente clínico."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 2 B 1",
+     "etiqueta": "Registro de indicación verbal",
+     "texto": "El personal de salud que reciba vía verbal o telefónica cualquier indicación, resultado de laboratorio o gabinete, tiene que anotar dicha información recibida en el formato o documento estandarizado del expediente clínico que defina el EAM"
+    },
+    {
+     "numeral": "AE 2 B 1",
+     "etiqueta": "Lectura de regreso",
+     "texto": "La persona que recibe las indicaciones clínicas o resultados tiene que leerlos, a la persona que los emitió."
+    },
+    {
+     "numeral": "AE 2 B 2",
+     "etiqueta": "Repetir en voz alta",
+     "texto": "La persona que recibe las indicaciones tiene que repetirla en voz alta."
+    },
+    {
+     "numeral": "AE 2 C",
+     "etiqueta": "Escalas en la evaluación",
+     "texto": "Dentro de la evaluación se recomienda tomar en cuenta en caso necesario el estado de conciencia, la evolución durante la jornada o turno y escalas de valoración como son las de riesgo de caídas, úlceras por presión y de dolor, entre otras."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-2.json"
+  },
+  {
+   "id": "AESP-3",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 3",
+   "titulo": "Seguridad en el proceso de medicación",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_3.webp",
+   "infografia": "polisafe",
+   "objetivo": "Fortalecer las acciones relacionadas con la selección y adquisición, el almacenamiento, la prescripción, transcripción, dispensación, preparación y administración de medicamentos, para prevenir errores que puedan dañar a los pacientes, derivados del proceso de medicación en los EAM del Sistema Nacional de Salud.",
+   "puntos": [
+    {
+     "numeral": "AE 3 C",
+     "etiqueta": "Prescripción legible",
+     "texto": "Los médicos del EAM tienen que anotar la prescripción médica en el expediente y en la receta médica, con letra clara, legible sin abreviaturas, sin enmendaduras ni tachaduras."
+    },
+    {
+     "numeral": "AE 3 B",
+     "etiqueta": "Alertas visuales de color",
+     "texto": "El personal responsable del almacenamiento colocará una alerta visual de color rojo en los medicamentos de alto riesgo y de color azul los medicamentos LASA."
+    },
+    {
+     "numeral": "AE 3 D",
+     "etiqueta": "Barreras para LASA y alto riesgo",
+     "texto": "A los medicamentos con aspecto o nombre parecido (LASA) y los medicamentos de alto riesgo se les coloca alertas visuales al momento de prescribirlos y/o transcribirlos, que hagan evidente la diferencia entre ellos:"
+    },
+    {
+     "numeral": "AE 3 J",
+     "etiqueta": "Doble verificación",
+     "texto": "Es importante que cada organización implemente la doble verificación con el propósito de disminuir la probabilidad de que ocurran errores de medicación, tiene que realizarse por dos personas competentes"
+    },
+    {
+     "numeral": "AE 3 I",
+     "etiqueta": "Sin etiqueta no se administra",
+     "texto": "No se administrarán medicamentos que carezcan de etiquetas o cuando estas no sean legibles."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 3 G",
+     "etiqueta": "Recepción de medicamentos",
+     "texto": "El personal de enfermería verificará que los medicamentos correspondan a los prescritos por el personal médico."
+    },
+    {
+     "numeral": "AE 3 H",
+     "etiqueta": "Etiquetado tras preparar",
+     "texto": "Etiquetar los medicamentos inmediatamente después de su preparación"
+    },
+    {
+     "numeral": "AE 3 I",
+     "etiqueta": "Alergias e identificación",
+     "texto": "El personal de salud antes de la administración de algún medicamento o hemocomponente, tiene que corroborar, con el paciente, cuidador o acompañante, si tiene alergias y verificará los datos de identificación del paciente."
+    },
+    {
+     "numeral": "AE 3 I",
+     "etiqueta": "Registro tras administrar",
+     "texto": "Registro correcto de los medicamentos, inmediatamente después de su administración, en la hoja de enfermería registrar el nombre del fármaco, fecha, hora de administración, dosis, vía de administración y nombre de quien la administró."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-3.json"
+  },
+  {
+   "id": "AESP-4",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 4",
+   "titulo": "Seguridad en los procedimientos",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_4.webp",
+   "infografia": "polisafe",
+   "objetivo": "Reforzar las prácticas de seguridad ya aceptadas y reducir los eventos adversos y centinela derivados de la práctica quirúrgica y procedimientos de alto riesgo fuera del quirófano por medio de la aplicación del Protocolo Universal en los EAM del Sistema Nacional de Salud.",
+   "puntos": [
+    {
+     "numeral": "AE 4 A 1",
+     "etiqueta": "Marcado del sitio quirúrgico",
+     "texto": "El marcado tiene que realizarse sobre la piel del paciente y de manera que permanezca después de la asepsia y antisepsia."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Aplicación de la LVSC",
+     "texto": "Se aplicará en todos los pacientes a los que se realicen cualquier procedimiento quirúrgico dentro o fuera de la sala de operaciones, así como en los procedimientos invasivos y de alto riesgo que el EAM defina."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Entrada: confirmar identidad",
+     "texto": "Confirman verbalmente con el paciente (si es posible), su identidad preguntando los dos datos de identificación, el sitio quirúrgico, el procedimiento quirúrgico y su consentimiento."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Pausa quirúrgica",
+     "texto": "Confirma de manera verbal con el anestesiólogo y el personal de enfermería (instrumentista y circulante) la identidad del paciente, el procedimiento que se va a realizar, el sitio quirúrgico"
+    },
+    {
+     "numeral": "AE 4 B",
+     "etiqueta": "Tiempo Fuera fuera del quirófano",
+     "texto": "La realización del Tiempo Fuera, con el propósito de llevar a cabo el procedimiento/tratamiento correcto, con el paciente correcto y en el sitio correcto"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Coordinador de la lista",
+     "texto": "Se nombrará a un integrante del equipo quirúrgico como el coordinador para su llenado, se recomienda que sea el circulante."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Verificar esterilización",
+     "texto": "Verifica la fecha y método de esterilización del equipo e instrumental."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Recuento de instrumental",
+     "texto": "El recuento completo del instrumental, textiles y agujas."
+    },
+    {
+     "numeral": "AE 4 A 2",
+     "etiqueta": "Etiquetado de muestras",
+     "texto": "El etiquetado de las muestras con los dos datos de identificación del paciente (nombre completo y fecha de nacimiento), fecha de la cirugía y descripción general de la muestra."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-4.json"
+  },
+  {
+   "id": "AESP-5",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 5",
+   "titulo": "Reducción del riesgo de Infecciones Asociadas a la Atención de la Salud (IAAS)",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_5.webp",
+   "infografia": "polisafe",
+   "objetivo": "Coadyuvar a reducir las infecciones asociadas a la atención de la salud, por medio de la implementación de un programa integral de higiene de manos durante el proceso de atención.",
+   "puntos": [
+    {
+     "numeral": "AE 5 A",
+     "etiqueta": "Higiene de manos prioritaria",
+     "texto": "Es importante que cada organización implemente este programa, en donde la acción prioritaria es la higiene de manos por el personal clínico con la técnica establecida por la OMS y en los cinco momentos."
+    },
+    {
+     "numeral": "AE 5 B",
+     "etiqueta": "Estrategia multimodal",
+     "texto": "Implementar los componentes de la estrategia multimodal de la OMS para la mejora de la higiene de las manos"
+    },
+    {
+     "numeral": "AE 5 A",
+     "etiqueta": "Capacitación continua",
+     "texto": "Implementan programas de capacitación continua para todo el personal de los EAM, estudiantes, pacientes, familiares, cuidadores o acompañantes y visitantes, en temas de higiene de manos, prevención de IAAS y uso racional de antimicrobianos."
+    },
+    {
+     "numeral": "AE 5 A",
+     "etiqueta": "Abasto de insumos",
+     "texto": "El Área Administrativa de los EAM aseguran el abasto y mantenimiento del material y equipo necesario para la higiene de manos y la calidad del agua."
+    },
+    {
+     "numeral": "AE 5 B",
+     "etiqueta": "Herramienta validada",
+     "texto": "Aplicar una herramienta validada para la prevención y reducción de las IAAS, por ejemplo, la Cédula Única de Gestión para los Paquetes de Acciones para la Prevención de las IAAS."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 5 B",
+     "etiqueta": "Cinco momentos",
+     "texto": "Formación y capacitación del personal de salud con respecto a la importancia de la higiene de manos basada en los cinco momentos y los procedimientos adecuados para la fricción y lavado de manos."
+    },
+    {
+     "numeral": "AE 5 B",
+     "etiqueta": "Recordatorios visuales",
+     "texto": "Colocar recordatorios visuales en los puntos de atención en el lugar de trabajo."
+    },
+    {
+     "numeral": "AE 5 B",
+     "etiqueta": "Observancia y retroalimentación",
+     "texto": "Evaluación y retroalimentación: hacer seguimiento de la infraestructura y de la observancia de estas prácticas y retroalimentar al respecto."
+    },
+    {
+     "numeral": "AE 5 A",
+     "etiqueta": "Prevención en procedimientos",
+     "texto": "Implementar acciones para la prevención de las IAAS en la colocación de sondas, implantes anticonceptivos, dispositivos intrauterinos, aplicación de medicamentos y biológicos parenterales, cuidados de heridas y estomas, entre otros."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-5.json"
+  },
+  {
+   "id": "AESP-6",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 6",
+   "titulo": "Reducción del riesgo de daño al paciente por causa de caídas",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_6.webp",
+   "infografia": "polisafe",
+   "objetivo": "Prevenir el daño al paciente asociado a las caídas en los EAM del Sistema Nacional de Salud mediante la evaluación y reducción del riesgo de caídas.",
+   "puntos": [
+    {
+     "numeral": "AE 6 A",
+     "etiqueta": "Evaluación del riesgo",
+     "texto": "Tiene que evaluar el riesgo de caídas del paciente, utilizando un instrumento o herramienta validada, acorde a las características y necesidades de los pacientes atendidos en el EAM."
+    },
+    {
+     "numeral": "AE 6 A",
+     "etiqueta": "Evaluación en todos los pacientes",
+     "texto": "La evaluación del riesgo de caídas tiene que realizarse en todos los pacientes."
+    },
+    {
+     "numeral": "AE 6 B",
+     "etiqueta": "Barandales elevados",
+     "texto": "En caso de que el paciente se encuentre en cama o camilla, el personal de salud debe levantar siempre los barandales."
+    },
+    {
+     "numeral": "AE 6 B",
+     "etiqueta": "Registro y notificación",
+     "texto": "En caso de que el paciente sufra una caída se tiene que registrar y notificar inmediatamente, siguiendo el protocolo del EAM para el reporte de eventos señalado en la AESP 7."
+    },
+    {
+     "numeral": "AE 6 C",
+     "etiqueta": "Entorno arquitectónico",
+     "texto": "En el EAM se designará a una persona para que verifique los siguientes factores del entorno arquitectónico y que están asociados a riesgo de caídas de pacientes hospitalizados"
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 6 A",
+     "etiqueta": "Informar el riesgo",
+     "texto": "Informar a paciente, familiar, cuidador o acompañante sobre el riesgo de caída y las medidas de seguridad que se aplican para prevenirla, entre ellas, solicitar la ayuda del personal para la movilización del paciente."
+    },
+    {
+     "numeral": "AE 6 B",
+     "etiqueta": "Señalar el riesgo",
+     "texto": "Identificar el riesgo de caídas en la tarjeta de cabecera o a pie de cama u otros medios que permitan la identificación del riesgo durante los traslados."
+    },
+    {
+     "numeral": "AE 6 B",
+     "etiqueta": "Traslado seguro",
+     "texto": "Trasladar al paciente en camilla con barandales en posición elevada o en sillas de ruedas, ambos con frenos funcionales."
+    },
+    {
+     "numeral": "AE 6 B",
+     "etiqueta": "Aditamentos al alcance",
+     "texto": "Acercar al paciente los aditamentos de ayuda como bastones, andadera, silla de ruedas y lentes, entre otros."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-6.json"
+  },
+  {
+   "id": "AESP-7",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 7",
+   "titulo": "Prevención, notificación, registro y análisis de cuasifallas, eventos adversos y centinela.",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_7.webp",
+   "infografia": "polisafe",
+   "objetivo": "Generar información sobre cuasifallas, eventos adversos y centinelas, mediante una herramienta de registro que permita el análisis y favorezca la toma de decisiones para que a nivel local se prevenga su ocurrencia; y a nivel nacional permita emitir alertas para evitar que acontezcan eventos centinela en los EAM, tiene que ser una prioridad del Sistema Nacional de Salud.",
+   "puntos": [
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Registro inmediato",
+     "texto": "El registro de eventos adversos se tiene que realizar inmediatamente cuando ocurra el evento adverso o tan pronto cuando sean identificados, priorizando la atención del paciente."
+    },
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Registro no punitivo",
+     "texto": "Es un registro anónimo, voluntario, confidencial y no punitivo."
+    },
+    {
+     "numeral": "AE 7 B",
+     "etiqueta": "Análisis causa-raíz",
+     "texto": "En todos los eventos centinela se tiene que realizar el análisis causa-raíz en un período no mayor a 45 días."
+    },
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Patrones y tendencias",
+     "texto": "Los eventos adversos y cuasifallas tienen que analizarse mediante Patrones y Tendencias al menos cada 6 meses."
+    },
+    {
+     "numeral": "AE 7 C",
+     "etiqueta": "Presentación al comité",
+     "texto": "Los resultados del registro de cuasifallas, eventos adversos y centinela se presentarán en el Comité de Calidad y Seguridad del Paciente o equivalente, con el fin de establecer las acciones de mejora."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Sistema de registro",
+     "texto": "Los EAM utilizarán el Sistema de Registro de Eventos Adversos desarrollado para tal efecto, el cual se encuentra disponible en la página electrónica de la DGCES o la definida por el EAM."
+    },
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Cuándo registrar",
+     "texto": "El EAM debe realizar el registro y análisis cuando exista riesgo potencial o inminente de muerte imprevista, pérdida temporal o permanente de una función que no estén relacionadas con el curso natural de la enfermedad, problema subyacente del paciente o resultado de una intervención."
+    },
+    {
+     "numeral": "AE 7 A",
+     "etiqueta": "Eventos en vacunación",
+     "texto": "Reportar al servicio de inmunizaciones durante las primeras 24 horas las cuasifallas y eventos adversos derivados del proceso de vacunación, así como los Eventos Supuestamente Atribuibles a la Vacunación e Inmunización."
+    },
+    {
+     "numeral": "AE 7 B",
+     "etiqueta": "Entrega de menor equivocado",
+     "texto": "Entrega de menor de edad equivocado a familiar, cuidador, acompañante o representante legal."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-7.json"
+  },
+  {
+   "id": "AESP-8",
+   "tipo": "aesp",
+   "clave": "Acción Esencial 8",
+   "titulo": "Cultura de Seguridad del Paciente para la mejora de la calidad en la atención",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [
+    "Forma parte del Acuerdo que modifica el Anexo Único de las Acciones Esenciales para la Seguridad del Paciente (DOF, 16/06/2023)."
+   ],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": "assets/estudio/normas/aesp_8.webp",
+   "infografia": "polisafe",
+   "objetivo": "Medir la cultura de seguridad del paciente en el ámbito hospitalario, con el propósito de favorecer la toma de decisiones para establecer acciones de mejora continua del clima de seguridad en los EAM del Sistema Nacional de Salud.",
+   "puntos": [
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Cuestionario de referencia",
+     "texto": "Para el proceso de medición se recomienda utilizar el cuestionario que la DGCES adaptó a partir del desarrollado por la Agency for Healthcare Research and Quality (AHRQ)."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Plataforma de medición",
+     "texto": "La medición de la cultura de seguridad del paciente se podrá realizar en la plataforma informática que la DGCES elaboró para este fin."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Aprobación por el comité",
+     "texto": "La participación del EAM en la medición de la cultura de seguridad del paciente, tiene que ser aprobada por el Comité de Calidad y Seguridad del Paciente o equivalente."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Medición anual",
+     "texto": "Realizar anualmente, la medición de la cultura de seguridad del paciente."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Análisis de resultados",
+     "texto": "Los resultados de la medición se presentarán en el COCASEP o su equivalente, para identificar patrones y tendencias y para el diseño e implementación de acciones de mejora."
+    }
+   ],
+   "enfermeria": [
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Participación anónima",
+     "texto": "Participa de manera anónima el personal de todos los turnos del EAM."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Difusión de resultados",
+     "texto": "Los resultados de este análisis y las acciones de mejora implementadas se presentarán al cuerpo directivo y al personal del EAM."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Cuestionario hospitalario",
+     "texto": "Cuestionario sobre Cultura de Seguridad del Paciente en los Establecimientos en Hospitales de México."
+    },
+    {
+     "numeral": "AE 8 A",
+     "etiqueta": "Cuestionario ambulatorio",
+     "texto": "Cuestionario sobre Cultura de Seguridad del Paciente en los Establecimientos de Salud Ambulatorios."
+    }
+   ],
+   "texto": "assets/data/estudio/normas/AESP-8.json"
+  },
+  {
+   "id": "AESP-0",
+   "tipo": "aesp",
+   "clave": "Acciones Esenciales",
+   "titulo": "Acuerdo, introducción y glosario de las Acciones Esenciales para la Seguridad del Paciente",
+   "emisor": "Consejo de Salubridad General",
+   "tema": "Seguridad del paciente",
+   "publicacion": "16/06/2023",
+   "entradaVigor": "17/06/2023",
+   "estado": "vigente",
+   "avisos": [],
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "imagen": null,
+   "infografia": null,
+   "objetivo": null,
+   "puntos": [],
+   "enfermeria": [],
+   "texto": "assets/data/estudio/normas/AESP-0.json"
+  }
+ ]
+}

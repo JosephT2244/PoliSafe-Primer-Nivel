@@ -1,0 +1,115 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Plantilla de texto largo (privacidad y términos) con índice lateral.
+interface Props {
+  secciones: { id: string; titulo: string }[];
+}
+const { secciones } = Astro.props;
+---
+
+<div class="contenedor legal">
+  <nav class="indice" aria-label="En esta página">
+    <p>En esta página</p>
+    <ul>
+      {
+        secciones.map((s) => (
+          <li>
+            <a href={`#${s.id}`}>{s.titulo}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div class="texto">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .legal {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-block: clamp(3rem, 6vw, 5rem) var(--seccion);
+  }
+
+  .indice {
+    position: sticky;
+    top: 6.5rem;
+    align-self: start;
+  }
+
+  .indice p {
+    font-size: var(--t-sm);
+    font-weight: 650;
+    color: var(--texto-2);
+    margin-bottom: 0.75rem;
+  }
+
+  .indice ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid var(--borde);
+  }
+
+  .indice a {
+    display: block;
+    padding: 0.45rem 0 0.45rem 1rem;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+    text-decoration: none;
+  }
+
+  .indice a:hover {
+    color: var(--acento);
+    border-left-color: var(--acento);
+  }
+
+  .texto {
+    max-width: 68ch;
+  }
+
+  .texto :global(h2) {
+    font-size: var(--t-lg);
+    font-stretch: 85%;
+    font-weight: 660;
+    margin: 2.75rem 0 0.9rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .texto :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .texto :global(p),
+  .texto :global(li) {
+    color: var(--texto-2);
+  }
+
+  .texto :global(p + p) {
+    margin-top: 1rem;
+  }
+
+  .texto :global(ul) {
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .texto :global(a) {
+    color: var(--acento);
+  }
+
+  @media (max-width: 860px) {
+    .legal {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .indice {
+      position: static;
+    }
+  }
+</style>

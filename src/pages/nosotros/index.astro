@@ -1,0 +1,407 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Nosotros: quiénes somos, qué hacemos, misión, visión, valores, equipo y trayectoria (RF-008-03).
+import { Icon } from 'astro-icon/components';
+import { Picture, Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import { sitio } from '../../datos/sitio';
+import { mision, vision, queHacemos, valores, equipo, trayectoria } from '../../datos/empresa';
+import { fechaLarga } from '../../lib/lanzamientos.mjs';
+import enfermera from '../../assets/marca/enfermera.png';
+import icono from '../../assets/marca/icono_app.png';
+
+const personas = equipo.map((p) => ({ '@type': 'Person', name: p.nombre, jobTitle: p.rol, worksFor: { '@type': 'Organization', name: sitio.nombre } }));
+---
+
+<Base
+  titulo="Nosotros"
+  descripcion="Quiénes somos, qué hacemos, misión, visión, valores y equipo de PoliSafe Primer Nivel, creada por estudiantes del Instituto Politécnico Nacional para la enfermería de primer nivel de Jalisco."
+  datosEstructurados={personas.map((p) => ({ '@context': 'https://schema.org', ...p }))}
+>
+  <CabeceraPagina
+    antetitulo="Quiénes somos"
+    titulo="Software clínico hecho con rigor, desde el IPN para Jalisco."
+    entrada={`PoliSafe fue creada por estudiantes durante su estancia de estudios en diversas escuelas del ${sitio.institucion}. PoliSafe Primer Nivel es su versión para el ${sitio.concurso}: una herramienta gratuita para que la enfermería de primer nivel dé seguimiento a las enfermedades crónicas con información verificable.`}
+  />
+
+  <section class="seccion historia" aria-labelledby="t-historia">
+    <div class="contenedor historia-rejilla">
+      <div class="historia-foto" data-revelar>
+        <Picture
+          src={enfermera}
+          alt="Enfermera con uniforme quirúrgico consulta una tableta y toma notas en un aula de simulación clínica."
+          formats={['avif']}
+    fallbackFormat="webp"
+          widths={[480, 800, 1200]}
+          sizes="(max-width: 860px) 92vw, 600px"
+          loading="eager"
+        />
+      </div>
+      <div data-revelar style="--orden:1">
+        <h2 id="t-historia" class="titulo-seccion">De cuaderno de estudio a herramienta para la unidad.</h2>
+        <p class="entrada">
+          PoliSafe empezó como una app para repasar el Proceso de Atención de Enfermería, farmacología y cálculos. Con cada
+          revisión fue sumando lo que el personal de enfermería necesita en un turno: catálogos completos, cálculos con
+          fuente y perfiles protegidos.
+        </p>
+        <p class="entrada">
+          Para el reto de Salud y Bienestar de Jalisco partimos de los datos oficiales del estado y de lo que nos contaron
+          enfermeras de primer nivel, y agregamos lo que faltaba: el seguimiento de las enfermedades crónicas con las metas
+          de las normas y el panorama de cada municipio. Cada cambio empieza con una especificación escrita y pasa una puerta
+          de calidad con cientos de pruebas automatizadas.
+        </p>
+        <p class="entrada">
+          Uso de inteligencia artificial: parte del código, de las pruebas, del análisis de datos y de la documentación se
+          escribió con ayuda de Claude (Anthropic) y el equipo la revisó. Ni la app ni este sitio usan inteligencia artificial.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion que-hacemos" aria-labelledby="t-que">
+    <div class="contenedor">
+      <h2 id="t-que" class="titulo-seccion" data-revelar>Qué hacemos.</h2>
+      <div class="tres">
+        {
+          queHacemos.map((q, i) => (
+            <article data-revelar style={`--orden:${i}`}>
+              <h3>{q.titulo}</h3>
+              <p>{q.texto}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="mv" aria-label="Misión y visión">
+    <div class="contenedor mv-rejilla">
+      <article data-revelar>
+        <h2>Misión</h2>
+        <p>{mision}</p>
+      </article>
+      <article data-revelar style="--orden:1">
+        <h2>Visión</h2>
+        <p>{vision}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-valores">
+    <div class="contenedor">
+      <h2 id="t-valores" class="titulo-seccion" data-revelar>Nuestros valores.</h2>
+      <ul class="valores">
+        {
+          valores.map((v, i) => (
+            <li data-revelar style={`--orden:${i % 3}`}>
+              <Icon name={v.icono} aria-hidden="true" />
+              <h3>{v.nombre}</h3>
+              <p>{v.texto}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion equipo" aria-labelledby="t-equipo">
+    <div class="contenedor">
+      <h2 id="t-equipo" class="titulo-seccion" data-revelar>El equipo.</h2>
+      <ul class="personas">
+        {
+          equipo.map((p, i) => (
+            <li data-revelar style={`--orden:${i}`}>
+              <span class="monograma" aria-hidden="true">
+                {p.iniciales}
+              </span>
+              <h3>{p.nombre}</h3>
+              <p class="rol">{p.rol}</p>
+              <p>{p.texto}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion trayectoria" aria-labelledby="t-trayectoria">
+    <div class="contenedor trayectoria-rejilla">
+      <div data-revelar>
+        <h2 id="t-trayectoria" class="titulo-seccion">Trayectoria.</h2>
+        <p class="entrada">Los hitos de PoliSafe y de PoliSafe Primer Nivel, con las fechas del historial del proyecto.</p>
+      </div>
+      <ol class="linea">
+        {
+          trayectoria.map((t, i) => (
+            <li data-revelar style={`--orden:${i % 3}`}>
+              <time datetime={t.fecha}>{fechaLarga(t.fecha)}</time>
+              <h3>{t.titulo}</h3>
+              <p>{t.texto}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="seccion simbolo" aria-labelledby="t-simbolo">
+    <div class="contenedor simbolo-rejilla">
+      <Image src={icono} alt="Logotipo de PoliSafe: un tlacuache con cofia y portapapeles dentro de un sello guinda con la palabra PoliSafe." width={360} height={360} class="simbolo-img" />
+      <div data-revelar>
+        <h2 id="t-simbolo" class="titulo-seccion">Nuestro símbolo.</h2>
+        <p class="entrada">
+          El tlacuache es un mamífero originario de México. En PoliSafe lleva cofia y portapapeles: representa a quien cuida,
+          observa y registra con atención. El sello guinda lleva el nombre de PoliSafe y el color de la escuela donde nos formamos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="contenedor cierre-fila" data-revelar>
+      <p>¿Eres jefatura de enfermería o de una jurisdicción y quieres probar PoliSafe Primer Nivel en tu unidad?</p>
+      <a class="boton" href="/contacto/">
+        <Icon name="ph:envelope-simple-light" aria-hidden="true" />
+        Contactar al equipo
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .historia-rejilla,
+  .simbolo-rejilla,
+  .trayectoria-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .historia-foto :global(img) {
+    width: 100%;
+    aspect-ratio: 5 / 4.4;
+    object-fit: cover;
+    object-position: 68% center;
+    border-radius: var(--r-xl);
+  }
+
+  .historia .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .que-hacemos {
+    padding-top: 0;
+  }
+
+  .tres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .tres article {
+    padding: 1.75rem;
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+  }
+
+  .tres h3,
+  .valores h3,
+  .personas h3,
+  .linea h3 {
+    font-size: var(--t-md);
+    margin-bottom: 0.6rem;
+  }
+
+  .tres p,
+  .valores p,
+  .personas p,
+  .linea p {
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+  }
+
+  .mv {
+    background: var(--banda);
+    color: var(--banda-texto);
+    padding-block: var(--seccion);
+  }
+
+  .mv-rejilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .mv h2 {
+    font-size: var(--t-md);
+    font-weight: 650;
+    color: var(--banda-texto-2);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(248 236 226 / 0.2);
+  }
+
+  .mv p {
+    font-size: var(--t-lg);
+    font-stretch: 88%;
+    line-height: 1.4;
+  }
+
+  .valores {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .valores svg {
+    width: 40px;
+    height: 40px;
+    color: var(--acento);
+    margin-bottom: 1rem;
+  }
+
+  .equipo {
+    background: var(--superficie-2);
+  }
+
+  .personas {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .personas li {
+    padding: 2rem 1.75rem;
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+  }
+
+  .monograma {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: var(--guinda);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-stretch: 80%;
+    letter-spacing: 0.02em;
+  }
+
+  .personas .rol {
+    color: var(--acento);
+    font-weight: 650;
+    margin-bottom: 0.75rem;
+  }
+
+  .trayectoria-rejilla {
+    align-items: start;
+  }
+
+  .trayectoria .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .linea {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.75rem;
+    border-left: 2px solid var(--borde-fuerte);
+    display: grid;
+    gap: 2rem;
+  }
+
+  .linea li {
+    position: relative;
+  }
+
+  .linea li::before {
+    content: '';
+    position: absolute;
+    left: calc(-1.75rem - 7px);
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--guinda);
+    box-shadow: 0 0 0 4px var(--fondo);
+  }
+
+  time {
+    display: block;
+    font-size: var(--t-sm);
+    font-weight: 650;
+    color: var(--acento);
+    margin-bottom: 0.35rem;
+  }
+
+  .simbolo {
+    background: var(--superficie-2);
+  }
+
+  .simbolo-rejilla :global(.simbolo-img) {
+    width: min(100%, 360px);
+    border-radius: 50%;
+    justify-self: center;
+    box-shadow: var(--sombra-2);
+  }
+
+  .simbolo .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .cierre {
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+
+  .cierre-fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .cierre-fila p {
+    font-size: var(--t-lg);
+    font-weight: 650;
+    font-stretch: 85%;
+    max-width: 32ch;
+  }
+
+  @media (max-width: 860px) {
+    .historia-rejilla,
+    .simbolo-rejilla,
+    .trayectoria-rejilla,
+    .mv-rejilla,
+    .tres,
+    .personas {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .valores {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .valores {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

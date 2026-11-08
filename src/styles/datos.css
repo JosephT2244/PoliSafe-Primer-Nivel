@@ -1,0 +1,432 @@
+/* Un código de: Joseph Ubaldo Trejo Hernández
+   Estilos de las páginas de datos de Jalisco (cifras, barras, mapa de puntos y tablas), tomados del sitio v1
+   y limitados al contenedor .datos para no chocar con los estilos del sitio de PoliSafe. */
+
+.datos .cifras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.datos .cifra {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+  padding: 1.25rem 1.25rem 1.1rem;
+  box-shadow: var(--sombra-1);
+}
+
+.datos .cifra-valor {
+  display: block;
+  font-size: var(--t-2xl);
+  font-stretch: 78%;
+  font-weight: 680;
+  color: var(--acento);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.datos .cifra-etiqueta {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.datos .cifra-detalle {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--t-sm);
+  color: var(--texto-2);
+}
+
+.datos .grafica {
+  margin-top: 2rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+}
+
+.datos .grafica h3 {
+  font-size: var(--t-md);
+  font-weight: 650;
+}
+
+.datos .grafica-sub {
+  font-size: var(--t-sm);
+  color: var(--texto-2);
+  margin-top: 0.25rem;
+}
+
+.datos .barras {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.datos .barra-fila {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr) auto;
+  gap: 0.35rem 1rem;
+  align-items: center;
+  border-radius: var(--r-sm);
+  padding: 0.25rem 0.4rem;
+  margin: -0.25rem -0.4rem;
+}
+
+.datos .barra-fila:hover,
+.datos .barra-fila:focus-within {
+  background: var(--superficie-2);
+}
+
+.datos .barra-nombre {
+  font-size: var(--t-sm);
+}
+
+.datos .barra-nom {
+  display: block;
+  font-size: var(--t-xs);
+  color: var(--texto-2);
+}
+
+.datos .barra-pista {
+  height: 14px;
+  background: var(--superficie-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.datos .barra-relleno {
+  height: 100%;
+  background: var(--acento);
+  border-radius: 0 4px 4px 0;
+}
+
+.datos .barra-valor {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: var(--t-sm);
+  text-align: right;
+  min-width: 4.5ch;
+}
+
+@media (max-width: 640px) {
+  .datos .barra-fila {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .datos .barra-pista {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* Mapa de puntos */
+.datos .mapa {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+
+.datos .mapa circle {
+  fill: var(--acento);
+  fill-opacity: 0.72;
+  stroke: var(--superficie);
+  stroke-width: 1.5;
+}
+
+.datos .mapa circle:hover {
+  fill-opacity: 1;
+  stroke: var(--texto);
+}
+
+/* Tablas */
+.datos .controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: end;
+  margin-top: 1.5rem;
+}
+
+.datos .control {
+  display: grid;
+  gap: 0.3rem;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.datos .control input,
+.datos .control select {
+  min-height: 44px;
+  min-width: 14rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borde-fuerte);
+  border-radius: var(--r-sm);
+  background: var(--superficie);
+  font-weight: 400;
+}
+
+.datos .conteo {
+  font-size: var(--t-sm);
+  color: var(--texto-2);
+  margin-top: 0.75rem;
+}
+
+.datos .tabla-envoltura {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+  background: var(--superficie);
+  max-height: 34rem;
+  overflow-y: auto;
+}
+
+.datos table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--t-sm);
+}
+
+.datos th,
+.datos td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
+
+.datos th {
+  font-weight: 650;
+}
+
+.datos thead th {
+  position: sticky;
+  top: 0;
+  background: var(--superficie-2);
+  z-index: 1;
+}
+
+.datos td.num,
+.datos th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.datos tbody tr:hover {
+  background: var(--superficie-2);
+}
+
+/* Aviso */
+.datos .aviso {
+  border-left: 4px solid var(--acento);
+  background: var(--acento-tinte);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin-top: 1.5rem;
+  max-width: 72ch;
+}
+
+.datos .columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.datos .tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+}
+
+.datos .tarjeta h3 {
+  font-size: var(--t-md);
+  margin-bottom: 0.5rem;
+}
+
+
+
+.datos .texto {
+  max-width: 68ch;
+}
+
+.datos .texto p + p,
+.datos .texto ul,
+.datos .texto p + ul {
+  margin-top: 0.85rem;
+}
+
+.datos .texto ul {
+  padding-left: 1.2rem;
+}
+
+.datos .texto li + li {
+  margin-top: 0.4rem;
+}
+
+.datos .nota {
+  font-size: var(--t-xs);
+  color: var(--texto-2);
+  margin-top: 0.75rem;
+  max-width: 80ch;
+}
+
+
+/* Agregado para el sitio de PoliSafe Primer Nivel */
+.datos .bloque {
+  padding-block: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+  border-top: 1px solid var(--borde);
+}
+
+.datos .bloque:first-of-type {
+  border-top: 0;
+}
+
+.datos .barra-fila.sin-norma .barra-relleno {
+  background: var(--borde-fuerte);
+}
+
+.datos .leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+  font-size: var(--t-sm);
+  color: var(--texto-2);
+}
+
+.datos .leyenda li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.datos .muestra {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--acento);
+}
+
+.datos .muestra.sin-norma {
+  background: var(--borde-fuerte);
+}
+
+.datos .relacion {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.datos .relacion li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem 2rem;
+  padding: 1.25rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+}
+
+.datos .relacion .etiqueta {
+  display: block;
+  font-size: var(--t-xs);
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--acento);
+  margin-bottom: 0.35rem;
+}
+
+.datos .relacion strong {
+  display: block;
+  font-size: var(--t-md);
+  margin-bottom: 0.25rem;
+}
+
+.datos .relacion p {
+  color: var(--texto-2);
+  font-size: var(--t-sm);
+}
+
+@media (max-width: 720px) {
+  .datos .relacion li {
+    grid-template-columns: 1fr;
+  }
+}
+
+.datos .archivos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.datos .archivo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--r-md);
+}
+
+.datos .archivo h3 {
+  font-size: var(--t-md);
+}
+
+.datos .archivo p {
+  font-size: var(--t-sm);
+  color: var(--texto-2);
+}
+
+.datos .archivo .meta {
+  font-size: var(--t-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.datos .archivo .boton {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.indice-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.indice-datos a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--borde-fuerte);
+  border-radius: 999px;
+  background: var(--superficie);
+  font-size: var(--t-sm);
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.indice-datos a:hover {
+  border-color: var(--acento);
+  color: var(--acento);
+}

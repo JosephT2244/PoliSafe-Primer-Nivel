@@ -1,0 +1,1400 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Portada de PoliSafe Primer Nivel: explica y promueve la app; los datos de Jalisco viven en /jalisco/.
+import { Icon } from 'astro-icon/components';
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Telefono from '../components/Telefono.astro';
+import Ventana from '../components/Ventana.astro';
+import TarjetaPlataforma from '../components/TarjetaPlataforma.astro';
+import Preguntas from '../components/Preguntas.astro';
+import { sitio, cifrasJalisco, cifrasApp } from '../datos/sitio';
+import { modulos } from '../datos/modulos';
+import { preguntas } from '../datos/preguntas';
+import manifiesto from '../datos/lanzamientos.json';
+import datos from '../datos/jalisco.json';
+import { vigente, megabytes, fechaLarga } from '../lib/lanzamientos.mjs';
+import { entero, pct } from '../lib/formato';
+
+import inicio from '../assets/capturas/inicio.png';
+import seguimiento from '../assets/capturas/seguimiento.png';
+import resultado from '../assets/capturas/seguimiento-resultado.png';
+import jalisco from '../assets/capturas/jalisco.png';
+import paciente from '../assets/capturas/seguimiento-paciente.png';
+import detalle from '../assets/capturas/jalisco-detalle.png';
+import tabletaSeguimiento from '../assets/capturas/tableta-seguimiento.png';
+import tabletaJalisco from '../assets/capturas/tableta-jalisco.png';
+import enfermera from '../assets/marca/enfermera.png';
+
+const android = vigente(manifiesto, 'android');
+const r = datos.resumen;
+
+const recorrido = [
+  { id: 'inicio', titulo: 'Inicio', texto: 'El seguimiento de tu unidad y Jalisco de un vistazo.', imagen: inicio, alt: 'Pantalla Inicio de PoliSafe Primer Nivel con el panel Primer nivel en Jalisco y los accesos rápidos.' },
+  { id: 'seguimiento', titulo: 'Seguimiento', texto: 'Quién tiene su control al día y quién no ha vuelto.', imagen: seguimiento, alt: 'Seguimiento de crónicos con 58.3 % de seguimiento completo y vigente y la lista de pendientes. Datos de demostración ficticios.' },
+  { id: 'resultado', titulo: 'Fuera de meta', texto: 'Cada valor con la norma y el numeral que lo respaldan.', imagen: resultado, alt: 'Consulta guardada con la glucemia en ayuno y el IMC fuera de meta, cada uno con su norma.' },
+  { id: 'jalisco', titulo: 'Jalisco', texto: 'Municipios y unidades con datos oficiales, sin internet.', imagen: jalisco, alt: 'Pantalla Jalisco con las muertes por enfermedades crónicas al año y la red pública de primer nivel.' },
+];
+
+const etapas = [
+  { nombre: 'Registra al paciente por folio', texto: 'Folio o expediente, sexo, grupo de edad, talla y padecimientos. Sin nombre, sin CURP, sin teléfono.' },
+  { nombre: 'Captura lo que pide la norma', texto: 'La consulta muestra primero lo que la NOM pide en cada visita y promedia dos tomas de presión.' },
+  { nombre: 'Lee lo que está fuera de meta', texto: 'Cada valor se compara con la NOM-015, NOM-030, NOM-037 o NOM-008 y se cita su numeral. No es un diagnóstico.' },
+  { nombre: 'Atiende a quien no ha vuelto', texto: 'El indicador de la unidad y la lista de pendientes dicen a quién buscar primero. El resumen sale en PDF, sin nombres.' },
+];
+
+const principal = modulos.find((m) => m.id === 'seguimiento')!;
+const destacados = ['jalisco', 'pae', 'calculos', 'farmacologia', 'estudio', 'perfiles'].map((id) => modulos.find((m) => m.id === id)!);
+const disposicion: Record<string, string> = { jalisco: 'modulo-alto', estudio: 'modulo-ancho' };
+
+const datosApp = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: sitio.nombre,
+  applicationCategory: 'MedicalApplication',
+  operatingSystem: 'Android 7.0 o posterior',
+  softwareVersion: android?.version,
+  datePublished: android?.fecha,
+  inLanguage: 'es-MX',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'MXN' },
+  description: sitio.descripcion,
+};
+---
+
+<Base titulo={sitio.nombre} datosEstructurados={[datosApp]}>
+  <!-- Portada: la única secuencia de entrada orquestada del sitio. -->
+  <section class="portada" aria-labelledby="titulo-portada">
+    <div class="contenedor portada-rejilla">
+      <div class="portada-texto">
+        <p class="sello entrar" style="--d:0">
+          <Icon name="ph:seal-check-light" aria-hidden="true" />
+          Gratuita para Android · Hecha para Jalisco
+        </p>
+        <h1 id="titulo-portada" class="display entrar" style="--d:1">
+          El control de las enfermedades crónicas, en el teléfono de la unidad.
+        </h1>
+        <p class="entrada entrar" style="--d:2">
+          PoliSafe Primer Nivel ayuda a la enfermería de primer nivel de Jalisco a dar seguimiento a diabetes, hipertensión,
+          dislipidemia y obesidad con las metas de las normas oficiales, y trae todo PoliSafe: PAE, cálculos, farmacología,
+          área quirúrgica y estudio. Funciona sin internet y sin datos personales.
+        </p>
+        <div class="portada-acciones entrar" style="--d:3">
+          {
+            android && (
+              <a class="boton" href={android.url} data-plataforma-cta="android">
+                <Icon name="ph:android-logo-light" aria-hidden="true" />
+                Descargar para Android
+              </a>
+            )
+          }
+          <a class="boton boton-secundario" href="/jalisco/">
+            <Icon name="ph:chart-bar-light" aria-hidden="true" />
+            Por qué en Jalisco
+          </a>
+        </div>
+        {
+          android && (
+            <ul class="portada-meta entrar" style="--d:4" aria-label="Datos de la versión">
+              <li>Versión {android.version}</li>
+              <li>{fechaLarga(android.fecha)}</li>
+              <li>
+                <a class="enlace" href="/descargas/">
+                  Ver requisitos y SHA-256
+                </a>
+              </li>
+              <li>
+                <a class="enlace" href="/app/">
+                  Abrir versión web
+                </a>
+              </li>
+              <li>
+                <a class="enlace" href="/como-usar/">
+                  Cómo usar la app
+                </a>
+              </li>
+            </ul>
+          )
+        }
+      </div>
+
+      <div class="escenario" data-recorrido>
+        <div class="escenario-telefono entrar" style="--d:2">
+          <figure class="telefono-vivo">
+            <div class="bisel">
+              {
+                recorrido.map((paso, i) => (
+                  <Picture
+                    src={paso.imagen}
+                    alt={paso.alt}
+                    formats={['avif']}
+                    fallbackFormat="webp"
+                    widths={[320, 480, 720]}
+                    sizes="(max-width: 700px) 72vw, 330px"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={i === 0 ? 'high' : 'auto'}
+                    class:list={['pantalla', { activa: i === 0 }]}
+                    data-pantalla={paso.id}
+                    aria-hidden={i === 0 ? undefined : 'true'}
+                  />
+                ))
+              }
+            </div>
+          </figure>
+        </div>
+        <ol class="recorrido entrar" style="--d:4" aria-label="Recorrido por la app">
+          {
+            recorrido.map((paso, i) => (
+              <li>
+                <button type="button" data-paso={paso.id} aria-pressed={i === 0 ? 'true' : 'false'}>
+                  <span class="recorrido-titulo">{paso.titulo}</span>
+                  <span class="recorrido-texto">{paso.texto}</span>
+                  <span class="progreso" aria-hidden="true" />
+                </button>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cifras de Jalisco que justifican la app -->
+  <section class="cifras" aria-labelledby="titulo-cifras">
+    <div class="contenedor">
+      <h2 id="titulo-cifras" class="solo-lector">Jalisco en cifras</h2>
+      <p class="cifras-intro" data-revelar>
+        En Jalisco, casi 6 de cada 10 muertes son por enfermedades crónicas, y el control de las más comunes se hace en el
+        primer nivel. Promedio de 2023 y 2024, con datos oficiales.
+      </p>
+      <ul class="cifras-lista">
+        {
+          cifrasJalisco.map((c, i) => (
+            <li data-revelar style={`--orden:${i}`}>
+              <span class="cifra">{c.valor}</span>
+              <span class="cifra-etiqueta">{c.etiqueta}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="cifras-enlace" data-revelar>
+        <a class="enlace" href="/jalisco/">Ver los datos completos, por municipio y por causa</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Módulos -->
+  <section class="seccion" aria-labelledby="titulo-modulos">
+    <div class="contenedor">
+      <div class="cabecera-seccion" data-revelar>
+        <h2 id="titulo-modulos" class="titulo-seccion">Todo PoliSafe, más lo que necesita el primer nivel.</h2>
+        <p class="entrada">
+          El seguimiento de crónicos y el panorama de Jalisco se suman a los módulos de PoliSafe. Todo se conecta: de la
+          ficha de un paciente pasas a un PAE nuevo o a las calculadoras.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="modulo modulo-principal" data-revelar>
+          <div class="modulo-texto">
+            <span class="modulo-icono"><Icon name={principal.icono} aria-hidden="true" /></span>
+            <h3>{principal.nombre}</h3>
+            <p>{principal.resumen}</p>
+            <ul class="lista-check">
+              {
+                principal.capacidades.slice(1, 4).map((c) => (
+                  <li>
+                    <Icon name="ph:check-light" aria-hidden="true" />
+                    {c}
+                  </li>
+                ))
+              }
+            </ul>
+            <a class="enlace" href="/producto/#seguimiento">Conocer el seguimiento</a>
+          </div>
+          <div class="modulo-pantallas" aria-hidden="true">
+            <Telefono imagen={principal.capturas[0].imagen} alt="" tamanos="240px" />
+            <Telefono imagen={principal.capturas[1].imagen} alt="" tamanos="240px" />
+          </div>
+        </article>
+
+        {
+          destacados.map((m, i) => (
+            <article class={`modulo ${disposicion[m.id] ?? ''}`} data-revelar style={`--orden:${i % 3}`}>
+              <span class="modulo-icono">
+                <Icon name={m.icono} aria-hidden="true" />
+              </span>
+              <h3>{m.nombre}</h3>
+              <p>{m.resumen}</p>
+              <a class="enlace" href={`/producto/#${m.id}`}>
+                Ver detalles<span class="solo-lector"> de {m.nombre}</span>
+              </a>
+              {m.id === 'jalisco' && (
+                <div class="modulo-recorte" aria-hidden="true">
+                  <Picture src={detalle} alt="" formats={['avif']} fallbackFormat="webp" widths={[400, 700]} sizes="340px" loading="lazy" />
+                </div>
+              )}
+            </article>
+          ))
+        }
+      </div>
+
+      <p class="aviso-academico" data-revelar>
+        <Icon name="ph:info-light" aria-hidden="true" />
+        <span>{sitio.avisoAcademico}</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- El seguimiento en cuatro pasos -->
+  <section class="seccion etapas" aria-labelledby="titulo-etapas">
+    <div class="contenedor etapas-rejilla">
+      <div class="etapas-visual">
+        <Telefono imagen={paciente} alt="Ficha del paciente DEMO-002 con seguimiento completo y vigente y los valores de su última consulta." tamanos="(max-width: 860px) 70vw, 320px" />
+      </div>
+      <div>
+        <h2 id="titulo-etapas" class="titulo-seccion" data-revelar>El seguimiento de cada paciente, en cuatro pasos.</h2>
+        <p class="entrada" data-revelar>
+          Pensado para una consulta real: pocos campos, lo que la norma pide primero y la cita a la mano cuando un valor
+          sale de meta.
+        </p>
+        <ol class="etapas-lista">
+          {
+            etapas.map((e, i) => (
+              <li data-revelar style={`--orden:${i}`}>
+                <span class="etapa-num" aria-hidden="true">{i + 1}</span>
+                <div>
+                  <h3>{e.nombre}</h3>
+                  <p>{e.texto}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué en Jalisco -->
+  <section class="banda" aria-labelledby="titulo-jalisco">
+    <div class="contenedor banda-rejilla">
+      <div>
+        <h2 id="titulo-jalisco" class="titulo-seccion" data-revelar>Por qué PoliSafe hace falta en Jalisco.</h2>
+        <p class="entrada" data-revelar>
+          Las enfermedades crónicas causan {entero(r.defunciones_cronicas_promedio_anual)} muertes al año en Jalisco y
+          {pct(r.pct_cronicas_menores_60)} ocurren antes de los 60 años. Casi toda la población tiene una unidad pública de
+          primer nivel cerca: el reto no es llegar, es dar un seguimiento completo a cada paciente en cada visita.
+        </p>
+        <ul class="banda-puntos">
+          <li data-revelar style="--orden:0">
+            <Icon name="ph:heartbeat-light" aria-hidden="true" />
+            <div><strong>Las causas que más pesan se controlan en el primer nivel</strong><span>Corazón, diabetes, riñón y presión arterial tienen detrás padecimientos con una norma de seguimiento.</span></div>
+          </li>
+          <li data-revelar style="--orden:1">
+            <Icon name="ph:map-pin-light" aria-hidden="true" />
+            <div><strong>{entero(r.unidades_publicas_primer_nivel)} unidades públicas en {r.municipios} municipios</strong><span>Solo {pct(r.pct_poblacion_mas_10km, 2)} de la población vive a más de 10&nbsp;km en línea recta de una.</span></div>
+          </li>
+          <li data-revelar style="--orden:2">
+            <Icon name="ph:wifi-slash-light" aria-hidden="true" />
+            <div><strong>Hecha para la unidad real</strong><span>Sin internet, sin cuentas y sin nombres de pacientes, en el teléfono que ya se tiene.</span></div>
+          </li>
+        </ul>
+        <a class="boton boton-claro" href="/jalisco/" data-revelar>
+          <Icon name="ph:chart-bar-light" aria-hidden="true" />
+          Ver Jalisco en datos
+        </a>
+      </div>
+      <div class="banda-visual" data-revelar>
+        <Telefono imagen={jalisco} alt="Pantalla Jalisco de la app con las muertes por enfermedades crónicas al año y la red pública de primer nivel." tamanos="(max-width: 860px) 70vw, 320px" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Adaptable -->
+  <section class="seccion" aria-labelledby="titulo-adaptable">
+    <div class="contenedor">
+      <div class="cabecera-seccion" data-revelar>
+        <h2 id="titulo-adaptable" class="titulo-seccion">Del teléfono de la enfermera a la tableta de la unidad.</h2>
+        <p class="entrada">
+          La app se adapta al ancho de la pantalla: barra inferior en el teléfono y riel lateral en la tableta, con más
+          información a la vista.
+        </p>
+      </div>
+      <div class="adaptable">
+        <div class="adaptable-escritorio" data-revelar>
+          <Ventana imagen={tabletaSeguimiento} alt="PoliSafe Primer Nivel en una tableta con el seguimiento de crónicos y el riel de navegación." titulo="PoliSafe Primer Nivel en tableta" />
+        </div>
+        <div class="adaptable-tableta" data-revelar style="--orden:1">
+          <Ventana imagen={tabletaJalisco} alt="Pantalla Jalisco en una tableta con las cifras del estado." titulo="Jalisco en tableta" tamanos="(max-width: 900px) 92vw, 420px" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacidad -->
+  <section class="seccion principios" aria-labelledby="titulo-principios">
+    <div class="contenedor">
+      <h2 id="titulo-principios" class="titulo-seccion" data-revelar>Los datos de tus pacientes no salen del teléfono.</h2>
+      <div class="principios-rejilla">
+        <article data-revelar style="--orden:0">
+          <Icon name="ph:identification-card-light" aria-hidden="true" />
+          <h3>Folios, no nombres</h3>
+          <p>La app no tiene campos para nombre, CURP, domicilio ni teléfono, y rechaza un folio que parezca un nombre.</p>
+        </article>
+        <article data-revelar style="--orden:1">
+          <Icon name="ph:wifi-slash-light" aria-hidden="true" />
+          <h3>Sin internet</h3>
+          <p>La app no tiene permiso de internet. Seguimiento, catálogos y datos de Jalisco viven en el dispositivo.</p>
+        </article>
+        <article data-revelar style="--orden:2">
+          <Icon name="ph:fingerprint-light" aria-hidden="true" />
+          <h3>Perfiles protegidos</h3>
+          <p>Hasta ocho perfiles por teléfono, cada uno con sus pacientes y con PIN, huella o rostro. Sin analítica ni publicidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Descargas -->
+  <section class="seccion descargas" aria-labelledby="titulo-descargas">
+    <div class="contenedor">
+      <div class="cabecera-seccion" data-revelar>
+        <h2 id="titulo-descargas" class="titulo-seccion">Descarga PoliSafe Primer Nivel.</h2>
+        <p class="entrada">Archivo oficial con versión, tamaño y SHA-256 publicados, y los datos de Jalisco en archivos abiertos.</p>
+      </div>
+      <div class="plataformas">
+        <div data-revelar style="--orden:0"><TarjetaPlataforma plataforma="android" /></div>
+        <article class="datos-abiertos" data-revelar style="--orden:1">
+          <Icon name="ph:table-light" aria-hidden="true" />
+          <h3>Datos abiertos de Jalisco</h3>
+          <p>Las tablas de municipios, causas, jurisdicciones y unidades que usa la app, en CSV, con su metodología.</p>
+          <a class="boton boton-secundario" href="/jalisco/#datos-abiertos">
+            <Icon name="ph:download-simple-light" aria-hidden="true" />
+            Ver los archivos
+          </a>
+        </article>
+      </div>
+      <ul class="cifras-lista" aria-label="La app en cifras">
+        {
+          cifrasApp.map((c, i) => (
+            <li data-revelar style={`--orden:${i}`}>
+              <span class="cifra">{c.valor}</span>
+              <span class="cifra-etiqueta">{c.etiqueta}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section class="seccion nosotros" aria-labelledby="titulo-nosotros">
+    <div class="contenedor nosotros-rejilla">
+      <div class="nosotros-foto" data-revelar>
+        <Picture
+          src={enfermera}
+          alt="Enfermera con uniforme quirúrgico consulta una tableta y toma notas en un aula de simulación clínica."
+          formats={['avif']}
+          fallbackFormat="webp"
+          widths={[480, 800, 1200]}
+          sizes="(max-width: 860px) 92vw, 560px"
+          loading="lazy"
+        />
+      </div>
+      <div data-revelar>
+        <h2 id="titulo-nosotros" class="titulo-seccion">Hecho en el IPN, pensado para Jalisco.</h2>
+        <p class="entrada">
+          PoliSafe fue creada por estudiantes durante su estancia de estudios en diversas escuelas del {sitio.institucion}.
+          PoliSafe Primer Nivel es su versión para el {sitio.concurso}, construida con especificaciones, pruebas
+          automatizadas y datos oficiales.
+        </p>
+        <a class="boton boton-secundario" href="/nosotros/">
+          Conocer al equipo
+          <Icon name="ph:arrow-right-light" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas -->
+  <section class="seccion preguntas" aria-labelledby="titulo-preguntas">
+    <div class="contenedor preguntas-rejilla">
+      <div data-revelar>
+        <h2 id="titulo-preguntas" class="titulo-seccion">Preguntas frecuentes.</h2>
+        <p class="entrada">
+          ¿No encuentras tu respuesta? Escribe a <a class="enlace" href={`mailto:${sitio.correo}`}>{sitio.correo}</a>.
+        </p>
+      </div>
+      <Preguntas lista={preguntas} />
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="cierre" aria-labelledby="titulo-cierre">
+    <div class="contenedor cierre-caja" data-revelar>
+      <h2 id="titulo-cierre" class="titulo-seccion">Lleva el seguimiento de tu unidad en el bolsillo.</h2>
+      <p>Gratuita, sin cuentas y lista para usarse sin conexión.</p>
+      <div class="cierre-acciones">
+        <a class="boton boton-claro" href="/descargas/">
+          <Icon name="ph:download-simple-light" aria-hidden="true" />
+          Ir a descargas
+        </a>
+        <a class="boton boton-fantasma-claro" href="/producto/">Ver todas las funciones</a>
+      </div>
+      {android && <p class="cierre-meta">Android: {megabytes(android.tamanoBytes)}.</p>}
+    </div>
+  </section>
+</Base>
+
+<script>
+  import '../scripts/portada';
+</script>
+
+<style>
+  /* ---------- Portada ---------- */
+  .portada {
+    position: relative;
+    padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(4rem, 8vw, 7rem);
+    isolation: isolate;
+  }
+
+  .portada::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto auto;
+    width: min(44vw, 640px);
+    height: calc(100% - 1.5rem);
+    background: var(--guinda);
+    border-bottom-left-radius: var(--r-xl);
+    z-index: -1;
+  }
+
+  .portada-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .sello {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem 0.4rem 0.6rem;
+    border-radius: 999px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+    font-size: var(--t-sm);
+    font-weight: 650;
+  }
+
+  .sello svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .portada h1 {
+    margin-top: 1.5rem;
+    font-size: var(--t-3xl);
+    color: var(--texto);
+    max-width: 15ch;
+  }
+
+  .portada .entrada {
+    margin-top: 1.5rem;
+  }
+
+  .portada-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.25rem;
+  }
+
+  .portada-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  .portada-meta li + li::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 1.25rem;
+    border-radius: 50%;
+    background: var(--borde-fuerte);
+    vertical-align: middle;
+  }
+
+  .escenario {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 330px) minmax(0, 1fr);
+    align-items: end;
+    gap: 1.5rem;
+    min-height: 640px;
+  }
+
+  .escenario-ventana {
+    position: absolute;
+    top: 6%;
+    left: 34%;
+    width: 140%;
+    max-width: 680px;
+    z-index: -1;
+    opacity: 0.96;
+  }
+
+  .escenario-telefono {
+    grid-column: 1;
+  }
+
+  .telefono-vivo {
+    margin: 0;
+  }
+
+  .telefono-vivo .bisel {
+    position: relative;
+    padding: 9px;
+    border-radius: 46px;
+    background: #1c1216;
+    box-shadow:
+      inset 0 0 0 1px rgb(255 255 255 / 0.08),
+      var(--sombra-3);
+    aspect-ratio: 412 / 892;
+  }
+
+
+  .telefono-vivo :global(.pantalla) {
+    position: absolute;
+    inset: 9px;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    object-fit: cover;
+    border-radius: 38px;
+    opacity: 0;
+    transform: scale(1.015);
+    transition:
+      opacity 700ms var(--curva),
+      transform 900ms var(--curva);
+  }
+
+  .telefono-vivo :global(.pantalla.activa) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .recorrido {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    display: grid;
+    gap: 0.25rem;
+    border-radius: var(--r-lg);
+    background: color-mix(in srgb, var(--superficie) 92%, transparent);
+    box-shadow: var(--sombra-2);
+    align-self: end;
+    max-width: 280px;
+  }
+
+  .recorrido button {
+    position: relative;
+    display: grid;
+    gap: 0.15rem;
+    width: 100%;
+    padding: 0.75rem 0.85rem 0.95rem;
+    border: 0;
+    border-radius: var(--r-md);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color var(--rapido) var(--curva);
+  }
+
+  .recorrido button:hover {
+    background: var(--superficie-2);
+  }
+
+  .recorrido button[aria-pressed='true'] {
+    background: var(--acento-tinte);
+  }
+
+  .recorrido-titulo {
+    font-weight: 700;
+    font-size: var(--t-sm);
+  }
+
+  .recorrido-texto {
+    font-size: var(--t-xs);
+    color: var(--texto-2);
+    line-height: 1.4;
+  }
+
+  .progreso {
+    position: absolute;
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.4rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--borde);
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  [aria-pressed='true'] .progreso {
+    opacity: 1;
+  }
+
+  .progreso::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--acento);
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  :global(.reproduciendo) [aria-pressed='true'] .progreso::after {
+    animation: avance var(--duracion, 5200ms) linear forwards;
+  }
+
+  @keyframes avance {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Secuencia de entrada (una sola vez, al cargar). */
+  .entrar {
+    animation: entrar 1100ms var(--curva) both;
+    animation-delay: calc(var(--d, 0) * 110ms + 60ms);
+  }
+
+  .escenario-telefono.entrar {
+    animation-name: entrar-telefono;
+    animation-duration: 1400ms;
+  }
+
+  .escenario-ventana.entrar {
+    animation-name: entrar-ventana;
+    animation-duration: 1500ms;
+  }
+
+  @keyframes entrar {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+  }
+
+  @keyframes entrar-telefono {
+    from {
+      opacity: 0;
+      transform: translateY(80px) rotate(-3deg);
+    }
+  }
+
+  @keyframes entrar-ventana {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+  }
+
+  /* ---------- Cifras ---------- */
+  .cifras {
+    border-block: 1px solid var(--borde);
+    background: var(--superficie);
+    padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .cifras-intro {
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+    margin-bottom: 1.5rem;
+  }
+
+  .cifras-lista {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cifras-lista li {
+    display: grid;
+    gap: 0.35rem;
+    padding-inline: 1.25rem;
+    border-left: 1px solid var(--borde);
+  }
+
+  .cifras-lista li:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .cifra {
+    font-size: clamp(2.5rem, 1.6rem + 3vw, 4rem);
+    font-weight: 640;
+    font-stretch: 70%;
+    line-height: 1;
+    color: var(--acento);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cifra-etiqueta {
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+    line-height: 1.35;
+    max-width: 18ch;
+  }
+
+  /* ---------- Cabeceras de sección ---------- */
+  .cabecera-seccion {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 1.5rem 4rem;
+    align-items: end;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  /* ---------- Bento de módulos ---------- */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .modulo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: clamp(1.4rem, 2.5vw, 2rem);
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    overflow: hidden;
+    transition:
+      transform var(--medio) var(--curva),
+      box-shadow var(--medio) var(--curva);
+  }
+
+  .modulo h3 {
+    font-size: var(--t-lg);
+    font-stretch: 86%;
+    font-weight: 650;
+  }
+
+  .modulo p {
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+  }
+
+  .modulo .enlace {
+    margin-top: auto;
+    font-size: var(--t-sm);
+    padding-top: 0.5rem;
+  }
+
+  .modulo-icono {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--acento-tinte);
+    color: var(--acento);
+  }
+
+  .modulo-icono svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modulo-principal {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    background: var(--banda);
+    border-color: transparent;
+    color: var(--banda-texto);
+  }
+
+  .modulo-principal .modulo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .modulo-principal h3 {
+    font-size: var(--t-xl);
+  }
+
+  .modulo-principal p,
+  .modulo-principal li {
+    color: var(--banda-texto-2);
+  }
+
+  .modulo-principal .modulo-icono {
+    background: rgb(248 236 226 / 0.12);
+    color: var(--banda-texto);
+  }
+
+  .modulo-principal .enlace {
+    color: var(--banda-texto);
+  }
+
+  .modulo-pantallas {
+    position: relative;
+    min-height: 420px;
+  }
+
+  .modulo-pantallas :global(.telefono) {
+    position: absolute;
+    width: 62%;
+  }
+
+  .modulo-pantallas :global(.telefono:first-child) {
+    left: 0;
+    top: 6%;
+    z-index: 1;
+  }
+
+  .modulo-pantallas :global(.telefono:last-child) {
+    right: 0;
+    top: 0;
+    transform: translateY(22%);
+    opacity: 0.92;
+  }
+
+  .lista-check {
+    list-style: none;
+    margin: 0.25rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+    font-size: var(--t-sm);
+  }
+
+  .lista-check li {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr;
+    gap: 0.6rem;
+    line-height: 1.45;
+  }
+
+  .lista-check svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.1rem;
+  }
+
+  .modulo-ancho {
+    grid-column: span 2;
+  }
+
+  .modulo-alto {
+    grid-row: span 2;
+    padding-bottom: 0;
+  }
+
+  .modulo-recorte {
+    margin: 1rem calc(-1 * clamp(1.4rem, 2.5vw, 2rem)) 0;
+    padding: 0 1.5rem;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  .modulo-recorte :global(img) {
+    width: 100%;
+    aspect-ratio: 412 / 470;
+    object-fit: cover;
+    object-position: center 82%;
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 0 0 8px #1c1216;
+    margin-top: 8px;
+  }
+
+  .aviso-academico {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--r-md);
+    border: 1px solid var(--borde);
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  .aviso-academico svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    flex: none;
+    color: var(--acento);
+  }
+
+  /* ---------- Etapas ---------- */
+  .etapas {
+    background: var(--superficie-2);
+  }
+
+  .etapas-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .etapas-visual {
+    position: sticky;
+    top: 7rem;
+    display: grid;
+    justify-items: center;
+  }
+
+  .etapas .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .etapas-lista {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .etapas-lista::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 48px;
+    bottom: 64px;
+    width: 2px;
+    background: var(--borde-fuerte);
+  }
+
+  .etapas-lista li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.25rem;
+    padding-block: 1.1rem;
+  }
+
+  .etapa-num {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--guinda);
+    color: #fff;
+    font-weight: 760;
+    font-size: 1.15rem;
+    box-shadow: 0 0 0 6px var(--superficie-2);
+  }
+
+  .etapas-lista h3 {
+    font-size: var(--t-md);
+    margin: 0.55rem 0 0.35rem;
+  }
+
+  .etapas-lista p {
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+    max-width: 52ch;
+  }
+
+  /* ---------- Banda del asistente ---------- */
+  .banda {
+    background: var(--banda);
+    color: var(--banda-texto);
+    padding-block: var(--seccion);
+    overflow: hidden;
+  }
+
+  .banda-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .banda .entrada {
+    color: var(--banda-texto-2);
+    margin-top: 1.25rem;
+  }
+
+  .banda-puntos {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .banda-puntos li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .banda-puntos svg {
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    border-radius: 12px;
+    background: rgb(248 236 226 / 0.1);
+  }
+
+  .banda-puntos strong {
+    display: block;
+    font-size: var(--t-base);
+  }
+
+  .banda-puntos span {
+    color: var(--banda-texto-2);
+    font-size: var(--t-sm);
+  }
+
+  .banda-visual {
+    display: grid;
+    justify-items: center;
+  }
+
+  /* ---------- Adaptable ---------- */
+  .adaptable {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding-bottom: 6rem;
+  }
+
+  .adaptable-escritorio {
+    width: 82%;
+  }
+
+  .adaptable-tableta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+  }
+
+  /* ---------- Principios ---------- */
+  .principios {
+    padding-top: 0;
+  }
+
+  .principios-rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .principios article {
+    padding: 1.75rem;
+    border-top: 2px solid var(--guinda);
+    background: var(--superficie);
+    border-radius: 0 0 var(--r-md) var(--r-md);
+  }
+
+  .principios svg {
+    width: 36px;
+    height: 36px;
+    color: var(--acento);
+  }
+
+  .principios h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: var(--t-md);
+  }
+
+  .principios p {
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+  }
+
+  /* ---------- Descargas ---------- */
+  .descargas {
+    background: var(--superficie-2);
+  }
+
+  .plataformas {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .datos-abiertos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: clamp(1.4rem, 2.5vw, 2rem);
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+  }
+
+  .datos-abiertos h3 {
+    font-size: var(--t-md);
+  }
+
+  .datos-abiertos p {
+    color: var(--texto-2);
+  }
+
+  .datos-abiertos :global(svg) {
+    width: 2rem;
+    height: 2rem;
+    color: var(--acento);
+  }
+
+  .descargas .cifras-lista {
+    margin-top: 2.5rem;
+  }
+
+  .cifras-enlace {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  /* ---------- Nosotros ---------- */
+  .nosotros-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .nosotros-foto :global(img) {
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    object-fit: cover;
+    object-position: 70% center;
+    border-radius: var(--r-xl);
+  }
+
+  .nosotros .entrada {
+    margin: 1.25rem 0 2rem;
+  }
+
+  .nosotros .boton svg {
+    transition: transform var(--medio) var(--curva);
+  }
+
+  .nosotros .boton:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* ---------- Preguntas ---------- */
+  .preguntas {
+    padding-top: 0;
+  }
+
+  .preguntas-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .preguntas .entrada {
+    margin-top: 1.25rem;
+  }
+
+  /* ---------- Cierre ---------- */
+  .cierre {
+    padding-bottom: var(--seccion);
+  }
+
+  .cierre-caja {
+    padding: clamp(2.5rem, 6vw, 5rem);
+    border-radius: var(--r-xl);
+    background: var(--guinda);
+    color: var(--banda-texto);
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 1.25rem;
+  }
+
+  .cierre-caja h2 {
+    max-width: 16ch;
+    color: #fff;
+  }
+
+  .cierre-caja > p {
+    color: var(--banda-texto-2);
+    font-size: var(--t-md);
+  }
+
+  .cierre-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .cierre .cierre-meta {
+    font-size: var(--t-xs);
+  }
+
+  /* ---------- Responsivo ---------- */
+  @media (max-width: 1100px) {
+    .portada::before {
+      width: 50%;
+    }
+
+    .escenario-ventana {
+      display: none;
+    }
+
+    .plataformas {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 960px) {
+    .portada-rejilla,
+    .cabecera-seccion,
+    .etapas-rejilla,
+    .banda-rejilla,
+    .nosotros-rejilla,
+    .preguntas-rejilla {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .portada::before {
+      inset: auto 0 0 0;
+      width: 100%;
+      height: 46%;
+      border-radius: var(--r-xl) var(--r-xl) 0 0;
+    }
+
+    .escenario {
+      min-height: 0;
+      grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    }
+
+    .bento {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .modulo-principal {
+      grid-column: 1 / -1;
+    }
+
+    .modulo-alto {
+      grid-row: span 1;
+    }
+
+    .modulo-ancho {
+      grid-column: auto;
+    }
+
+    .etapas-visual {
+      position: static;
+      max-width: 300px;
+      margin-inline: auto;
+    }
+
+    .cifras-lista {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 2rem;
+    }
+
+    .cifras-lista li:nth-child(4) {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .escenario {
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: center;
+    }
+
+    .escenario-telefono {
+      width: min(78vw, 320px);
+    }
+
+    .recorrido {
+      max-width: none;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bento,
+    .principios-rejilla,
+    .plataformas {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .modulo-principal {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .modulo-pantallas {
+      min-height: 380px;
+    }
+
+    .cifras-lista {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cifras-lista li {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .adaptable-escritorio {
+      width: 100%;
+    }
+
+    .adaptable-tableta {
+      position: relative;
+      width: 72%;
+      margin: -3rem 0 0 auto;
+    }
+
+    .adaptable {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .portada-meta li + li::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .recorrido-texto {
+      display: none;
+    }
+
+    .portada-acciones .boton {
+      width: 100%;
+    }
+  }
+</style>

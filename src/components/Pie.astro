@@ -1,0 +1,184 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+import { Image } from 'astro:assets';
+import icono from '../assets/marca/icono_app.png';
+import { sitio } from '../datos/sitio';
+
+const columnas = [
+  {
+    titulo: 'Producto',
+    enlaces: [
+      { href: '/producto/', texto: 'Funciones' },
+      { href: '/como-usar/', texto: 'Cómo usar' },
+      { href: '/descargas/', texto: 'Descargas' },
+    ],
+  },
+  {
+    titulo: 'Jalisco',
+    enlaces: [
+      { href: '/jalisco/', texto: 'Jalisco en datos' },
+      { href: '/jalisco/#datos-abiertos', texto: 'Datos abiertos' },
+      { href: '/jalisco/metodologia/', texto: 'Metodología' },
+    ],
+  },
+  {
+    titulo: 'Equipo',
+    enlaces: [
+      { href: '/nosotros/', texto: 'Nosotros' },
+      { href: '/contacto/', texto: 'Contacto' },
+    ],
+  },
+  {
+    titulo: 'Legal',
+    enlaces: [
+      { href: '/privacidad/', texto: 'Aviso de privacidad' },
+      { href: '/terminos/', texto: 'Términos de uso' },
+    ],
+  },
+];
+const anio = new Date().getFullYear();
+---
+
+<footer class="pie">
+  <div class="contenedor">
+    <div class="superior">
+      <div class="identidad">
+        <a class="marca" href="/">
+          <Image src={icono} alt="" width={384} height={384} />
+          <span>PoliSafe Primer Nivel</span>
+        </a>
+        <p>Enfermería de primer nivel en Jalisco. Creada por estudiantes del IPN.</p>
+        <p class="concurso">{sitio.concurso}</p>
+        <a class="correo" href={`mailto:${sitio.correo}`}>{sitio.correo}</a>
+      </div>
+      {
+        columnas.map((columna) => (
+          <nav aria-label={columna.titulo}>
+            <h2>{columna.titulo}</h2>
+            <ul>
+              {columna.enlaces.map((e) => (
+                <li>
+                  <a href={e.href} rel={e.href.startsWith('http') ? 'noopener' : undefined}>
+                    {e.texto}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+    <p class="aviso">{sitio.avisoAcademico}</p>
+    <div class="inferior">
+      <p>© {anio} PoliSafe. Gratuita, sin publicidad ni analítica.</p>
+      <p>NANDA-I, NIC y NOC son marcas y obras de sus respectivos titulares.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .pie {
+    background: var(--banda);
+    color: var(--banda-texto);
+    padding-block: clamp(3.5rem, 6vw, 5.5rem) 2rem;
+  }
+
+  .superior {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 760;
+    font-stretch: 70%;
+  }
+
+  .marca :global(img) {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .identidad p {
+    margin-top: 1rem;
+    color: var(--banda-texto-2);
+    max-width: 34ch;
+  }
+
+  .correo {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--banda-texto);
+    font-weight: 600;
+    text-underline-offset: 0.2em;
+  }
+
+  h2 {
+    font-size: var(--t-sm);
+    font-weight: 650;
+    color: var(--banda-texto-2);
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  nav a {
+    display: inline-block;
+    padding-block: 0.3rem;
+    text-decoration: none;
+    color: var(--banda-texto);
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .aviso {
+    margin-top: 3.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid rgb(248 236 226 / 0.16);
+    border-bottom: 1px solid rgb(248 236 226 / 0.16);
+    color: var(--banda-texto-2);
+    font-size: var(--t-sm);
+  }
+
+  .inferior {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+    padding-top: 1.5rem;
+    font-size: var(--t-xs);
+    color: var(--banda-texto-2);
+  }
+
+  :focus-visible {
+    outline-color: var(--crema);
+  }
+
+  @media (max-width: 860px) {
+    .superior {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .identidad {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

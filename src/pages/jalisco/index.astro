@@ -1,0 +1,466 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Jalisco en datos: por qué hace falta PoliSafe Primer Nivel, con las cifras y los archivos abiertos.
+// Cada número sale de src/datos/jalisco.json, que genera datos/scripts/pipeline.py.
+import { Icon } from 'astro-icon/components';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import datos from '../../datos/jalisco.json';
+import { entero, decimal, pct, titulo } from '../../lib/formato';
+import '../../styles/datos.css';
+
+const r = datos.resumen;
+const causas = datos.causas;
+const maxCausa = Math.max(...causas.map((c) => c.promedio_anual));
+const conNorma = causas.filter((c) => c.nom_seguimiento);
+const muertesConNorma = conNorma.reduce((s, c) => s + c.promedio_anual, 0);
+const pctConNorma = (muertesConNorma / r.defunciones_cronicas_promedio_anual) * 100;
+const municipios = [...datos.municipios].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+const jurisdicciones = [...datos.jurisdicciones].sort((a, b) => b.def_cronicas_prom - a.def_cronicas_prom);
+const fuente = (id: string) => datos.fuentes.find((f) => f.id === id)!;
+const muertesMenores60 = (r.defunciones_cronicas_promedio_anual * r.pct_cronicas_menores_60) / 100;
+const sinAfiliacionAlta = municipios.filter((m) => m.pct_sin_afiliacion >= 40).length;
+
+// Mapa de puntos: proyección equirrectangular corregida por la latitud media.
+const unidades = datos.unidades;
+const lats = unidades.map((u) => u.lat);
+const lons = unidades.map((u) => u.lon);
+const [latMin, latMax, lonMin, lonMax] = [Math.min(...lats), Math.max(...lats), Math.min(...lons), Math.max(...lons)];
+const kx = Math.cos((((latMin + latMax) / 2) * Math.PI) / 180);
+const ancho = 720;
+const margen = 12;
+const escala = (ancho - 2 * margen) / ((lonMax - lonMin) * kx);
+const alto = Math.round((latMax - latMin) * escala + 2 * margen);
+const px = (lon: number) => margen + (lon - lonMin) * kx * escala;
+const py = (lat: number) => margen + (latMax - lat) * escala;
+const instituciones = new Map<string, number>();
+for (const u of unidades) instituciones.set(u.institucion, (instituciones.get(u.institucion) ?? 0) + 1);
+const principales = [...instituciones.entries()].sort((a, b) => b[1] - a[1]).slice(0, 4);
+
+const relacion = [
+  {
+    dato: `${entero(r.defunciones_cronicas_promedio_anual)} muertes crónicas al año, ${pct(r.pct_cronicas_del_total)} del total`,
+    detalle: `Y ${pct(pctConNorma)} de ellas son por causas que tienen detrás un padecimiento con norma de seguimiento en el primer nivel: diabetes, hipertensión y dislipidemia.`,
+    app: 'Seguimiento con las metas de la norma',
+    respuesta: 'La app sigue diabetes, hipertensión, dislipidemia y obesidad con lo que la NOM pide en cada visita y cita el numeral de cada meta.',
+  },
+  {
+    dato: `${pct(r.pct_cronicas_menores_60)} ocurre antes de los 60 años`,
+    detalle: `Unas ${entero(muertesMenores60)} muertes al año antes de los 60: el control a tiempo cuenta.`,
+    app: 'Quién no ha vuelto',
+    respuesta: 'El indicador de la unidad y la lista de pendientes ordenan primero a quien no tiene consulta vigente, con la vigencia que la unidad elija.',
+  },
+  {
+    dato: `${entero(r.unidades_publicas_primer_nivel)} unidades públicas de primer nivel; solo ${pct(r.pct_poblacion_mas_10km, 2)} de la población a más de 10 km`,
+    detalle: 'La red llega a casi todos. Lo que falta no es una unidad cerca, es que cada visita deje un registro completo y útil.',
+    app: 'En el teléfono que ya se tiene',
+    respuesta: 'Sin internet, sin cuentas y sin capturar nombres: se usa en cualquier unidad, incluidas las de la sierra y las móviles.',
+  },
+  {
+    dato: `Diferencias grandes entre municipios y jurisdicciones`,
+    detalle: `Las tasas por edad cambian de un municipio a otro, y en ${sinAfiliacionAlta} municipios al menos 40 % de la población no tiene afiliación a servicios de salud.`,
+    app: 'Jalisco dentro de la app',
+    respuesta: 'Cada enfermera consulta sin internet la carga de su municipio, su jurisdicción y su red de unidades, con la fuente de cada cifra.',
+  },
+];
+
+const archivos = [
+  {
+    nombre: 'Municipios',
+    archivo: 'municipios_jalisco.csv',
+    filas: datos.municipios.length,
+    texto: 'Población por edad, muertes por causa crónica (promedio anual), tasas de 18 a 59 y de 60 años y más, unidades, distancia, afiliación y marginación de cada municipio.',
+  },
+  {
+    nombre: 'Causas crónicas',
+    archivo: 'causas_cronicas_jalisco.csv',
+    filas: datos.causas.length,
+    texto: 'Defunciones de 2023 y 2024 por grupo de causa (CIE-10), promedio anual, porcentaje antes de los 60 años, porcentaje de mujeres y norma de seguimiento.',
+  },
+  {
+    nombre: 'Unidades de primer nivel',
+    archivo: 'unidades_primer_nivel_jalisco.csv',
+    filas: datos.unidades.length,
+    texto: 'Cada unidad pública de primer nivel en operación con su CLUES, institución, municipio, localidad, jurisdicción, tipología y coordenadas.',
+  },
+  {
+    nombre: 'Jurisdicciones sanitarias',
+    archivo: 'jurisdicciones_jalisco.csv',
+    filas: datos.jurisdicciones.length,
+    texto: 'Municipios, población, muertes crónicas al año, unidades públicas y población lejos de una unidad por jurisdicción.',
+  },
+  {
+    nombre: 'Resumen estatal',
+    archivo: 'resumen_estatal.json',
+    filas: null,
+    texto: 'Las cifras del estado que usan la app y este sitio: defunciones, porcentajes, población, unidades, distancia y tasas por edad.',
+  },
+];
+---
+
+<Base
+  titulo="Jalisco en datos"
+  descripcion={`Por qué hace falta PoliSafe Primer Nivel en Jalisco: ${entero(r.defunciones_cronicas_promedio_anual)} muertes por enfermedades crónicas al año, ${entero(r.unidades_publicas_primer_nivel)} unidades públicas de primer nivel y los datos de los 125 municipios, con archivos abiertos.`}
+>
+  <CabeceraPagina
+    antetitulo="Jalisco en datos"
+    titulo="Por qué PoliSafe hace falta en Jalisco."
+    entrada="En Jalisco, la mayoría de las muertes son por enfermedades crónicas y casi toda la población tiene cerca una unidad pública de primer nivel. El reto está dentro de la unidad: registrar bien cada control y saber quién no ha vuelto. Estos son los datos oficiales que lo muestran, y los archivos para que los revises."
+  >
+    <ul class="indice-datos" aria-label="Secciones de la página">
+      <li><a href="#cifras">Cifras</a></li>
+      <li><a href="#causas">Causas</a></li>
+      <li><a href="#respuesta">De los datos a la app</a></li>
+      <li><a href="#municipios">Municipios</a></li>
+      <li><a href="#unidades">Red de unidades</a></li>
+      <li><a href="#datos-abiertos">Datos abiertos</a></li>
+    </ul>
+  </CabeceraPagina>
+
+  <div class="datos">
+    <section id="cifras" class="bloque contenedor" aria-labelledby="t-cifras">
+      <h2 id="t-cifras" class="titulo-seccion">El problema en cuatro cifras.</h2>
+      <div class="cifras">
+        <p class="cifra">
+          <span class="cifra-valor">{entero(r.defunciones_cronicas_promedio_anual)}</span>
+          <span class="cifra-etiqueta">muertes por enfermedades crónicas al año</span>
+          <span class="cifra-detalle">{pct(r.pct_cronicas_del_total)} de las defunciones registradas de residentes de Jalisco. Promedio de 2023 ({entero(r.defunciones_cronicas['2023'])}) y 2024 ({entero(r.defunciones_cronicas['2024'])}).</span>
+        </p>
+        <p class="cifra">
+          <span class="cifra-valor">{pct(r.pct_cronicas_menores_60)}</span>
+          <span class="cifra-etiqueta">ocurren antes de los 60 años</span>
+          <span class="cifra-detalle">Tasa de 18 a 59 años: {decimal(r.tasa_estatal_18_59)} por 100 mil; de 60 años y más: {decimal(r.tasa_estatal_60_mas)} por 100 mil.</span>
+        </p>
+        <p class="cifra">
+          <span class="cifra-valor">{entero(r.unidades_publicas_primer_nivel)}</span>
+          <span class="cifra-etiqueta">unidades públicas de primer nivel en operación</span>
+          <span class="cifra-detalle">En {r.jurisdicciones} jurisdicciones sanitarias y los {r.municipios} municipios; {r.unidades_moviles} son móviles. Catálogo CLUES, septiembre de 2026.</span>
+        </p>
+        <p class="cifra">
+          <span class="cifra-valor">{pct(r.pct_poblacion_mas_10km, 2)}</span>
+          <span class="cifra-etiqueta">de la población vive a más de 10&nbsp;km de una</span>
+          <span class="cifra-detalle">{entero(r.personas_mas_10km)} personas de {entero(r.poblacion_2020)}, en línea recta. La distancia no es el problema de la mayoría; el seguimiento sí.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="causas" class="bloque contenedor" aria-labelledby="t-causas">
+      <h2 id="t-causas" class="titulo-seccion">Qué enfermedades pesan más.</h2>
+      <div class="texto">
+        <p>
+          Las enfermedades del corazón, la diabetes, las cerebrovasculares, las hipertensivas y la insuficiencia renal suman
+          {' '}{entero(muertesConNorma)} muertes al año, {pct(pctConNorma)} de las crónicas. Detrás de ellas hay padecimientos que
+          se controlan en el primer nivel con normas oficiales que dicen qué medir en cada visita. Las demás causas crónicas se
+          muestran para dimensionar el problema completo.
+        </p>
+      </div>
+      <figure class="grafica">
+        <h3>Defunciones por causa crónica, promedio anual</h3>
+        <p class="grafica-sub">Residentes de Jalisco, registros de 2023 y 2024. Bajo cada causa, la norma de seguimiento en primer nivel, si existe.</p>
+        <ul class="leyenda" aria-label="Leyenda">
+          <li><span class="muestra" aria-hidden="true"></span>Con norma de seguimiento en primer nivel</li>
+          <li><span class="muestra sin-norma" aria-hidden="true"></span>Sin norma de seguimiento en primer nivel</li>
+        </ul>
+        <ol class="barras">
+          {
+            causas.map((c) => (
+              <li
+                class:list={['barra-fila', { 'sin-norma': !c.nom_seguimiento }]}
+                tabindex="0"
+                title={`${c.nombre}: ${entero(c.promedio_anual)} al año; ${pct(c.pct_menores_60)} antes de los 60 años. CIE-10 ${c.cie10}.`}
+              >
+                <span class="barra-nombre">
+                  {c.nombre}
+                  <span class="barra-nom">
+                    {c.nom_seguimiento ? `Seguimiento: ${c.nom_seguimiento}` : `CIE-10 ${c.cie10}`} · {pct(c.pct_menores_60)} antes de los 60
+                  </span>
+                </span>
+                <span class="barra-pista" aria-hidden="true">
+                  <span class="barra-relleno" style={`display:block;width:${((c.promedio_anual / maxCausa) * 100).toFixed(1)}%`} />
+                </span>
+                <span class="barra-valor">{entero(c.promedio_anual)}</span>
+              </li>
+            ))
+          }
+        </ol>
+        <figcaption class="nota">
+          Fuente: {fuente('12').institucion}, {fuente('12').nombre} ({fuente('12').periodo}). Dataset 12 del catálogo del reto.
+          Archivo: <a href="/datos/causas_cronicas_jalisco.csv" download>causas_cronicas_jalisco.csv</a>.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="respuesta" class="bloque contenedor" aria-labelledby="t-respuesta">
+      <h2 id="t-respuesta" class="titulo-seccion">De los datos a la app.</h2>
+      <div class="texto">
+        <p>Cada función nueva de PoliSafe Primer Nivel responde a algo que muestran los datos.</p>
+      </div>
+      <ol class="relacion">
+        {
+          relacion.map((x) => (
+            <li>
+              <div>
+                <span class="etiqueta">Lo que dicen los datos</span>
+                <strong>{x.dato}</strong>
+                <p>{x.detalle}</p>
+              </div>
+              <div>
+                <span class="etiqueta">Lo que hace la app</span>
+                <strong>{x.app}</strong>
+                <p>{x.respuesta}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="aviso">
+        <strong>No es un diagnóstico.</strong> La app no diagnostica, no indica tratamientos y no está validada médicamente.
+        Los valores fuera de meta son referencias de las normas oficiales mexicanas. Los pacientes del modo de demostración son
+        ficticios.
+      </p>
+    </section>
+
+    <section id="municipios" class="bloque contenedor" aria-labelledby="t-municipios">
+      <h2 id="t-municipios" class="titulo-seccion">Los 125 municipios.</h2>
+      <div class="texto">
+        <p>
+          Carga de enfermedad, red de unidades y contexto social de cada municipio. Las tasas se separan por edad porque los
+          municipios con más personas mayores tienen, de forma natural, más defunciones: compararlas en bruto engaña.
+        </p>
+      </div>
+      <div class="controles">
+        <label class="control">Buscar municipio
+          <input id="buscar" type="search" placeholder="Ej. Zapotlán…" autocomplete="off" />
+        </label>
+        <label class="control">Jurisdicción sanitaria
+          <select id="jurisdiccion">
+            <option value="">Todas</option>
+            {[...new Set(municipios.map((m) => m.jurisdiccion))].sort().map((j) => <option value={j}>{titulo(j)}</option>)}
+          </select>
+        </label>
+        <label class="control">Ordenar por
+          <select id="orden">
+            <option value="nombre">Nombre</option>
+            <option value="muertes">Muertes crónicas al año</option>
+            <option value="t1859">Tasa de 18 a 59 años</option>
+            <option value="t60">Tasa de 60 años y más</option>
+            <option value="unidades">Unidades por 10 mil habitantes</option>
+            <option value="lejos">Población a más de 10 km</option>
+            <option value="afiliacion">Sin afiliación a servicios de salud</option>
+          </select>
+        </label>
+      </div>
+      <p class="conteo" id="conteo" aria-live="polite">{municipios.length} de {municipios.length} municipios</p>
+      <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Tabla de municipios">
+        <table id="tabla-municipios">
+          <thead>
+            <tr>
+              <th scope="col">Municipio</th>
+              <th scope="col">Jurisdicción</th>
+              <th scope="col" class="num">Población 2020</th>
+              <th scope="col" class="num">Muertes crónicas al año</th>
+              <th scope="col" class="num">Tasa 18 a 59 (por 100 mil)</th>
+              <th scope="col" class="num">Tasa 60 y más (por 100 mil)</th>
+              <th scope="col" class="num">Unidades públicas</th>
+              <th scope="col" class="num">Por 10 mil hab.</th>
+              <th scope="col" class="num">Población a más de 10 km</th>
+              <th scope="col" class="num">Sin afiliación</th>
+              <th scope="col">Marginación</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              municipios.map((m) => (
+                <tr
+                  data-nombre={m.nombre.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()}
+                  data-jurisdiccion={m.jurisdiccion}
+                  data-muertes={m.def_cronicas_prom}
+                  data-t1859={m.tasa_18_59}
+                  data-t60={m.tasa_60_mas}
+                  data-unidades={m.unidades_por_10mil}
+                  data-lejos={m.pct_mas_10km}
+                  data-afiliacion={m.pct_sin_afiliacion}
+                >
+                  <th scope="row">{m.nombre}</th>
+                  <td>{titulo(m.jurisdiccion)}</td>
+                  <td class="num">{entero(m.pob_total)}</td>
+                  <td class="num">{decimal(m.def_cronicas_prom)}</td>
+                  <td class="num">{decimal(m.tasa_18_59)}</td>
+                  <td class="num">{decimal(m.tasa_60_mas)}</td>
+                  <td class="num">{entero(m.unidades_publicas)}</td>
+                  <td class="num">{decimal(m.unidades_por_10mil, 2)}</td>
+                  <td class="num">{pct(m.pct_mas_10km)}</td>
+                  <td class="num">{pct(m.pct_sin_afiliacion)}</td>
+                  <td>{m.marg_grado}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="nota">
+        Fuentes: datasets 12 (INEGI, defunciones registradas 2023 y 2024), 13 (Secretaría de Salud, CLUES, septiembre de 2026) y
+        17 (CONAPO, marginación 2020) del catálogo del reto; población y afiliación del Censo 2020 de INEGI. Las tasas con pocos
+        casos (municipios pequeños) varían mucho de un año a otro. Archivo:
+        <a href="/datos/municipios_jalisco.csv" download>municipios_jalisco.csv</a>. Detalle en la
+        <a href="/jalisco/metodologia/">metodología</a>.
+      </p>
+    </section>
+
+    <section id="unidades" class="bloque contenedor" aria-labelledby="t-unidades">
+      <h2 id="t-unidades" class="titulo-seccion">Dónde está la red de primer nivel.</h2>
+      <div class="texto">
+        <p>
+          Cada punto es una unidad pública de primer nivel en operación. Las principales instituciones son
+          {' '}{principales.map(([nombre, n], i) => `${titulo(nombre)} (${entero(n)})${i < principales.length - 2 ? ', ' : i === principales.length - 2 ? ' y ' : ''}`).join('')}.
+        </p>
+      </div>
+      <figure class="grafica">
+        <h3>Unidades públicas de primer nivel en operación, Jalisco</h3>
+        <p class="grafica-sub">{entero(unidades.length)} unidades. Pasa el puntero sobre un punto para ver su nombre; la lista completa está en el archivo de unidades.</p>
+        <svg class="mapa" viewBox={`0 0 ${ancho} ${alto}`} role="img" aria-label={`Mapa de puntos con ${unidades.length} unidades públicas de primer nivel en Jalisco. Se concentran en el área metropolitana de Guadalajara y se reparten por todo el estado.`}>
+          {
+            unidades.map((u) => (
+              <circle cx={px(u.lon).toFixed(1)} cy={py(u.lat).toFixed(1)} r="4">
+                <title>{`${titulo(u.nombre)}. ${titulo(u.institucion)}. ${titulo(u.municipio)}, jurisdicción ${titulo(u.jurisdiccion)}.`}</title>
+              </circle>
+            ))
+          }
+        </svg>
+        <figcaption class="nota">
+          Fuente: {fuente('13').institucion}, {fuente('13').nombre} ({fuente('13').periodo}). Dataset 13 del catálogo del reto.
+          Archivo: <a href="/datos/unidades_primer_nivel_jalisco.csv" download>unidades_primer_nivel_jalisco.csv</a>.
+        </figcaption>
+      </figure>
+      <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Tabla de jurisdicciones" style="margin-top: 1.5rem">
+        <table>
+          <caption class="solo-lector">Jurisdicciones sanitarias de Jalisco</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jurisdicción sanitaria</th>
+              <th scope="col" class="num">Municipios</th>
+              <th scope="col" class="num">Población 2020</th>
+              <th scope="col" class="num">Muertes crónicas al año</th>
+              <th scope="col" class="num">Unidades públicas</th>
+              <th scope="col" class="num">Por 10 mil hab.</th>
+              <th scope="col" class="num">Población a más de 10 km</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              jurisdicciones.map((j) => (
+                <tr>
+                  <th scope="row">{titulo(j.jurisdiccion)}</th>
+                  <td class="num">{j.municipios}</td>
+                  <td class="num">{entero(j.pob_total)}</td>
+                  <td class="num">{entero(j.def_cronicas_prom)}</td>
+                  <td class="num">{entero(j.unidades_publicas)}</td>
+                  <td class="num">{decimal(j.unidades_por_10mil, 2)}</td>
+                  <td class="num">{entero(j.pob_mas_10km)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="datos-abiertos" class="bloque contenedor" aria-labelledby="t-abiertos">
+      <h2 id="t-abiertos" class="titulo-seccion">Datos abiertos.</h2>
+      <div class="texto">
+        <p>
+          Estos son los archivos que alimentan la app y esta página, tal como salen del programa de análisis. Son agregados
+          por municipio, causa, jurisdicción o unidad: no contienen datos de ninguna persona. Están en CSV con codificación
+          UTF-8 y punto decimal; se abren en cualquier hoja de cálculo.
+        </p>
+      </div>
+      <ul class="archivos">
+        {
+          archivos.map((a) => (
+            <li class="archivo">
+              <Icon name={a.archivo.endsWith('.json') ? 'ph:brackets-curly-light' : 'ph:table-light'} aria-hidden="true" width="28" height="28" />
+              <h3>{a.nombre}</h3>
+              <p>{a.texto}</p>
+              <p class="meta">
+                <code>{a.archivo}</code>
+                {a.filas !== null && <span> · {entero(a.filas)} filas</span>}
+              </p>
+              <a class="boton boton-secundario" href={`/datos/${a.archivo}`} download>
+                <Icon name="ph:download-simple-light" aria-hidden="true" />
+                Descargar<span class="solo-lector"> {a.nombre}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <h3 class="titulo-seccion" style="font-size: var(--t-lg); margin-top: 2.5rem">Fuentes originales.</h3>
+      <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Tabla de fuentes">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Dataset del reto</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Institución</th>
+              <th scope="col">Periodo</th>
+              <th scope="col">Para qué se usa</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              datos.fuentes.map((f) => (
+                <tr>
+                  <th scope="row">{f.id === 'complementaria' ? 'Complementaria' : f.id}</th>
+                  <td>{f.nombre}</td>
+                  <td>{f.institucion}</td>
+                  <td>{f.periodo}</td>
+                  <td>{f.uso}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="nota">
+        Los archivos originales se descargaron de INEGI (<a href="https://www.inegi.org.mx/programas/edr/" rel="noopener">defunciones registradas</a>
+        {' '}y <a href="https://www.inegi.org.mx/programas/ccpv/2020/" rel="noopener">Censo 2020</a>), de la Secretaría de Salud (catálogo CLUES) y de
+        {' '}<a href="https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372" rel="noopener">CONAPO</a>. Cómo se transforman en
+        estas tablas, con sus definiciones y límites, está en la <a href="/jalisco/metodologia/">metodología</a>.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<script>
+  // Filtro y orden de la tabla de municipios. Sin JavaScript la tabla completa sigue visible.
+  const tabla = document.querySelector<HTMLTableElement>('#tabla-municipios');
+  const buscar = document.querySelector<HTMLInputElement>('#buscar');
+  const jurisdiccion = document.querySelector<HTMLSelectElement>('#jurisdiccion');
+  const orden = document.querySelector<HTMLSelectElement>('#orden');
+  const conteo = document.querySelector<HTMLParagraphElement>('#conteo');
+  if (tabla && buscar && jurisdiccion && orden && conteo) {
+    const cuerpo = tabla.tBodies[0];
+    const filas = Array.from(cuerpo.rows);
+    const normalizar = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
+    const aplicar = () => {
+      const q = normalizar(buscar.value);
+      const j = jurisdiccion.value;
+      const clave = orden.value;
+      const ordenadas = [...filas].sort((a, b) =>
+        clave === 'nombre'
+          ? (a.dataset.nombre ?? '').localeCompare(b.dataset.nombre ?? '', 'es')
+          : Number(b.dataset[clave]) - Number(a.dataset[clave]),
+      );
+      let visibles = 0;
+      for (const fila of ordenadas) {
+        const ver = (fila.dataset.nombre ?? '').includes(q) && (j === '' || fila.dataset.jurisdiccion === j);
+        fila.hidden = !ver;
+        if (ver) visibles++;
+        cuerpo.appendChild(fila);
+      }
+      conteo.textContent = `${visibles} de ${filas.length} municipios`;
+    };
+    buscar.addEventListener('input', aplicar);
+    jurisdiccion.addEventListener('change', aplicar);
+    orden.addEventListener('change', aplicar);
+  }
+</script>

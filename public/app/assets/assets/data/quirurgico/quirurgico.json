@@ -1,0 +1,3036 @@
+{
+ "version": 1,
+ "actualizado": "2026-10-04",
+ "fuentes": {
+  "equipo": {
+   "titulo": "Material de estudio del equipo PoliSafe",
+   "detalle": ""
+  },
+  "bultos": {
+   "titulo": "Referencia del equipo PoliSafe",
+   "detalle": "El contenido de cada bulto cambia según el hospital; confírmalo con la Central de Equipos y Esterilización (CEyE) de tu unidad."
+  },
+  "aesp": {
+   "titulo": "Acciones Esenciales para la Seguridad del Paciente, Acción Esencial 4",
+   "detalle": "Diario Oficial de la Federación, 16/06/2023.",
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5692439&fecha=16/06/2023",
+   "ruta": "/estudio/norma/AESP-4"
+  },
+  "imss": {
+   "titulo": "IMSS, Procedimiento para la atención médico quirúrgica del paciente en segundo nivel de atención, clave 2660-003-066",
+   "detalle": "Las claves de formatos son del IMSS; en otras instituciones cambian.",
+   "url": "https://reposipot.imss.gob.mx/normatividad/DNMR/Procedimiento/2660-003-066.pdf"
+  },
+  "lopes": {
+   "titulo": "Lopes CMM, Galvão CM. Posicionamiento quirúrgico: evidencias para el cuidado de enfermería",
+   "detalle": "Rev. Latino-Am. Enfermagem. 2010;18(2).",
+   "url": "https://revistas.usp.br/rlae/article/view/4153"
+  }
+ },
+ "instrumental": [
+  {
+   "titulo": "Pinzas",
+   "elementos": [
+    {
+     "nombre": "Pinzas para campos de Backhaus",
+     "archivo": "backhaus.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Cuentan con cremallera y mandíbulas curvas, delgadas y agudas.",
+        "Pertenecen al instrumental de pinzado y oclusión.",
+        "Pueden ser penetrantes, su uso debe ser cauteloso."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Mantener campos quirúrgicos en su lugar durante toda la intervención.",
+        "Reducción de fracturas en huesos pequeños.",
+        "Prender tejidos gruesos.",
+        "NO debe usarse para fijar dispositivos médicos pues pueden perforar los mismos."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas de disección",
+     "archivo": "pinzas_diseccion.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Cuentan con una articulación con acción de resorte en el extremo distal.",
+        "Instrumental sin cremallera.",
+        "Las puntas pueden ser lisas o serradas, y algunas incluyen dientes."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Para manipular o tomar tejidos corporales.",
+        "Estabilizar tejidos.",
+        "Modelar dientes protésicos.",
+        "Prender tejidos muscular y óseo.",
+        "Aplicación de apósitos.",
+        "Alinear bordes de heridas."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas de disección con dientes",
+     "archivo": "pinzas_diseccion_dientes.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Puntas dentadas con patrón común 1×2.",
+        "Agarre fuerte y preciso.",
+        "Diseño tipo pinza de resorte, sin cremallera ni anillos."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre firme de piel, aponeurosis y tejido denso.",
+        "Sujeción de bordes cutáneos durante la sutura.",
+        "Manipulación segura de tejidos gruesos o resbaladizos.",
+        "Menor traumatismo en piel y fascia al concentrar la presión en los dientes."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas de disección simples",
+     "archivo": "pinzas_diseccion_simples.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Puntas lisas y redondeadas.",
+        "Agarre suave que reduce el riesgo de daño tisular.",
+        "Menor sujeción en tejidos gruesos o resbaladizos comparado con pinzas con dientes."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre suave y atraumático de tejidos delicados.",
+        "Manipulación de vasos sanguíneos, nervios, peritoneo e intestinos.",
+        "Retiro de suturas y manejo de gasas o torundas pequeñas.",
+        "Separación de planos tisulares durante la disección."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas de disección de DeBakey",
+     "archivo": "pinzas_diseccion_debakey.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Puntas atraumáticas con microestriaciones longitudinales.",
+        "Agarre seguro sin penetrar ni aplastar el tejido.",
+        "Diseño tipo pinza de resorte, sin cremallera."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Manipulación suave y atraumática de tejidos delicados.",
+        "Pinza estándar en cirugía vascular y cardiaca para arterias y venas.",
+        "Sujeción de tejido intestinal, nervios, piel y estructuras blandas."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas de disección rusas",
+     "archivo": "pinzas_diseccion_rusas.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Punta ancha y redondeada con dientes triangulares.",
+        "Agarre potente y seguro para tejidos pesados o resbaladizos.",
+        "Diseño tipo pinza de resorte, sin cremallera."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Manipulación de órganos grandes o tejidos a extirpar.",
+        "Sujeción de agujas de sutura o torundas de gasa.",
+        "Uso limitado a tejidos resistentes o que serán desechados por su carácter traumático."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas hemostáticas Kelly curvas",
+     "archivo": "kelly_curvas.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Estriado horizontal en sus mandíbulas.",
+        "Presenta una curvatura en sus mandíbulas, lo que facilita el acceso en ciertas maniobras quirúrgicas.",
+        "Tamaño intermedio."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Ocluir el sangrado en vasos sanguíneos antes de proceder a su cauterización o ligadura.",
+        "Manipular tejidos que no requieren una presión excesiva.",
+        "Permite una mejor visibilidad y control."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Mosquito rectas",
+     "archivo": "mosquito_rectas.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Pinzas pequeñas que poseen puntas finas y un estriado horizontal a todo lo largo de sus mandíbulas.",
+        "Instrumentos de pinzado y oclusión."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Ocluir el sangrado en heridas pequeñas o superficiales antes de realizar la cauterización o ligadura.",
+        "Para cirugías del tipo: plásticas, pediátricas, de tiroides y de mano."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Rochester-Pean",
+     "archivo": "rochester_pean.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Estriado horizontal que se extiende a todo lo largo de sus mandíbulas.",
+        "Instrumentos de pinzado y oclusión.",
+        "Son más grandes y fuertes.",
+        "Existe versión curva como recta."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Clampar y ocluir vasos sanguíneos grandes y pedículos tisulares para lograr la hemostasia.",
+        "Sujetar de manera firme tejidos gruesos o pesados que van a ser extirpados o ligados."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Allis",
+     "archivo": "allis.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mandíbulas: cortas y anchas.",
+        "Punta dentada: fila de pequeños dientes interconectados en forma curva.",
+        "Agarre: muy fuerte, evita deslizamientos."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre firme y seguro de tejidos que serán extirpados.",
+        "Sujeción de tejido fibroso y resistente: fascias, aponeurosis.",
+        "Agarre de bordes de piel en incisiones."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Mixter",
+     "archivo": "mixter.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Son pinzas que presentan una angulación marcada de aprox. 45 a 90 grados en la parte distal de sus mandíbulas.",
+        "Estriado horizontal.",
+        "Con cremallera."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Su función principal es ocluir vasos sanguíneos o estructuras tubulares en áreas de difícil acceso.",
+        "Permite realizar disección en planos profundos o alrededor de estructuras anatómicas curvas."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Satinsky",
+     "archivo": "satinsky.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mandíbulas curvas en forma de “S”: se adaptan a la superficie del vaso.",
+        "Diseño largo y fino, ideal para vasos de gran calibre.",
+        "Atraumática: no daña ni aplasta la pared vascular."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Oclusión vascular parcial (clampeo tangencial) en vasos grandes.",
+        "Permite pinzar solo una porción del vaso (aorta, vena cava) manteniendo flujo sanguíneo parcial.",
+        "Facilita incisiones o suturas vasculares sin interrumpir totalmente la circulación."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Collin-Duval",
+     "archivo": "collin_duval.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mandíbulas triangulares con amplia superficie de agarre.",
+        "Puntas que no cierran completamente, distribuyendo la presión.",
+        "Superficie lisa o con estrías finas longitudinales."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre y sujeción atraumática de tejido blando.",
+        "Manipulación del pulmón en cirugía torácica.",
+        "Sujeción de intestino, vesícula biliar y colon en cirugía abdominal."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Kocher",
+     "archivo": "kocher.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño recto o curvo.",
+        "Tamaño común: 14–16 cm.",
+        "Mandíbulas delgadas y cónicas, más finas que otras hemostáticas."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre firme de tejidos que serán extirpados.",
+        "Control de hemorragias en estructuras robustas.",
+        "Agarre traumático de tejidos duros o fibrosos (fascia, músculo, piel)."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas portaesponjas de Foerster",
+     "archivo": "foerster.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Puntas terminadas en dos aros circulares u ovalados.",
+        "Interior de los aros liso o dentado.",
+        "Diseño largo y delgado, disponible en versión recta o curva."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Manejo aséptico de gasas y apósitos.",
+        "Aplicación de soluciones antisépticas con torundas.",
+        "Limpieza y secado del campo quirúrgico."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Pinzas Babcock",
+     "archivo": "babcock.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mandíbulas anchas con forma redondeada o triangular al cerrarse.",
+        "Diseño atraumático: sin dientes afilados.",
+        "Punta ensanchada y redondeada que distribuye la presión de forma uniforme."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Agarre atraumático de tejidos delicados y tubulares.",
+        "Manipulación de estructuras huecas: intestino, apéndice, trompas de Falopio, uréteres y vasos grandes.",
+        "Sujeción de tejidos que deben permanecer viables dentro del paciente."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Bisturíes y mangos",
+   "elementos": [
+    {
+     "nombre": "Mango de bisturí n.º 3 largo",
+     "archivo": "mango_bisturi_3.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Está clasificado en la categoría de corte y disección.",
+        "Sostiene hojas de bisturí #10, 11, 12 y 15.",
+        "Es el estándar para acceder a planos profundos."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Usada para realizar cortes de precisión dentro de una herida profunda.",
+        "Sirve para sostener diversas hojas compatibles y crear un escalpelo funcional."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Hoja de bisturí n.º 10",
+     "archivo": "hoja_10.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Cuerpo grande con borde curvo.",
+        "Se usa con un mango de bisturí #3, #3 largo o #7.",
+        "Artículo de un solo uso por paciente, ya que viene estéril y empaquetado."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Su función principal es la realización de incisiones en la piel.",
+        "Se emplea junto con un mango para crear un escalpelo funcional que permita realizar cortes finos de precisión."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Hoja de bisturí n.º 20",
+     "archivo": "hoja_20.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Es una hoja de gran tamaño con un borde cortante curvo que se extiende hasta una punta redondeada.",
+        "Se utiliza específicamente con el mango de bisturí número 4."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se emplea principalmente para realizar incisiones largas y profundas en la piel.",
+        "Se utiliza para seccionar tejidos gruesos o masivos, como los encontrados en cirugía general, ortopedia y procedimientos abdominales donde se requiere un corte amplio."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Hoja de bisturí n.º 11",
+     "archivo": "hoja_11.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Posee un borde cortante anulado que asciende progresivamente hasta terminar en punta aguda.",
+        "Para mango del #7, aunque también para el #3 y #3 largo."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se utiliza principalmente para realizar incisiones pequeñas y precisas.",
+        "Puncionar y drenar acumulaciones de líquido o abscesos.",
+        "Se emplea frecuentemente para iniciar una arteriotomía (incisión en una arteria)."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Mango de bisturí n.º 4",
+     "archivo": "mango_bisturi_4.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Posee un cuerpo liso o con estrías longitudinales para facilitar el agarre.",
+        "Compatibles para hojas de bisturí de la serie 20, como las números 20, 21, 22, 23, 24 y 25."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se utiliza principalmente para realizar incisiones extensas en la piel y otros tejidos superficiales.",
+        "Elección en procedimientos de cirugía general, ortopedia o ginecología donde se requiere un corte profundo y amplio."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Tijeras",
+   "elementos": [
+    {
+     "nombre": "Tijeras de Mayo rectas",
+     "archivo": "mayo_rectas.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "El rasgo distintivo es que las estrías transversales solo cubren aproximadamente la mitad distal.",
+        "Son consideradas menos traumáticas en la punta."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Ocluyen vasos sanguíneos de mediano calibre.",
+        "Permiten la sujeción y manipulación de tejidos y piel.",
+        "Facilitan la disección profunda o roma en áreas difíciles."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Tijeras de Mayo curvas",
+     "archivo": "mayo_curvas.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "El rasgo distintivo es que las estrías transversales solo cubren aproximadamente la mitad distal.",
+        "Son consideradas menos traumáticas en la punta."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Ocluyen vasos sanguíneos de mediano calibre.",
+        "Permiten la sujeción y manipulación de tejidos y piel.",
+        "Facilitan la disección profunda o roma en áreas difíciles."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Tijeras de Metzenbaum",
+     "archivo": "metzembaum.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Son tijeras más delicadas que las de Mayo, con cañas (cuerpos) más largas y delgadas en relación con sus hojas.",
+        "Hojas cortas y de puntas romas."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se utilizan principalmente para separar y cortar tejidos suaves o finos.",
+        "Curvas: disección profunda y para cortar tejidos dentro de la cavidad.",
+        "Rectas: corte en tejidos más superficiales o línea de corte directa."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Tijeras para vendajes de Lister",
+     "archivo": "lister.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Poseen un borde serrado y una punta roma ensanchada en la mandíbula inferior.",
+        "Se clasifican dentro de los instrumentos de corte y disección."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se utilizan para cortar vendajes, material de enyesado (férulas) y ropa.",
+        "También son útiles para cortar apósitos y campos quirúrgicos.",
+        "Nunca deben usarse para cortar tejidos vivos."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Separadores",
+   "elementos": [
+    {
+     "nombre": "Separador Richardson",
+     "archivo": "richardson.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mango en forma de gancho o “L” para agarre firme.",
+        "Hoja curva, plana y redondeada, atraumática.",
+        "Disponible en varios tamaños de hoja."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Retracción manual de tejido y órganos para mejorar visibilidad y acceso.",
+        "Separación de bordes de incisiones abdominales o torácicas.",
+        "Protección de estructuras delicadas y vasos sanguíneos."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Separador Deaver",
+     "archivo": "deaver.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Hoja curva en forma de gancho largo o signo de interrogación.",
+        "Superficie lisa y redondeada, atraumática para órganos.",
+        "Instrumento largo y robusto, disponible en varios anchos."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Retracción manual y profunda de órganos abdominales y torácicos grandes.",
+        "Retracción visceral de hígado, estómago, bazo o pulmón.",
+        "Proporciona amplia exposición en cirugías abdominales mayores."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Separador Gelpi",
+     "archivo": "gelpi.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Mecanismo autoestático con cremallera (trinquete).",
+        "Diseño tipo pinza con vástagos cruzados.",
+        "Puntas en forma de ganchos simples."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Retracción autoestática de bordes de herida en campos quirúrgicos pequeños y profundos.",
+        "Mantiene separación constante sin asistencia manual.",
+        "Usado en ortopedia, neurocirugía, cirugía plástica y procedimientos perineales o ginecológicos."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Separador Senn",
+     "archivo": "senn.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño de doble extremo.",
+        "Un extremo con hoja plana, lisa y curvada para retracción suave.",
+        "Otro extremo con tres ganchos afilados para mayor sujeción."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Retracción manual de tejido superficial y delicado.",
+        "Separación de piel, grasa y tejido subcutáneo en incisiones pequeñas y medianas.",
+        "Uso frecuente en cirugía plástica, de mano, pediátrica y de cuello."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Separador Volkmann",
+     "archivo": "volkman.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Punta activa con uno o varios ganchos o garfios.",
+        "Puede tener de 2 a 6 dientes, romos o afilados.",
+        "Vástago largo con mango en anillo o bucle para mejor agarre."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Retracción manual de tejido superficial o semiprofundo.",
+        "Sujeción de bordes de herida fibrosos o gruesos.",
+        "Separación de piel, músculo o tejido fibroso en incisiones pequeñas y medianas."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Portaagujas",
+   "elementos": [
+    {
+     "nombre": "Portaagujas Mayo-Hegar",
+     "archivo": "mayo_hegar.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Instrumento combinado: portaagujas y tijeras.",
+        "Mandíbulas con estrías e insertos de carburo de tungsteno para mejor agarre."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Sujeción y control de la aguja de sutura durante procedimientos quirúrgicos.",
+        "Permite suturar y cortar el hilo sin cambiar de instrumento.",
+        "Ideal para suturas rápidas y cirujanos que trabajan sin asistente."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Portaagujas Castroviejo",
+     "archivo": "gastroviejo.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño delgado y ligero para alta precisión.",
+        "Mandíbulas finas que sujetan la aguja sin dañarla.",
+        "Mecanismo de bloqueo fino para control estable."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Sujeción y control preciso de agujas de sutura finas.",
+        "Empleado en microcirugía, oftalmología, cirugía vascular y plástica.",
+        "Ideal para trabajar en tejidos delicados y espacios reducidos."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Portaagujas Mathieu",
+     "archivo": "mathieu.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño de resorte con mecanismo de cremallera en el mango.",
+        "Agarre palmar que favorece rapidez y ergonomía."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Sujeta y controla la aguja de sutura durante el paso a través de los tejidos.",
+        "Facilita suturas rápidas y precisas, común en cierres de rutina y odontología.",
+        "Permite un control firme de la aguja para dirigirla correctamente."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Aspiradores",
+   "elementos": [
+    {
+     "nombre": "Aspirador Yankauer",
+     "archivo": "yankauer.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño rígido y curvado con mango ergonómico.",
+        "Punta redondeada y bulbosa para proteger tejidos.",
+        "Abertura principal amplia con orificios secundarios para evitar oclusión."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Aspiración de líquidos, secreciones y partículas gruesas en áreas superficiales o cavidades accesibles.",
+        "Aspiración oral y faríngea para mantener despejada la vía aérea.",
+        "Aspiración superficial en heridas quirúrgicas."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Aspirador Frazier",
+     "archivo": "frazier.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Cánula delgada y larga para trabajo fino.",
+        "Punta estrecha, recta o ligeramente angulada, con orificio de succión pequeño.",
+        "Estilete opcional para desobstrucción."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Aspiración precisa de pequeños volúmenes de líquidos, sangre, LCR y humo quirúrgico.",
+        "Instrumento estándar en neurocirugía, ORL, oftalmología y cirugía plástica.",
+        "Permite trabajar en cavidades profundas y estrechas sin obstruir la visibilidad."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Cánula de aspiración Poole",
+     "archivo": "poole.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Diseño de doble vaina.",
+        "Vaina interna: tubo delgado con una abertura para succión concentrada."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Aspiración rápida de grandes volúmenes de sangre, fluidos o líquidos de irrigación en cavidades profundas, especialmente abdominales.",
+        "Fundamental en hemorragias activas y cirugías como laparotomías.",
+        "Protege el tejido blando evitando succión y daño directo."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Material de apoyo",
+   "elementos": [
+    {
+     "nombre": "Lápiz electroquirúrgico",
+     "archivo": "lapiz_electroquirurgico.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Es un dispositivo, generalmente desechable, que incluye el lápiz, un electrodo (punta) en forma de hoja y una funda protectora.",
+        "Se clasifica como un instrumento accesorio."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Se utiliza para dividir o separar tejidos de manera rápida y precisa.",
+        "Su función principal es sellar vasos sanguíneos pequeños para detener el sangrado durante la cirugía.",
+        "Minimizando la pérdida de sangre."
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Engrapadora de piel",
+     "archivo": "engrapadora_piel.webp",
+     "apartados": [
+      {
+       "titulo": "Características",
+       "lineas": [
+        "Dispositivo desechable con grapas de acero inoxidable.",
+        "Grapas pequeñas en forma de “B” o rectangulares.",
+        "Mecanismo de disparo con mango ergonómico."
+       ]
+      },
+      {
+       "titulo": "Usos",
+       "lineas": [
+        "Cierre rápido de incisiones quirúrgicas o laceraciones en piel.",
+        "Cierre primario de la piel al finalizar procedimientos quirúrgicos.",
+        "Útil en áreas con tensión o en cirugías de trauma."
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "bultos": [
+  {
+   "titulo": "Ortopedia",
+   "elementos": [
+    {
+     "nombre": "Reducción y fijación de fracturas",
+     "archivo": "reduccion_fijacion_fracturas.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas gubia",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Martillo quirúrgico",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Medidor de profundidad",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Verbrugge",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Brocas quirúrgicas",
+       "cantidad": "3"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador de Farabeuf",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Elevador de periostio",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección s/n dientes 18 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Separador de Hohmann ancho",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Backhaus",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Pinzas Allis",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Separador de Hohmann angosto",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Pinzas de disección s/n dientes 18 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "2"
+      }
+     ]
+    },
+    {
+     "nombre": "Artroplastia",
+     "archivo": "artroplastia.webp",
+     "piezas": [
+      {
+       "nombre": "Sierra oscilante",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos en T",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Extractor de cabeza femoral",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separadores Hohmann largos",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Juego de raspadores femorales",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Juego de fresas acetabulares/femorales",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinza rusa",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Iniciador de canal",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separadores Hohmann largos",
+       "cantidad": "4"
+      }
+     ]
+    },
+    {
+     "nombre": "Artroscopia de rodilla",
+     "archivo": "artroscopia_rodilla.webp",
+     "piezas": [
+      {
+       "nombre": "Vaina de artroscopio con doble grifo de irrigación",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Óptica artroscópica",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Trocar piramidal",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Palpador graduado",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de salida de líquidos",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Trocar romo",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mango de shaver",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas punch",
+       "cantidad": "3"
+      },
+      {
+       "nombre": "Cable de fibra óptica",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Bomba de irrigación continua",
+       "cantidad": "1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Oftalmología",
+   "elementos": [
+    {
+     "nombre": "Facoemulsificación",
+     "archivo": "facoemulsificacion.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas de capsulorrexis de Utrata",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Blefarostato de Lieberman",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de Bonn",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Gancho de Sinskey",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Nucleus chopper",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Espátula de iris",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de irrigación/aspiración",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cuchillete de 1.2 mm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cuchillete de 2.75 mm",
+       "cantidad": "1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Urología",
+   "elementos": [
+    {
+     "nombre": "Resección transuretral de próstata",
+     "archivo": "reseccion_transuretral_prostata.webp",
+     "piezas": [
+      {
+       "nombre": "Vaina de resectoscopio 26 French",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Elemento de trabajo de Iglesias",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Obturador para introducción de la vaina",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Asas de corte de alambre de tungsteno",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Evacuador de Ellik",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cable de electrocirugía monopolar",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Telescopio de 30° y 4 mm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Puente telescópico",
+       "cantidad": "1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Otorrinolaringología",
+   "elementos": [
+    {
+     "nombre": "Amigdalectomía",
+     "archivo": "amigdalectomia.webp",
+     "piezas": [
+      {
+       "nombre": "Disector de Hurd con elevador",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de White",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas de Negus",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Asa de amigdalectomía con alambre de acero",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Abrebocas de Davis-Boyle",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de Yankauer",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cuchillo Fisher",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Adenotomo de LaForce",
+       "cantidad": "1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Cirugía general",
+   "elementos": [
+    {
+     "nombre": "Colecistectomía",
+     "archivo": "colecistectomia.webp",
+     "piezas": [
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Dilatadores de Bakes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva 25 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas de disección s/n dientes 18 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Pinzas Mixter 23 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Juego de separador Richardson",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Foerster recta 24 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Foerster curva 24 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Juego Randall (4 pzas)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Juego de separador Deaver (4 pzas)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo curva 14 cm",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Apendicectomía",
+     "archivo": "apendicectomia.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas McIndoe 15 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Plato de riñón",
+       "cantidad": "8"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Gallipots",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas de carril 18 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Retractor de US Army",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Adson 12 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Crile 14 cm rectas",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Tijera Mayo curva 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum recta 18 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kocher",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas Adson 1:2 12 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Spencer Wells curvo 18 cm",
+       "cantidad": "8"
+      },
+      {
+       "nombre": "Pinzas Allis 15 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Spencer Wells recto 18 cm",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 18 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Crile 14 cm curvas",
+       "cantidad": "8"
+      },
+      {
+       "nombre": "Pinzas de Babcock",
+       "cantidad": "2"
+      }
+     ]
+    },
+    {
+     "nombre": "Laparotomía exploradora",
+     "archivo": "laparotomia_exploradora.webp",
+     "piezas": [
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 18 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Plato de riñón",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 18 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "8"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Separador Deaver",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Separador de Balfour (con valva suprapúbica)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "12"
+      },
+      {
+       "nombre": "Pinzas de disección rusas",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly recta 14 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva 25 cm",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Pinzas Allis 15 cm",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Pinzas Mosquito",
+       "cantidad": "12"
+      },
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador de Farabeuf (juego de 2)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de succión Poole",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Hernioplastia",
+     "archivo": "hernioplastia.webp",
+     "piezas": [
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva 18 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Plato de riñón",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "8"
+      },
+      {
+       "nombre": "Pinzas Adson con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Separador de Farabeuf",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Tijera Mayo recta 14 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Allis 15 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas Adson sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas DeBakey",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Mosquito",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Separador Gelpi",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador Senn-Miller",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Hemorroidectomía",
+     "archivo": "hemorroidectomia.webp",
+     "piezas": [
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Espéculo anal de Hill-Ferguson",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Separador de Farabeuf",
+       "cantidad": "2-4"
+      },
+      {
+       "nombre": "Sonda acanalada",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Mosquito",
+       "cantidad": "6"
+      },
+      {
+       "nombre": "Anoscopio Fansler",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Allis 15 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Tijera Mayo recta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Estilete",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva corta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Pennington",
+       "cantidad": "4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Ginecología y obstetricia",
+   "elementos": [
+    {
+     "nombre": "Cesárea",
+     "archivo": "cesarea.webp",
+     "piezas": [
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador de Balfour (con valva suprapúbica)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas de disección rusas",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva",
+       "cantidad": "6-8"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Valva suprapúbica",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Oclusión tubaria bilateral",
+     "archivo": "oclusion_tubaria_bilateral.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "2-4"
+      },
+      {
+       "nombre": "Pinzas Allis 15 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Mosquito",
+       "cantidad": "4-6"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "2-4"
+      },
+      {
+       "nombre": "Separador Richardson",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva 25 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Separador de Farabeuf (juego de 2)",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Histerectomía",
+     "archivo": "histerectomia.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas Heaney",
+       "cantidad": "4-6"
+      },
+      {
+       "nombre": "Separador Deaver",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Rochester-Ochsner (con dientes)",
+       "cantidad": "4-6"
+      },
+      {
+       "nombre": "Separador de Balfour (con valva suprapúbica)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Allis largas",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Cánula de aspiración de Yankauer",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Valva de Doyen",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Mayo recta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva 25 cm",
+       "cantidad": "6-10"
+      },
+      {
+       "nombre": "Pinzas de disección rusas",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Jorgenson",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2-3"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Pozzi",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Cánula de succión Poole",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Legrado uterino instrumental (LUI)",
+     "archivo": "legrado_uterino_lui.webp",
+     "piezas": [
+      {
+       "nombre": "Juego de dilatadores de Hegar",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Plato de riñón",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Pozzi",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Winter",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Histerómetro (Sims)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Valva de Sims (doble)",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Espéculo vaginal (Graves)",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Quistectomía de ovario",
+     "archivo": "quistectomia_ovario.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas Babcock",
+       "cantidad": "4-6"
+      },
+      {
+       "nombre": "Plato de riñón",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador Deaver",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas DeBakey",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas portaesponja de Foerster",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Valva de Doyen",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Kelly curva 14 cm",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas para campos de Backhaus",
+       "cantidad": "4-6"
+      },
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Tijera Mayo recta",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera Metzenbaum curva",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección rusas",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Allis",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Pinzas Mosquito",
+       "cantidad": "6-10"
+      },
+      {
+       "nombre": "Pinzas Rochester-Péan curva 25 cm",
+       "cantidad": "2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "titulo": "Procedimientos especiales",
+   "elementos": [
+    {
+     "nombre": "Lavado quirúrgico",
+     "archivo": "lavado_quirurgico.webp",
+     "piezas": [
+      {
+       "nombre": "Portaagujas Mayo-Hegar 20 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas Allis",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Mangos de bisturí #4",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Foerster recta 25 cm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Riñón de acero inoxidable",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Curetas de Volkmann #2 y #4",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Sistema de irrigación pulsátil",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Desbridamiento de pie diabético",
+     "archivo": "desbridamiento_pie_diabetico.webp",
+     "piezas": [
+      {
+       "nombre": "Pinzas de disección Adson con dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas de disección Adson sin dientes",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Mangos de bisturí #3",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinzas Mosquito curvas",
+       "cantidad": "4"
+      },
+      {
+       "nombre": "Sonda acanalada de Doyen",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Estilete abotonado",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera de iris rectas",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinza gubia de Ruskin",
+       "cantidad": "1"
+      }
+     ]
+    },
+    {
+     "nombre": "Cirugía bariátrica",
+     "archivo": "cirugia_bariatrica.webp",
+     "piezas": [
+      {
+       "nombre": "Aguja de Veress de 150 mm",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Trócares de 5 mm",
+       "cantidad": "3"
+      },
+      {
+       "nombre": "Trócares de 12 mm",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Pinza Maryland",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinzas grasper atraumáticas",
+       "cantidad": "2"
+      },
+      {
+       "nombre": "Óptica laparoscópica de 10 mm a 30°",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Sonda de calibración",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Grapadora lineal endoscópica",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinza de energía avanzada",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Separador hepático de Nathanson",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Tijera monopolar laparoscópica",
+       "cantidad": "1"
+      },
+      {
+       "nombre": "Pinza de Babcock laparoscópica",
+       "cantidad": "1"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "tiempos": [
+  {
+   "titulo": "Tiempos quirúrgicos",
+   "elementos": [
+    {
+     "nombre": "Corte o incisión",
+     "archivo": "corte_incision.webp",
+     "apartados": [
+      {
+       "titulo": "¿Qué es?",
+       "lineas": [
+        "Tiempo inicial de la cirugía donde se inciden los tejidos para obtener acceso a la zona de interés o se separan estructuras anatómicas."
+       ]
+      },
+      {
+       "titulo": "Objetivos",
+       "lineas": [
+        "Realizar la incisión cutánea inicial, dividir tejidos y separar estructuras de forma aguda o roma."
+       ]
+      },
+      {
+       "titulo": "Instrumental",
+       "lineas": [
+        "Bisturíes, Tijeras de Mayo, Tijeras de Metzenbaum y Tijeras de Lister."
+       ]
+      },
+      {
+       "titulo": "Clave",
+       "lineas": [
+        "Las tijeras de disección (como Metzenbaum) nunca deben usarse para cortar suturas o campos, ya que pierden su filo de precisión."
+       ]
+      }
+     ],
+     "creditos": [
+      {
+       "autor": "TSgt Matthew Smith, U.S. Air Force",
+       "licencia": "Dominio público",
+       "fuente": "https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Lt._Col._Gerald_Fortuna,_a_trauma_surgeon_with_the_86th_Medical_Group,_performs_a_simulated_exploratory_laparotomy_in-flight_surgery_aboard_a_C-17_Globemaster_III_aircraft_during_the_Joint_140117-F-RW714-664.jpg"
+      }
+     ]
+    },
+    {
+     "nombre": "Hemostasia",
+     "archivo": "hemostasia.webp",
+     "apartados": [
+      {
+       "titulo": "¿Qué es?",
+       "lineas": [
+        "El proceso de detener o prevenir el sangrado durante la intervención."
+       ]
+      },
+      {
+       "titulo": "Objetivos",
+       "lineas": [
+        "Clampar o comprimir vasos sanguíneos para controlar la pérdida de sangre y mantener el campo visual despejado."
+       ]
+      },
+      {
+       "titulo": "Instrumental",
+       "lineas": [
+        "Pinzas de Halstead (Mosquito), Pinzas de Crile y Kelly, Pinzas de Rochester-Péan y Pinzas de Mixter (de ángulo)."
+       ]
+      },
+      {
+       "titulo": "Clave",
+       "lineas": [
+        "El estriado de las mandíbulas varía (horizontal o vertical) según el tipo de tejido que se desea ocluir."
+       ]
+      }
+     ],
+     "creditos": [
+      {
+       "autor": "Richard Balikian MD",
+       "licencia": "CC BY 4.0",
+       "fuente": "https://commons.wikimedia.org/wiki/File:Neck_Lift_Electrocautery_Dissection.jpg"
+      },
+      {
+       "autor": "TSgt Matthew Smith, U.S. Air Force",
+       "licencia": "Dominio público",
+       "fuente": "https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Lt._Col._Gerald_Fortuna,_a_trauma_surgeon_with_the_86th_Medical_Group,_performs_a_simulated_exploratory_laparotomy_in-flight_surgery_aboard_a_C-17_Globemaster_III_aircraft_during_the_Joint_140117-F-RW714-719.jpg"
+      }
+     ]
+    },
+    {
+     "nombre": "Exposición",
+     "archivo": "exposicion.webp",
+     "apartados": [
+      {
+       "titulo": "¿Qué es?",
+       "lineas": [
+        "Aparta los tejidos para facilitar la visión y el acceso al sitio quirúrgico."
+       ]
+      },
+      {
+       "titulo": "Objetivos",
+       "lineas": [
+        "Proporcionar una ventana clara al cirujano y proteger órganos o estructuras que no deben ser tocados."
+       ]
+      },
+      {
+       "titulo": "Instrumental",
+       "lineas": [
+        "Separadores manuales (Farabeuf, Senn), separadores automáticos (Balfour, Gosset), cánulas de aspiración (Yankauer, Poole)."
+       ]
+      },
+      {
+       "titulo": "Clave",
+       "lineas": [
+        "La tracción expone, la aspiración limpia y la separación mantiene el espacio abierto."
+       ]
+      }
+     ],
+     "creditos": [
+      {
+       "autor": "Master Sgt. John Nimmo, Sr., U.S. Air Force",
+       "licencia": "Dominio público",
+       "fuente": "https://commons.wikimedia.org/wiki/File:Joint_Readiness_Training_Center_140117-F-XL333-873.jpg"
+      }
+     ]
+    },
+    {
+     "nombre": "Disección",
+     "archivo": "diseccion.webp",
+     "apartados": [
+      {
+       "titulo": "¿Qué es?",
+       "lineas": [
+        "Es la separación o división de las estructuras anatómicas (tejido conectivo, planos musculares) para liberar el órgano enfermo."
+       ]
+      },
+      {
+       "titulo": "Objetivos",
+       "lineas": [
+        "Identificar estructuras vitales (nervios, vasos) y aislar el área que requiere tratamiento (exéresis o reparación)."
+       ]
+      },
+      {
+       "titulo": "Instrumental",
+       "lineas": [
+        "Pinzas de disección (con y sin dientes), tijeras de Metzenbaum, gasas (disección roma)."
+       ]
+      },
+      {
+       "titulo": "Clave",
+       "lineas": [
+        "Puede ser roma (con dedos o gasa, sin cortar) o cortante (con bisturí o tijera)."
+       ]
+      }
+     ],
+     "creditos": [
+      {
+       "autor": "Richard Balikian MD",
+       "licencia": "CC BY 4.0",
+       "fuente": "https://commons.wikimedia.org/wiki/File:Deep_Neck_Lift_Submental_Dissection.jpg"
+      },
+      {
+       "autor": "Richard Balikian MD",
+       "licencia": "CC BY 4.0",
+       "fuente": "https://commons.wikimedia.org/wiki/File:Open_rhinoplasty_surgical_exposure_prior_to_dissection.jpg"
+      }
+     ]
+    },
+    {
+     "nombre": "Sutura",
+     "archivo": "sutura.webp",
+     "apartados": [
+      {
+       "titulo": "¿Qué es?",
+       "lineas": [
+        "Es el tiempo final donde se realiza la aproximación de los tejidos para restaurar su continuidad anatómica."
+       ]
+      },
+      {
+       "titulo": "Objetivos",
+       "lineas": [
+        "Favorecer la cicatrización, prevenir infecciones y cerrar la herida por planos."
+       ]
+      },
+      {
+       "titulo": "Instrumental",
+       "lineas": [
+        "Portaagujas (Hegar, Mayo-Hegar), agujas quirúrgicas, hilos de sutura (absorbibles y no absorbibles), pinzas de disección."
+       ]
+      },
+      {
+       "titulo": "Clave",
+       "lineas": [
+        "Se realiza de los planos profundos hacia la superficie (músculo → fascia → grasa → piel)."
+       ]
+      }
+     ],
+     "creditos": [
+      {
+       "autor": "Richard Balikian MD",
+       "licencia": "CC BY 4.0",
+       "fuente": "https://commons.wikimedia.org/wiki/File:Upper_Blepharoplasty_Suture_Closure.jpg"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "lvsc": {
+  "fuente": "aesp",
+  "notas": [
+   "Se nombrará a un integrante del equipo quirúrgico como el coordinador para su llenado, se recomienda que sea el circulante.",
+   "Se aplicará en todos los pacientes a los que se realicen cualquier procedimiento quirúrgico dentro o fuera de la sala de operaciones, así como en los procedimientos invasivos y de alto riesgo que el EAM defina.",
+   "Cada EAM podrá incluir la verificación de cualquier otra variable que ponga en riesgo la seguridad del paciente durante el procedimiento, siempre y cuando al menos se verifique lo establecido en cada una de las fases."
+  ],
+  "fases": [
+   {
+    "id": "entrada",
+    "titulo": "FASE 1. Entrada",
+    "momento": "Antes de la inducción de la anestesia",
+    "grupos": [
+     {
+      "responsable": "El anestesiólogo, el cirujano y el personal de enfermería:",
+      "puntos": [
+       {
+        "id": "entrada.01",
+        "texto": "Confirman verbalmente con el paciente (si es posible), su identidad preguntando los dos datos de identificación, el sitio quirúrgico, el procedimiento quirúrgico y su consentimiento."
+       }
+      ]
+     },
+     {
+      "responsable": "El anestesiólogo:",
+      "puntos": [
+       {
+        "id": "entrada.02",
+        "texto": "Durante la realización de procedimientos con técnica aséptica tiene que utilizar el equipo completo de protección incluyendo gorro, guantes, bata quirúrgica y cubre bocas bien posicionado."
+       },
+       {
+        "id": "entrada.03",
+        "texto": "Confirma con el cirujano el marcaje del sitio quirúrgico."
+       },
+       {
+        "id": "entrada.04",
+        "texto": "Realiza el control de la seguridad de la anestesia al revisar: medicamentos, anotando la fecha de caducidad y el lote de los mismos, así mismo como la aplicación de los correctos para la administración de medicamentos, funcionalidad y condiciones óptimas del equipo, así como el riesgo anestésico del paciente."
+       },
+       {
+        "id": "entrada.05",
+        "texto": "Coloca y comprueba que funcione el oxímetro de pulso correctamente."
+       },
+       {
+        "id": "entrada.06",
+        "texto": "Confirma si el paciente tiene alergias conocidas, vía aérea difícil y riesgo de aspiración. En el caso de que sí exista este riesgo, tiene que verificar que cuente con el material, equipo y ayuda disponibles."
+       },
+       {
+        "id": "entrada.07",
+        "texto": "Identifica el riesgo de hemorragias: en adultos mayor a 500 ml y en niños mayor a 7ml/kg."
+       },
+       {
+        "id": "entrada.08",
+        "texto": "Prevé la disponibilidad de soluciones parenterales, vías centrales y/o periféricas permeables con el calibre de catéter adecuado, de acuerdo con el procedimiento a realizar."
+       },
+       {
+        "id": "entrada.09",
+        "texto": "Identifica la necesidad de hemocomponentes y en su caso, verificar que se haya realizado el cruce de sangre previamente."
+       }
+      ]
+     },
+     {
+      "responsable": "El cirujano confirma:",
+      "puntos": [
+       {
+        "id": "entrada.10",
+        "texto": "Realización de asepsia en el sitio quirúrgico."
+       },
+       {
+        "id": "entrada.11",
+        "texto": "Disponibilidad de todos los documentos, imágenes y estudios relevantes, y que estén debidamente identificados."
+       },
+       {
+        "id": "entrada.12",
+        "texto": "Disponibilidad de los productos sanguíneos necesarios, especialmente en procedimientos con riesgo de presentar una hemorragia masiva."
+       },
+       {
+        "id": "entrada.13",
+        "texto": "Funcionamiento adecuado de implantes, dispositivos y/o equipo especial necesarios."
+       },
+       {
+        "id": "entrada.14",
+        "texto": "Participa en la prevención de eventos críticos informando los pasos críticos o no sistematizados, la duración de la operación y la pérdida de sangre prevista."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pausa",
+    "titulo": "FASE 2. Tiempo fuera o Pausa quirúrgica",
+    "momento": "Antes de la incisión",
+    "grupos": [
+     {
+      "responsable": "Circulante o persona designada:",
+      "puntos": [
+       {
+        "id": "pausa.01",
+        "texto": "El circulante o persona designada ha identificado a cada uno de los miembros del equipo quirúrgico que pueden ser cirujano, anestesiólogo, ayudante de cirujano, instrumentista y cualquier otro tipo de personal, para que se presenten por su nombre y función, sin omisiones (lista de verificación de la seguridad de la cirugía)."
+       }
+      ]
+     },
+     {
+      "responsable": "El cirujano:",
+      "puntos": [
+       {
+        "id": "pausa.02",
+        "texto": "Confirma que cada uno de los miembros del equipo quirúrgico se hayan presentado por su nombre y función (sin omisiones)."
+       },
+       {
+        "id": "pausa.03",
+        "texto": "Confirma de manera verbal con el anestesiólogo y el personal de enfermería (instrumentista y circulante) la identidad del paciente, el procedimiento que se va a realizar, el sitio quirúrgico (en caso de órgano bilateral, marcaje derecho o izquierdo, en caso de estructura múltiple el nivel a operar) y la posición del paciente."
+       }
+      ]
+     },
+     {
+      "responsable": "El anestesiólogo:",
+      "puntos": [
+       {
+        "id": "pausa.04",
+        "texto": "En cualquier procedimiento de anestesia, realizar protocolo de manejo que incluyan la correcta técnica de asepsia y antisepsia, así como evitar al máximo los factores que incrementan el riesgo de infección."
+       },
+       {
+        "id": "pausa.05",
+        "texto": "Verifica en el caso que proceda, que se haya aplicado la profilaxis antibiótica conforme a las indicaciones médicas."
+       },
+       {
+        "id": "pausa.06",
+        "texto": "Informa la existencia o riesgo de enfermedad en el paciente que pueda complicar la cirugía."
+       }
+      ]
+     },
+     {
+      "responsable": "Enfermería:",
+      "puntos": [
+       {
+        "id": "pausa.07",
+        "texto": "Verifica la fecha y método de esterilización del equipo e instrumental."
+       },
+       {
+        "id": "pausa.08",
+        "texto": "Informa si hubo algún problema con el instrumental, equipos y material, así como con el conteo del mismo."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "salida",
+    "titulo": "FASE 3. Salida",
+    "momento": "Antes de que el paciente salga del quirófano",
+    "grupos": [
+     {
+      "responsable": "El cirujano, en presencia del anestesiólogo y el personal de enfermería, confirma que se ha aplicado la LVSC, a partir de confirmar verbalmente:",
+      "puntos": [
+       {
+        "id": "salida.01",
+        "texto": "El nombre del procedimiento realizado."
+       },
+       {
+        "id": "salida.02",
+        "texto": "El recuento completo del instrumental, textiles y agujas."
+       },
+       {
+        "id": "salida.03",
+        "texto": "El etiquetado de las muestras con los dos datos de identificación del paciente (nombre completo y fecha de nacimiento), fecha de la cirugía y descripción general de la muestra."
+       },
+       {
+        "id": "salida.04",
+        "texto": "Si hay problemas que resolver, relacionados con el instrumental y los equipos que tiene que ser notificados y resueltos."
+       },
+       {
+        "id": "salida.05",
+        "texto": "Reportar si ocurrieron eventos adversos. En caso afirmativo registrarlos."
+       },
+       {
+        "id": "salida.06",
+        "texto": "Principales aspectos críticos de la recuperación y el tratamiento."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "cierre": [
+   "Todos los integrantes del equipo quirúrgico anotan su nombre y firmar la LVSC, en la parte que les corresponde.",
+   "La LVSC debidamente llenada y firmada por todos los integrantes del equipo quirúrgico, se integra al expediente clínico del paciente."
+  ]
+ },
+ "funciones": [
+  {
+   "id": "instrumentista",
+   "titulo": "Enfermera(o) instrumentista",
+   "institucional": "Enfermera Especialista Quirúrgica",
+   "politicas": [
+    {
+     "n": "5.2.64",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Preparará la sala quirúrgica acorde a la programación en el entendido que podrán existir cambios en la programación derivado de necesidades de atención los cuales le serán notificados por su jefe inmediato."
+    },
+    {
+     "n": "5.2.65",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Notificará de forma inmediata a su jefe y al equipo quirúrgico en caso de detectar mal funcionamiento de instalaciones, instrumental y equipamiento."
+    }
+   ],
+   "actividades": [
+    {
+     "n": 118,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Solicita a la Central de Esterilización, mediante el formato “Solicitud de dispositivos médicos para las áreas quirúrgicas” clave: 2430-A09-008 ropa estéril, instrumental e insumos necesarios para el procedimiento."
+    },
+    {
+     "n": 119,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Recibe y prepara instrumental, ropa, material para curación y equipo para la realización de procedimiento."
+    },
+    {
+     "n": 120,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Organiza y dispone del mobiliario, equipo e instrumental de acuerdo con indicaciones del MNF Cirujano tratante y a la cirugía a realizar."
+    },
+    {
+     "n": 126,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Se presentan por su nombre con el paciente en forma amable y respetuosa, y realiza las siguientes acciones:",
+     "vinetas": [
+      "Corroborar el nombre completo y NSS del paciente.",
+      "Cotejar los datos de la “Pulsera de identificación” contra los datos del formato “Autorización, solicitud y registro de intervención quirúrgica 4-30-59/ 17” 2E10-009-016 (Anexo 1).",
+      "Verificar el cumplimiento de indicaciones médicas pre-operatorias, contenidas en el “Expediente clínico”."
+     ]
+    },
+    {
+     "n": 140,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Abre los bultos de ropa, equipos, instrumental y materiales estériles (guantes, equipo de succión, material de sutura y otros accesorios), con técnica aséptica y los acomoda en las mesas."
+    },
+    {
+     "n": 141,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Realiza lavado quirúrgico de manos, se coloca bata y los guantes estériles con la técnica adecuada."
+    },
+    {
+     "n": 142,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Realiza en forma conjunta con la Enfermera General circulante el conteo inicial por piezas de gasas, compresas e instrumental que será utilizado en el procedimiento quirúrgico."
+    },
+    {
+     "n": 143,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Notifica al MNF Cirujano tratante sobre la funcionalidad del instrumental y equipo estéril requerido durante la cirugía."
+    },
+    {
+     "n": 147,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Visten con técnica cerrada a MNF Cirujano tratante y médico(s) ayudante."
+    },
+    {
+     "n": 157,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Vigila la conservación, integridad, seguridad y eficiencia del campo quirúrgico estéril durante toda la cirugía."
+    },
+    {
+     "n": 158,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Proporciona al MNF Cirujano tratante y médico ayudante, todo lo necesario durante la intervención, controlando el orden del campo quirúrgico (gasas, compresas, instrumental y otros requerimientos imprevistos) para anticipar las necesidades del procedimiento."
+    },
+    {
+     "n": 160,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Cuentan el número de piezas de gasas, compresas e instrumental utilizado en la intervención quirúrgica e informa al MNF Cirujano tratante el resultado del conteo final y su balance."
+    },
+    {
+     "n": 167,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Médico ayudante y Enfermera Especialista Quirúrgica",
+     "texto": "Asisten al cirujano en la conclusión de la cirugía y ayudan en la colocación de apósitos, gasas, vendajes o los elementos necesarios para cubrir la herida y áreas adyacentes."
+    },
+    {
+     "n": 181,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Entrega las piezas quirúrgicas o productos biológicos a la Enfermera General Circulante."
+    },
+    {
+     "n": 210,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica o Enfermera General Circulante",
+     "texto": "Registra los procedimientos quirúrgicos practicados al paciente y datos solicitados en el formato “Intervenciones quirúrgicas efectuadas en el quirófano 4-30-27/17”, clave 2E10-009-012 (Anexo 2)."
+    },
+    {
+     "n": 235,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Limpia y humedece el instrumental y otros dispositivos médicos utilizados en la cirugía y entrega a la CEyE."
+    },
+    {
+     "n": 236,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica",
+     "texto": "Solicita al Auxiliar de Limpieza e Higiene o Auxiliar de Servicios de Intendencia realizar la limpieza de la sala de operaciones al concluir cada intervención quirúrgica."
+    }
+   ],
+   "aesp": [
+    "Verifica la fecha y método de esterilización del equipo e instrumental.",
+    "Informa si hubo algún problema con el instrumental, equipos y material, así como con el conteo del mismo."
+   ]
+  },
+  {
+   "id": "circulante",
+   "titulo": "Enfermera(o) circulante",
+   "institucional": "Enfermera General Circulante",
+   "politicas": [
+    {
+     "n": "5.2.66",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Coordinará con el personal que interviene en el proceso de atención quirúrgica el tránsito de los pacientes programados para cirugía."
+    },
+    {
+     "n": "5.2.67",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Desechará de acuerdo con la normatividad los materiales punzocortantes utilizados en los procedimientos quirúrgicos y anestésicos dentro de la Unidad Quirúrgica."
+    }
+   ],
+   "actividades": [
+    {
+     "n": 116,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Equipa la Sala de Operaciones en coordinación con la Enfermera Especialista Quirúrgica."
+    },
+    {
+     "n": 117,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Ubica mesa de operaciones y prepara los accesorios de acuerdo con el tipo de cirugía."
+    },
+    {
+     "n": 121,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Recibe de la Enfermera General del Área de Recuperación en Quirófano al paciente y el “Expediente clínico”."
+    },
+    {
+     "n": 122,
+     "fase": "Atención pre-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Saluda al paciente, se presenta y lo identifica correctamente de acuerdo con la “Guía para la implementación de metas internacionales de seguridad del paciente”, clave 2660-006-001."
+    },
+    {
+     "n": 123,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Indica al Camillero o Auxiliar de servicios de Intendencia o Auxiliar de Limpieza e Higiene transferir a la mesa quirúrgica en la posición que el MNF anestesiólogo indique para realizar el procedimiento anestésico."
+    },
+    {
+     "n": 125,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Registra todos los cuidados de Enfermería en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4)."
+    },
+    {
+     "n": 126,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Se presentan por su nombre con el paciente en forma amable y respetuosa, y realiza las siguientes acciones:",
+     "vinetas": [
+      "Corroborar el nombre completo y NSS del paciente.",
+      "Cotejar los datos de la “Pulsera de identificación” contra los datos del formato “Autorización, solicitud y registro de intervención quirúrgica 4-30-59/ 17” 2E10-009-016 (Anexo 1).",
+      "Verificar el cumplimiento de indicaciones médicas pre-operatorias, contenidas en el “Expediente clínico”."
+     ]
+    },
+    {
+     "n": 127,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Mantiene cerradas las puertas de la sala de operaciones."
+    },
+    {
+     "n": 135,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Continúa con el llenado de la “Lista de Verificación de la seguridad de la cirugía”, clave 2430-021-160 en coordinación con los MNF Cirujano tratante, MNF Anestesiólogo, y antes de la inducción anestésica llena con el paciente el apartado: Antes de la Cirugía."
+    },
+    {
+     "n": 136,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Auxilia al MNF Anestesiólogo en proporcionar, preparar y administrar medicamentos y soluciones parenterales, material de curación y demás insumos que se requieran para la atención anestésica y lo anota en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4) contenidas en el “Expediente clínico”."
+    },
+    {
+     "n": 137,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Asiste a la Enfermera Especialista Quirúrgica en la preparación, acomodo de las mesas de instrumental y ropa estéril y le proporciona todos los insumos necesarios durante el procedimiento quirúrgico."
+    },
+    {
+     "n": 138,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Anota en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4), el número de paquetes de gasas, compresas e instrumental que será utilizado en el procedimiento quirúrgico."
+    },
+    {
+     "n": 139,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Registra la hora de inicio del procedimiento anestésico en el formato “Registros clínicos e intervenciones de enfermería del paciente quirúrgico”, clave 2430-021-076."
+    },
+    {
+     "n": 142,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Realiza en forma conjunta con la Enfermera General circulante el conteo inicial por piezas de gasas, compresas e instrumental que será utilizado en el procedimiento quirúrgico."
+    },
+    {
+     "n": 146,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Realiza antisepsia y de ser necesario la instalación de sonda vesical."
+    },
+    {
+     "n": 147,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Visten con técnica cerrada a MNF Cirujano tratante y médico(s) ayudante."
+    },
+    {
+     "n": 151,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Escribe la evidencia del tiempo fuera en el apartado correspondiente del formato “Lista de Verificación de la seguridad de la cirugía”, clave 2430-021-160."
+    },
+    {
+     "n": 152,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Acomoda aparatos y otros implementos en el ámbito de su competencia en el quirófano y adecua su disposición para la cirugía a solicitud del Equipo quirúrgico"
+    },
+    {
+     "n": 154,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Anota la hora del inicio del procedimiento quirúrgico en el momento de la incisión en el formato “Intervenciones quirúrgicas efectuadas en el quirófano 4-30-27/17”, clave 2E10-009-012 (Anexo 2)."
+    },
+    {
+     "n": 160,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+     "texto": "Cuentan el número de piezas de gasas, compresas e instrumental utilizado en la intervención quirúrgica e informa al MNF Cirujano tratante el resultado del conteo final y su balance."
+    },
+    {
+     "n": 166,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Anota la cuenta de gasas, compresas e instrumental en la “Lista de Verificación de la seguridad de la cirugía”, clave 2430-021-160 apartado: antes de que el paciente salga de la sala de operaciones."
+    },
+    {
+     "n": 170,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Anota en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4) el resultado del conteo de gasas, compresas e instrumental y la hora de término del procedimiento quirúrgico."
+    },
+    {
+     "n": 171,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Cambia ropa al paciente, le retira de la piel los restos de antiséptico, corrobora fijación de drenajes y dispositivos del paciente en colaboración con el médico ayudante."
+    },
+    {
+     "n": 172,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Asiste al MNF Anestesiólogo para la aspiración y término de procedimiento anestésico."
+    },
+    {
+     "n": 173,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Completa el llenado del apartado de la “Lista de Verificación de la seguridad de la cirugía”, clave 2430-021-160” denominado: antes de que el paciente salga de sala de operaciones y anota nombre, matrícula y firma."
+    },
+    {
+     "n": 174,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Firma el formato “Autorización, solicitud y registro de intervención quirúrgica 4-30-59/17” clave 2E10-009-016 (Anexo 1) una vez que lo termine de elaborar el MNF cirujano tratante."
+    },
+    {
+     "n": 182,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Recibe de la Enfermera Especialista Quirúrgica las piezas quirúrgicas o productos biológicos los rotula y anexa el formato “Solicitud e informe de estudio histopatológico o citológico” clave 2660-009-001 en original y copia contenido en el “Expediente clínico”."
+    },
+    {
+     "n": 183,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Integra al “Expediente clínico” la siguiente documentación:",
+     "vinetas": [
+      "“Nota post-anestésica”.",
+      "“Nota post-quirúrgica”.",
+      "“Nota de indicaciones médicas”.",
+      "“Autorización, solicitud y registro de Intervención quirúrgica 4-30-59/17”, clave 2E10-009-016 (Anexo 1).",
+      "“Lista de verificación para la seguridad de la cirugía”, clave 2430-021-160."
+     ]
+    },
+    {
+     "n": 184,
+     "fase": "Atención trans-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Realiza las actividades de la 5 al 9 del “Procedimiento para el manejo, procesamiento y estudio de biopsias, especímenes quirúrgicos y citológicos en el Servicio de Anatomía Patológica de las Unidades de Servicios Médicos de Segundo Nivel de Atención”, clave 2660-003-002."
+    },
+    {
+     "n": 194,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Solicita al Camillero en Unidades Hospitalarias, o Auxiliar de Limpieza e Higiene en Unidades Médicas, su intervención para el traslado del paciente a la Sala de recuperación."
+    },
+    {
+     "n": 196,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera General Circulante",
+     "texto": "Entrega al paciente con el “Expediente clínico” a la Enfermera General de la Sala de Recuperación."
+    },
+    {
+     "n": 210,
+     "fase": "Atención post-operatoria",
+     "responsable": "Enfermera Especialista Quirúrgica o Enfermera General Circulante",
+     "texto": "Registra los procedimientos quirúrgicos practicados al paciente y datos solicitados en el formato “Intervenciones quirúrgicas efectuadas en el quirófano 4-30-27/17”, clave 2E10-009-012 (Anexo 2)."
+    }
+   ],
+   "aesp": [
+    "Se nombrará a un integrante del equipo quirúrgico como el coordinador para su llenado, se recomienda que sea el circulante.",
+    "Verifica la fecha y método de esterilización del equipo e instrumental.",
+    "Informa si hubo algún problema con el instrumental, equipos y material, así como con el conteo del mismo.",
+    "El circulante o persona designada ha identificado a cada uno de los miembros del equipo quirúrgico que pueden ser cirujano, anestesiólogo, ayudante de cirujano, instrumentista y cualquier otro tipo de personal, para que se presenten por su nombre y función, sin omisiones (lista de verificación de la seguridad de la cirugía)."
+   ]
+  }
+ ],
+ "conteo": {
+  "piezas": [
+   "Gasas",
+   "Compresas",
+   "Agujas",
+   "Instrumental"
+  ],
+  "nota": "La calculadora solo suma y resta lo que anotes: inicial + agregadas − contadas al final. No sustituye el registro oficial (hoja de enfermería y Lista de Verificación).",
+  "pasos": [
+   {
+    "n": 138,
+    "fase": "Atención trans-operatoria",
+    "responsable": "Enfermera General Circulante",
+    "texto": "Anota en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4), el número de paquetes de gasas, compresas e instrumental que será utilizado en el procedimiento quirúrgico."
+   },
+   {
+    "n": 142,
+    "fase": "Atención trans-operatoria",
+    "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+    "texto": "Realiza en forma conjunta con la Enfermera General circulante el conteo inicial por piezas de gasas, compresas e instrumental que será utilizado en el procedimiento quirúrgico."
+   },
+   {
+    "n": 159,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Solicita a la Enfermera Especialista Quirúrgica y a la Enfermera General Circulante la cuenta de gasas, compresas y revisión del instrumental antes del cierre de tejidos o de la conclusión del procedimiento."
+   },
+   {
+    "n": 160,
+    "fase": "Atención trans-operatoria",
+    "responsable": "Enfermera Especialista Quirúrgica y Enfermera General Circulante",
+    "texto": "Cuentan el número de piezas de gasas, compresas e instrumental utilizado en la intervención quirúrgica e informa al MNF Cirujano tratante el resultado del conteo final y su balance."
+   },
+   {
+    "n": 161,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Solicita verificación del conteo a la Enfermera General circulante.",
+    "condicion": "La cuenta de gasas y/o compresas y/o instrumental no es completa"
+   },
+   {
+    "n": 162,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Revisa el área operatoria las veces que sea necesario y utiliza auxiliares de diagnóstico para complementar la búsqueda."
+   },
+   {
+    "n": 163,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Consigna la búsqueda y hallazgo del material faltante en la “Nota post-quirúrgica” la firma e integra en el “Expediente clínico.",
+    "condicion": "Sí localiza el material faltante"
+   },
+   {
+    "n": 164,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Realiza una “Nota narrativa” en dónde indique que se realizó búsqueda exhaustiva del material faltante y los métodos que documentan la no permanencia en el paciente, la firma y la anexa al “Expediente clínico”.",
+    "condicion": "No se localiza el material faltante"
+   },
+   {
+    "n": 165,
+    "fase": "Atención trans-operatoria",
+    "responsable": "MNF Cirujano tratante",
+    "texto": "Concluye la intervención quirúrgica, cierre de tejidos y señala el final del procedimiento quirúrgico.",
+    "condicion": "Sí está completa la cuenta de gasas, compresas e instrumental"
+   },
+   {
+    "n": 166,
+    "fase": "Atención trans-operatoria",
+    "responsable": "Enfermera General Circulante",
+    "texto": "Anota la cuenta de gasas, compresas e instrumental en la “Lista de Verificación de la seguridad de la cirugía”, clave 2430-021-160 apartado: antes de que el paciente salga de la sala de operaciones."
+   },
+   {
+    "n": 170,
+    "fase": "Atención trans-operatoria",
+    "responsable": "Enfermera General Circulante",
+    "texto": "Anota en el formato “Cuidados de enfermería al paciente quirúrgico”, clave 2660-009-094 (Anexo 4) el resultado del conteo de gasas, compresas e instrumental y la hora de término del procedimiento quirúrgico."
+   }
+  ],
+  "aesp": [
+   "Verifica la fecha y método de esterilización del equipo e instrumental.",
+   "Informa si hubo algún problema con el instrumental, equipos y material, así como con el conteo del mismo.",
+   "El recuento completo del instrumental, textiles y agujas."
+  ]
+ },
+ "posiciones": {
+  "nota": "Sigue el protocolo de tu institución: la posición la indican el anestesiólogo y el cirujano.",
+  "objetivo": "Colocar al paciente de modo que el equipo tenga el mejor acceso al sitio quirúrgico y, al mismo tiempo, evitar lesiones. Para lograrlo se planea en equipo (cirujano, anestesiólogo y enfermería) y se usan dispositivos de posicionamiento adecuados a cada paciente.",
+  "factores": [
+   "Anestesia general: el cuerpo pierde sus reflejos de protección y queda expuesto a lesiones musculares, nerviosas y al dolor; los relajantes musculares y los analgésicos pueden ocultar y retrasar el diagnóstico de una lesión.",
+   "Tiempo quirúrgico prolongado: en cirugías de más de 2 horas los tejidos comprimidos se oxigenan peor y aumenta la probabilidad de úlceras por presión.",
+   "Edad: en personas mayores o muy jóvenes la piel es más sensible y se lesiona con más facilidad.",
+   "Peso: la obesidad y el sobrepeso aumentan las complicaciones del posicionamiento; el bajo peso deja más expuestas las prominencias óseas.",
+   "Inmovilidad o problemas de movilidad: dificultan colocar al paciente y favorecen trombos y puntos de presión.",
+   "Hipotermia: los tejidos necesitan más oxígeno y, si no lo reciben, pueden necrosarse.",
+   "Enfermedades previas: diabetes mellitus, cáncer, insuficiencia renal, hematocrito y hemoglobina bajos, y enfermedades vasculares, cardiacas, respiratorias o del sistema inmunitario."
+  ],
+  "complicaciones": [
+   "Dolor musculoesquelético",
+   "Desplazamiento de articulaciones",
+   "Lesión de nervios periféricos",
+   "Lesiones de la piel, como úlceras por presión",
+   "Compromiso cardiovascular y pulmonar",
+   "Síndrome compartimental"
+  ],
+  "generales": [
+   "Valorar antes de la cirugía los factores de riesgo de cada paciente, tomarlos en cuenta en el plan de cuidados y registrarlos.",
+   "Comprobar que la mesa de operaciones y los dispositivos estén limpios, completos y funcionando.",
+   "Elegir los dispositivos de posicionamiento según el paciente, el tipo de cirugía y su duración.",
+   "Mover, trasladar y colocar al paciente con el número suficiente de personas y con el equipo adecuado, para evitar lesiones al paciente y al personal.",
+   "Mantener la alineación corporal.",
+   "Proteger las zonas de presión y revisar las prominencias óseas en contacto con la mesa; se recomienda que la presión capilar no pase de 32 mmHg.",
+   "Disminuir la fricción y el cizallamiento al mover al paciente.",
+   "Cuidar las zonas por donde pasan plexos y nervios para evitar lesiones nerviosas.",
+   "Volver a valorar al paciente después de colocarlo.",
+   "Registrar la posición, los dispositivos usados y los cuidados realizados."
+  ],
+  "posiciones": [
+   {
+    "id": "supina",
+    "nombre": "Decúbito supino (dorsal)",
+    "cuidados": [
+     "Colocar almohada o soporte bajo la cabeza y bajo las rodillas.",
+     "Separar los brazos del cuerpo a 90° como máximo.",
+     "Mantener las piernas sin cruzar.",
+     "Vigilar que los pies no queden en hiperextensión."
+    ]
+   },
+   {
+    "id": "prona",
+    "nombre": "Decúbito prono (ventral)",
+    "cuidados": [
+     "Proteger la cara, los ojos y el mentón.",
+     "Dejar accesibles el tubo endotraqueal y las líneas de monitoreo.",
+     "Mantener el cuello alineado.",
+     "Colocar rollos o cojines cilíndricos desde la clavícula hasta la cresta ilíaca, y bajo las piernas y los pies.",
+     "Dejar libres de presión los genitales.",
+     "Evitar la hiperflexión de los pies."
+    ]
+   },
+   {
+    "id": "lateral",
+    "nombre": "Decúbito lateral",
+    "cuidados": [
+     "Mantener la columna alineada.",
+     "Revisar que la oreja del lado de apoyo no quede doblada ni comprimida.",
+     "Poner soporte bajo la cabeza, en la axila y entre las piernas.",
+     "Flexionar a la altura de la cadera la pierna que queda en contacto con la mesa y dejar extendida la de arriba."
+    ]
+   },
+   {
+    "id": "litotomia",
+    "nombre": "Litotomía (ginecológica)",
+    "cuidados": [
+     "Apoyar los brazos en soportes a 90° como máximo.",
+     "Acolchar la cadera, los glúteos y los costados del cuerpo.",
+     "Elevar las piernas lo menos posible y por el menor tiempo posible.",
+     "Reducir al mínimo la abducción de la cadera.",
+     "Apoyar las piernas en la zona de mayor superficie de contacto y con los talones en la posición más baja posible."
+    ]
+   }
+  ],
+  "obesidad": "En el paciente con obesidad conviene preparar antes de que entre a la sala los dispositivos, la mesa y el instrumental de tamaño adecuado, y hacer la transferencia con suficiente personal. Algunos autores revisados consideran de mayor riesgo las posiciones supina, prona, de Trendelenburg y de litotomía en estos pacientes, y señalan que la lateral puede ser más favorable.",
+  "fuente": "lopes",
+  "imss": {
+   "n": 123,
+   "fase": "Atención trans-operatoria",
+   "responsable": "Enfermera General Circulante",
+   "texto": "Indica al Camillero o Auxiliar de servicios de Intendencia o Auxiliar de Limpieza e Higiene transferir a la mesa quirúrgica en la posición que el MNF anestesiólogo indique para realizar el procedimiento anestésico."
+  }
+ }
+}

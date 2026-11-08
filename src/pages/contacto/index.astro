@@ -1,0 +1,110 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Contacto: sin formularios simulados.
+import { Icon } from 'astro-icon/components';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import { sitio } from '../../datos/sitio';
+
+const canales = [
+  {
+    icono: 'ph:envelope-simple-light',
+    titulo: 'Correo',
+    texto: 'Dudas sobre la app, reportes de discrepancias en una descarga o en un dato, y solicitudes de unidades, jurisdicciones o escuelas.',
+    enlace: `mailto:${sitio.correo}`,
+    accion: sitio.correo,
+  },
+  {
+    icono: 'ph:map-trifold-light',
+    titulo: 'Datos de Jalisco',
+    texto: 'Si encuentras una cifra que no coincide con su fuente oficial, dinos cuál y en qué página; la revisamos contra el archivo original.',
+    enlace: '/jalisco/metodologia/',
+    accion: 'Ver la metodología',
+  },
+  {
+    icono: 'ph:graduation-cap-light',
+    titulo: 'Origen',
+    texto: 'PoliSafe fue creada por estudiantes durante su estancia de estudios en diversas escuelas del Instituto Politécnico Nacional.',
+    enlace: null,
+    accion: sitio.institucion,
+  },
+];
+---
+
+<Base titulo="Contacto" descripcion="Escribe al equipo de PoliSafe Primer Nivel con dudas sobre la app, reportes de datos o solicitudes de unidades de salud, jurisdicciones y escuelas.">
+  <CabeceraPagina
+    antetitulo="Contacto"
+    titulo="Hablemos de PoliSafe Primer Nivel."
+    entrada="Respondemos por correo. Para reportar un problema, incluye el modelo del teléfono, la versión de la app y los pasos para reproducirlo. Nunca envíes datos de pacientes reales."
+  />
+  <section class="seccion">
+    <div class="contenedor canales">
+      {
+        canales.map((c, i) => (
+          <article data-revelar style={`--orden:${i}`}>
+            <Icon name={c.icono} aria-hidden="true" />
+            <h2>{c.titulo}</h2>
+            <p>{c.texto}</p>
+            {c.enlace ? (
+              <a class="enlace" href={c.enlace} rel={c.enlace.startsWith('http') ? 'noopener' : undefined}>
+                {c.accion}
+              </a>
+            ) : (
+              <p class="dato">{c.accion}</p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .canales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 2rem;
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+  }
+
+  article svg {
+    width: 40px;
+    height: 40px;
+    color: var(--acento);
+  }
+
+  h2 {
+    font-size: var(--t-md);
+  }
+
+  article p {
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+  }
+
+  article .enlace,
+  .dato {
+    margin-top: auto;
+    word-break: break-word;
+  }
+
+  .dato {
+    font-weight: 600;
+    color: var(--texto) !important;
+  }
+
+  @media (max-width: 860px) {
+    .canales {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

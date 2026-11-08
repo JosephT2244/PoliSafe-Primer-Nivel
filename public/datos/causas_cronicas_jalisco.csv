@@ -1,0 +1,10 @@
+﻿grupo,nombre,cie10,nom_seguimiento,def_2023,def_2024,promedio_anual,pct_menores_60,pct_mujeres
+isquemicas,Enfermedades isquémicas del corazón,I20–I25,NOM-030-SSA2-2009 y NOM-037-SSA2-2012,7827,8496,8161.5,19.0,42.5
+tumores,Tumores malignos,C00–C97,,6455,6622,6538.5,31.2,51.8
+diabetes,Diabetes mellitus,E10–E14,NOM-015-SSA2-2010,5575,5708,5641.5,21.7,48.0
+cerebrovasculares,Enfermedades cerebrovasculares,I60–I69,NOM-030-SSA2-2009,2267,2344,2305.5,19.8,48.8
+hepatica,Enfermedades crónicas del hígado,K70–K77,,2157,2250,2203.5,48.6,27.0
+hipertensivas,Enfermedades hipertensivas,I10–I15,NOM-030-SSA2-2009,2136,2220,2178.0,15.8,53.5
+epoc,Enfermedades crónicas de las vías respiratorias inferiores,J40–J47,,1946,1843,1894.5,6.2,48.6
+otras_circulatorias,Otras enfermedades del sistema circulatorio,"I00–I99, resto",,1797,1882,1839.5,23.6,52.4
+renal,Insuficiencia renal,N17–N19,NOM-015-SSA2-2010 (vigilancia de nefropatía),1399,1473,1436.0,40.0,40.9

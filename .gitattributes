@@ -1,0 +1,11 @@
+# Un código de: Joseph Ubaldo Trejo Hernández
+* text=auto
+*.apk binary
+*.wasm binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.woff2 binary
+*.otf binary
+*.ttf binary
+*.bin binary

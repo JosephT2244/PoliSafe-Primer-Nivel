@@ -1,0 +1,66 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Términos de uso de PoliSafe Primer Nivel.
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import Legal from '../../components/Legal.astro';
+import { sitio } from '../../datos/sitio';
+
+const secciones = [
+  { id: 'alcance', titulo: 'Alcance' },
+  { id: 'juicio', titulo: 'No sustituye decisiones clínicas' },
+  { id: 'datos', titulo: 'Datos y metas' },
+  { id: 'gratuita', titulo: 'Disponibilidad' },
+  { id: 'versiones', titulo: 'Versiones oficiales' },
+  { id: 'contenido', titulo: 'Contenido de terceros' },
+  { id: 'contacto', titulo: 'Contacto' },
+];
+---
+
+<Base titulo="Términos de uso" descripcion="Condiciones de uso de PoliSafe Primer Nivel: apoyo a la enfermería, no diagnóstico, datos oficiales, descargas y contenido de terceros.">
+  <CabeceraPagina antetitulo="Alcance de uso" titulo="Apoyo a la enfermería, con criterio profesional." entrada="Vigentes desde el 7 de noviembre de 2026." estrecha />
+  <Legal secciones={secciones}>
+    <h2 id="alcance">Alcance</h2>
+    <p>
+      PoliSafe Primer Nivel es una herramienta de apoyo para la enfermería de primer nivel: seguimiento de enfermedades
+      crónicas, consulta y estudio. Está disponible para Android. Es un prototipo presentado en el {sitio.concurso}.
+    </p>
+
+    <h2 id="juicio">No sustituye decisiones clínicas</h2>
+    <p>{sitio.avisoAcademico}</p>
+    <p>
+      Los valores fuera de meta, los resultados de las calculadoras y el contenido de las fichas deben revisarse por el
+      profesional antes de usarse. Las dosis, el diagnóstico y el tratamiento corresponden al médico tratante.
+    </p>
+
+    <h2 id="datos">Datos y metas</h2>
+    <p>
+      Las metas del seguimiento se tomaron literalmente de las normas oficiales mexicanas vigentes y cada una cita su
+      numeral. Las cifras de Jalisco son agregadas y salen de fuentes públicas; su cálculo se explica en la
+      <a href="/jalisco/metodologia/">metodología</a>. Los pacientes del modo de demostración son ficticios. Consulta el
+      <a href="/privacidad/">aviso de privacidad</a> para saber qué se guarda en el teléfono.
+    </p>
+
+    <h2 id="gratuita">Disponibilidad</h2>
+    <p>
+      PoliSafe Primer Nivel es gratuita. No hay pagos, planes ni licencias. Las funciones pueden cambiar entre versiones; las
+      notas de cada versión se publican en <a href="/descargas/">Descargas</a>.
+    </p>
+
+    <h2 id="versiones">Versiones oficiales</h2>
+    <p>
+      Instala únicamente el archivo enlazado desde <a href="/descargas/">Descargas</a> y comprueba su SHA-256
+      antes de instalarlos. No nos hacemos responsables de copias obtenidas en otros sitios.
+    </p>
+
+    <h2 id="contenido">Contenido de terceros</h2>
+    <p>
+      NANDA-I, NIC y NOC son clasificaciones y marcas de sus respectivos titulares. Las normas oficiales mexicanas, el
+      Compendio Nacional de Insumos para la Salud y los datos de INEGI, Secretaría de Salud y CONAPO son de sus emisores.
+      La app cita la fuente de cada texto clínico y de cada cifra que muestra y no reclama su autoría.
+    </p>
+
+    <h2 id="contacto">Contacto</h2>
+    <p>Para dudas sobre estos términos escribe a <a href={`mailto:${sitio.correo}`}>{sitio.correo}</a>.</p>
+  </Legal>
+</Base>

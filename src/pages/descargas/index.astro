@@ -1,0 +1,384 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Descargas: todo sale del manifiesto validado en el build. El APK se publica junto al sitio.
+import { Icon } from 'astro-icon/components';
+import Base from '../../layouts/Base.astro';
+import CabeceraPagina from '../../components/CabeceraPagina.astro';
+import TarjetaPlataforma from '../../components/TarjetaPlataforma.astro';
+import { sitio } from '../../datos/sitio';
+import manifiesto from '../../datos/lanzamientos.json';
+import { vigente, fechaLarga } from '../../lib/lanzamientos.mjs';
+
+const android = vigente(manifiesto, 'android');
+
+const pasosAndroid = [
+  'Toca "Descargar APK" desde el teléfono. Si lo descargaste en la computadora, cópialo al teléfono.',
+  'Abre el archivo desde Descargas. Android pedirá permitir la instalación desde el navegador o el administrador de archivos que usaste; acepta solo para esa app.',
+  'Toca Instalar y abre PoliSafe Primer Nivel. No necesitas cuenta ni internet.',
+  'Si quieres conocerla antes de capturar pacientes reales, carga los pacientes de demostración en Ajustes.',
+];
+---
+
+<Base
+  titulo="Descargas"
+  descripcion="Descarga PoliSafe Primer Nivel gratis para Android o úsala en el navegador. Versión, fecha, tamaño, requisitos y SHA-256 del archivo, y los datos abiertos de Jalisco."
+>
+  <CabeceraPagina
+    antetitulo="Lanzamiento oficial"
+    titulo="Descarga PoliSafe Primer Nivel."
+    entrada={`Versión vigente publicada el ${android ? fechaLarga(android.fecha) : ''}. El archivo se publica en este mismo sitio con su SHA-256 para que compruebes que no se modificó.`}
+  />
+
+  <section class="seccion plataformas-seccion" aria-labelledby="t-plataformas">
+    <h2 id="t-plataformas" class="solo-lector">Plataformas</h2>
+    <div class="contenedor plataformas">
+      <div data-revelar><TarjetaPlataforma plataforma="android" detalle /></div>
+      <article class="web-tarjeta datos-tarjeta" data-revelar style="--orden:1">
+        <div class="web-texto">
+          <h2 class="web-titulo">
+            <Icon name="ph:table-light" aria-hidden="true" />
+            Datos abiertos de Jalisco
+          </h2>
+          <p>
+            Las tablas que usa la app, en CSV: causas crónicas de muerte, 125 municipios, 13 jurisdicciones y 854 unidades
+            públicas de primer nivel, con su resumen estatal y la metodología.
+          </p>
+        </div>
+        <a class="boton boton-secundario" href="/jalisco/#datos-abiertos">
+          <Icon name="ph:download-simple-light" aria-hidden="true" />
+          Ver los archivos
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion web-seccion" aria-labelledby="t-web">
+    <div class="contenedor">
+      <article class="web-tarjeta" data-revelar>
+        <div class="web-texto">
+          <h2 id="t-web" class="web-titulo">
+            <Icon name="ph:globe-light" aria-hidden="true" />
+            Versión web
+          </h2>
+          <p>
+            Úsala desde el navegador de una computadora o de una tableta, sin instalar nada. Los datos se guardan solo en ese
+            navegador y no se envían a ningún servidor. Los recordatorios del sistema y el desbloqueo con huella o rostro solo
+            están en la app para Android.
+          </p>
+        </div>
+        <a class="boton" href="/app/">
+          <Icon name="ph:arrow-square-out-light" aria-hidden="true" />
+          Abrir versión web
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion instalar" aria-labelledby="t-instalar">
+    <div class="contenedor">
+      <h2 id="t-instalar" class="titulo-seccion" data-revelar>Cómo instalar.</h2>
+      <div class="guias">
+        {
+          android && (
+            <article data-revelar>
+              <h3>
+                <Icon name="ph:android-logo-light" aria-hidden="true" />
+                Android
+              </h3>
+              <ol>
+                {pasosAndroid.map((p) => (
+                  <li>{p}</li>
+                ))}
+              </ol>
+              <p class="nota">
+                <Icon name="ph:info-light" aria-hidden="true" />
+                <span>
+                  El APK se distribuye fuera de Google Play y está firmado con un certificado de desarrollo. Para actualizar,
+                  instala la versión nueva encima de la anterior; tus datos se conservan.
+                </span>
+              </p>
+            </article>
+          )
+        }
+        <article data-revelar style="--orden:1">
+          <h3>
+            <Icon name="ph:shield-check-light" aria-hidden="true" />
+            Permisos que pide
+          </h3>
+          <ol>
+            <li>Notificaciones, solo si activas recordatorios; al reiniciar el teléfono la app los vuelve a programar.</li>
+            <li>Alarmas exactas, solo si eliges la opción Hora exacta en un recordatorio.</li>
+            <li>Huella o rostro, solo si proteges tu perfil con ellos.</li>
+            <li>Vibración, para confirmar acciones.</li>
+          </ol>
+          <p class="nota">
+            <Icon name="ph:info-light" aria-hidden="true" />
+            <span>La app no pide permiso de internet, ubicación, contactos, cámara ni archivos.</span>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion verificar" aria-labelledby="t-verificar">
+    <div class="contenedor verificar-rejilla">
+      <div data-revelar>
+        <h2 id="t-verificar" class="titulo-seccion">Comprueba tu descarga.</h2>
+        <p class="entrada">
+          Comprueba que el SHA-256 del archivo descargado coincida con el publicado aquí antes de instalarlo. Si no coincide,
+          no lo instales y escríbenos a <a class="enlace" href={`mailto:${sitio.correo}`}>{sitio.correo}</a>.
+        </p>
+      </div>
+      <div class="comandos" data-revelar style="--orden:1">
+        <div>
+          <p class="comando-titulo">Windows (PowerShell)</p>
+          <pre><code>Get-FileHash .\{android?.archivo ?? 'archivo.apk'} -Algorithm SHA256</code></pre>
+        </div>
+        <div>
+          <p class="comando-titulo">macOS o Linux (Terminal)</p>
+          <pre><code>shasum -a 256 {android?.archivo ?? 'archivo.apk'}</code></pre>
+        </div>
+        <p class="nota-comando">
+          Comprueba el APK desde una computadora antes de copiarlo al teléfono. PowerShell muestra el resultado en
+          mayúsculas; la comparación no distingue mayúsculas de minúsculas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion notas-version" aria-labelledby="t-notas">
+    <div class="contenedor notas-rejilla">
+      <div data-revelar>
+        <h2 id="t-notas" class="titulo-seccion">Notas de la versión {android?.version}.</h2>
+        <p class="entrada">{android?.notas}</p>
+      </div>
+      <div data-revelar style="--orden:1">
+        <ul class="novedades">
+          <li>Seguimiento de diabetes, hipertensión, dislipidemia y obesidad por folio, con las metas de las NOM y su cita.</li>
+          <li>Indicador de seguimiento completo y vigente, lista de pendientes y resumen de la unidad en PDF.</li>
+          <li>Jalisco en datos: causas crónicas, 125 municipios y 854 unidades públicas de primer nivel, sin internet.</li>
+          <li>PAE en cinco etapas con NANDA-I 2024-2026, NIC 8.ª edición y NOC 7.ª edición.</li>
+          <li>18 calculadoras con fuente y 155 fichas del Compendio Nacional de Insumos para la Salud 2025.</li>
+          <li>Área quirúrgica, Estudio con NOM, búsqueda global y hasta 8 perfiles con PIN, huella o rostro.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import '../../scripts/copiar';
+</script>
+
+<style>
+  .datos-tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .web-seccion {
+    padding-top: 0;
+  }
+
+  .web-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra-1);
+  }
+
+  .web-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.4rem;
+    font-size: var(--t-md);
+  }
+
+  .web-titulo svg {
+    width: 1.4em;
+    height: 1.4em;
+    color: var(--acento);
+  }
+
+  .web-texto p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--texto-2);
+  }
+
+  .web-tarjeta .boton {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 720px) {
+    .web-tarjeta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .plataformas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .instalar {
+    background: var(--superficie-2);
+  }
+
+  .guias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .guias article {
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border-radius: var(--r-lg);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+  }
+
+  .guias h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: var(--t-lg);
+    font-stretch: 85%;
+    font-weight: 660;
+    margin-bottom: 1.5rem;
+  }
+
+  .guias h3 svg {
+    width: 32px;
+    height: 32px;
+    color: var(--acento);
+  }
+
+  .guias ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: paso;
+    display: grid;
+    gap: 1.1rem;
+  }
+
+  .guias li {
+    counter-increment: paso;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.9rem;
+    font-size: var(--t-sm);
+  }
+
+  .guias li::before {
+    content: counter(paso);
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--guinda);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .nota {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+    padding: 1rem;
+    border-radius: var(--r-md);
+    background: var(--superficie-2);
+    color: var(--texto-2);
+    font-size: var(--t-sm);
+  }
+
+  .nota svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: var(--acento);
+  }
+
+  .verificar-rejilla,
+  .notas-rejilla {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .verificar .entrada,
+  .notas-version .entrada {
+    margin-top: 1.25rem;
+  }
+
+  .comandos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .comando-titulo {
+    font-size: var(--t-sm);
+    font-weight: 650;
+    margin-bottom: 0.5rem;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-radius: var(--r-md);
+    background: #1c1216;
+    color: #f4ece6;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  code {
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  }
+
+  .nota-comando {
+    font-size: var(--t-sm);
+    color: var(--texto-2);
+  }
+
+  .notas-version {
+    padding-top: 0;
+  }
+
+  .novedades {
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--borde);
+  }
+
+  .novedades li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--borde);
+    font-size: var(--t-sm);
+  }
+
+  @media (max-width: 860px) {
+    .plataformas,
+    .guias,
+    .verificar-rejilla,
+    .notas-rejilla {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

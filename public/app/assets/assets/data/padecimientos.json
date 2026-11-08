@@ -1,0 +1,74 @@
+[
+ {
+  "id": "diabetes",
+  "nombre": "Diabetes mellitus tipo 2",
+  "nom": "NOM-015-SSA2-2010",
+  "campos_requeridos": [
+   "peso",
+   "presion",
+   "pies",
+   "glucemia"
+  ],
+  "citas": [
+   {
+    "nom": "NOM-015-SSA2-2010",
+    "numeral": "11.11.1.3",
+    "texto": "11.11.1.3 En cada visita se debe evaluar el control metabólico, el plan de alimentación y la actividad física y se investiga de manera intencionada la presencia de complicaciones. Se registra el peso, la presión arterial y el resultado de la exploración de los pies; se reforzará la educación a pacientes y en donde sea posible, se le estimula a participar en un grupo de ayuda mutua."
+   },
+   {
+    "nom": "NOM-015-SSA2-2010",
+    "numeral": "3.10",
+    "texto": "3.10 Caso en control, al paciente bajo tratamiento en el Sistema Nacional de Salud, que presenta de manera regular, niveles de glucemia plasmática en ayuno de entre 70 y 130 mg/dl o de Hemoglobina Glucosilada (HbA1c) por debajo de 7%."
+   }
+  ],
+  "pendiente": "Confirmar campos con entrevistas (P4 y P7)."
+ },
+ {
+  "id": "hipertension",
+  "nombre": "Hipertensión arterial sistémica",
+  "nom": "NOM-030-SSA2-2009",
+  "campos_requeridos": [
+   "presion"
+  ],
+  "citas": [
+   {
+    "nom": "NOM-030-SSA2-2009",
+    "numeral": "8.4",
+    "texto": "8.4 El valor de la presión arterial sistólica y diastólica que se registre corresponderá al promedio de por lo menos dos mediciones hechas con un intervalo mínimo de dos minutos."
+   }
+  ],
+  "pendiente": "Confirmar campos con entrevistas (P4 y P7)."
+ },
+ {
+  "id": "obesidad",
+  "nombre": "Sobrepeso u obesidad",
+  "nom": "NOM-008-SSA3-2017",
+  "campos_requeridos": [
+   "peso"
+  ],
+  "citas": [
+   {
+    "nom": "NOM-008-SSA3-2017",
+    "numeral": "Apéndice A Informativo, A.1",
+    "texto": "A.1 Puntos de corte de los indicadores antropométricos. 20 a 59 años, Índice de masa corporal de acuerdo con la talla. Sobrepeso: En personas sin talla baja a b: 25.0 a 29.9 kg/m2; En personas con talla baja a b: 23 a 24.9 kg/m2. Obesidad: En personas sin talla baja a b: ≥ 30 kg/m2; En personas con talla baja a b: ≥ 25 kg/m2. ≥ 60 años, Índice de masa corporal: Sobrepeso 28 a 31.9 kg/m2; Obesidad ≥ 32 kg/m2. b Se entiende como talla baja aquella que es menor a 1.60 metros en el varón adulto y menor a 1.50 metros en la mujer adulta."
+   }
+  ],
+  "pendiente": "Confirmar campos con entrevistas (P4 y P7)."
+ },
+ {
+  "id": "dislipidemia",
+  "nombre": "Dislipidemia",
+  "nom": "NOM-037-SSA2-2012",
+  "campos_requeridos": [
+   "lipidos"
+  ],
+  "citas": [
+   {
+    "nom": "NOM-037-SSA2-2012",
+    "numeral": "3.6",
+    "texto": "3.6. Casos en control, paciente con algún tipo de dislipidemia bajo tratamiento en el Sistema Nacional de Salud y que presentan niveles de colesterol total < 200 mg/dL, triglicéridos < 150 mg/dL y C-HDL > 40 mg/dL."
+   }
+  ],
+  "pendiente": "Confirmar campos con entrevistas (P4 y P7)."
+ }
+]

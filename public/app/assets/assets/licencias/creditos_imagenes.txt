@@ -1,0 +1,185 @@
+CRÉDITOS DE IMÁGENES DE POLISAFE
+
+Las láminas de Área quirúrgica, Medicamentos y Estudio son diseño del equipo PoliSafe.
+El instrumental quirúrgico, los empaques genéricos de medicamentos, el listón de las
+normas y las tablas de Estudio son dibujos propios. Algunas láminas incluyen las siguientes ilustraciones
+de terceros, obtenidas de Bioicons (https://bioicons.com). Se usan recortadas y combinadas con otros
+elementos; no se cambió su dibujo.
+
+- coagulation: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- erythrocyte: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- mast_cell_degranulation_1: Sebastian Reinig. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- neutrophil-granulocyte: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- book: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- calculator: OpenClipart. Licencia CC 0 (https://creativecommons.org/publicdomain/zero/1.0/).
+- hand-washing: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- labbook: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- notepad: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- pencil: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- thermometer: kehan. Licencia CC 0 (https://creativecommons.org/publicdomain/zero/1.0/).
+- bloodstream: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- bottle-drug: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- brain-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- drug-blister: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- drug-capsule-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- drug-capsule-3: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- drug-package: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- drug-tablet-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- ear: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- electrocardiogram-ecg: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- eye: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- heart: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- infusion-bag-blue: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- injectable: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- intestine: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- kidney-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- liver: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- lung: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- muscle-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- musculature-front: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- oedema-legs: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- old-man: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- pancreas: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- perfusion-stand: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- skin: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- stomach-ulcer: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- syringe: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- venous-thrombosis-1: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- Medical_ampoule: DBCLS TogoTV (https://togotv.dbcls.jp). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- Vaccine_bottle: DBCLS TogoTV (https://togotv.dbcls.jp). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- bacterium: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- tube-filled-greencap: Servier Medical Art (https://smart.servier.com). Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+- Examination_Man: DBCLS TogoTV (https://togotv.dbcls.jp). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- Examination_child: DBCLS TogoTV (https://togotv.dbcls.jp). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- drip_iv_treatment: DBCLS TogoTV (https://togotv.dbcls.jp). Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- health-hazard: UNECE, pictogramas del SGA. Licencia CC 0 (https://creativecommons.org/publicdomain/zero/1.0/).
+
+FOTOGRAFÍAS DE LOS TIEMPOS QUIRÚRGICOS
+
+Las tarjetas de Corte/Incisión, Hemostasia, Exposición, Disección y Sutura usan fotografías de
+Wikimedia Commons, recortadas y, en Hemostasia y Disección, combinadas de dos en dos. No se alteró su contenido.
+
+- Corte/Incisión y Hemostasia (derecha): TSgt Matthew Smith, U.S. Air Force. Dominio público (obra del gobierno de EE. UU.).
+  https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Lt._Col._Gerald_Fortuna,_a_trauma_surgeon_with_the_86th_Medical_Group,_performs_a_simulated_exploratory_laparotomy_in-flight_surgery_aboard_a_C-17_Globemaster_III_aircraft_during_the_Joint_140117-F-RW714-664.jpg
+  https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Lt._Col._Gerald_Fortuna,_a_trauma_surgeon_with_the_86th_Medical_Group,_performs_a_simulated_exploratory_laparotomy_in-flight_surgery_aboard_a_C-17_Globemaster_III_aircraft_during_the_Joint_140117-F-RW714-719.jpg
+- Exposición: Master Sgt. John Nimmo, Sr., U.S. Air Force. Dominio público (obra del gobierno de EE. UU.).
+  https://commons.wikimedia.org/wiki/File:Joint_Readiness_Training_Center_140117-F-XL333-873.jpg
+- Hemostasia (izquierda), Disección y Sutura: Richard Balikian MD. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Neck_Lift_Electrocautery_Dissection.jpg
+  https://commons.wikimedia.org/wiki/File:Deep_Neck_Lift_Submental_Dissection.jpg
+  https://commons.wikimedia.org/wiki/File:Open_rhinoplasty_surgical_exposure_prior_to_dissection.jpg
+  https://commons.wikimedia.org/wiki/File:Upper_Blepharoplasty_Suture_Closure.jpg
+
+FOTOGRAFÍAS DE MEDICAMENTOS (spec 004)
+
+Las imágenes principales de 41 fichas de Farmacología usan fotografías de Wikimedia Commons, reducidas
+y con el crédito impreso en la tarjeta. No se alteró su contenido. Solo se aceptaron fotografías en dominio
+público, CC0 o CC BY, sin cajas con marca comercial.
+
+- Albendazol (albendazol_nombre1.jpg): Bamjos. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Albendazole.jpg
+- Amiodarona (amiodarona_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Amiodarone_(1).JPG
+- Atropina (atropina_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Atropine_0,5mg-ml_vial_white_background.jpg
+- Bicarbonato de sodio (bicarbonato_de_sodio_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:NHC_8,4%25_80ml_white_background.jpg
+- Bupivacaína (bupivacaina_nombre1.jpg): Whispyhistory. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Bupivacaine_vial.jpg
+- Carbón activado (carbon_activado_nombre1.jpg): Ravedave. Licencia CC BY 2.5 (https://creativecommons.org/licenses/by/2.5/). Se usa la licencia CC BY 2.5 que ofrece el autor.
+  https://commons.wikimedia.org/wiki/File:Activated_Carbon.jpg
+- Claritromicina (claritromicina_nombre1.jpg): WODUP. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Clarithromycin_caplets.jpg
+- Clorfenamina (clorfenamina_nombre1.jpg): Mx. Granger. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Chlorpheniramine_for_veterinary_use.jpg
+- Cloruro de potasio (cloruro_de_potasio_nombre1.jpg): FDA, gobierno de EE. UU.. Dominio público.
+  https://commons.wikimedia.org/wiki/File:RECALLED_%E2%80%93_Potassium_Chloride_Injection_(15081856939).jpg
+- Difenhidramina (difenhidramina_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Diphenhydramine_(1).JPG
+- Digoxina (digoxina_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Digoxin_1ml_vial_white_background.jpg
+- Dopamina (dopamina_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Dopamine_HCl.JPG
+- Doxiciclina (doxiciclina_nombre1.jpg): NIAID/NIH. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Doxycycline_pills.jpg
+- Epinefrina (epinefrina_nombre1.jpg): Nickjackson. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Epinephrine_005.JPG
+- Espironolactona (espironolactona_nombre1.jpg): Spirono. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Spironolactone_50_mg.jpg
+- Fenobarbital (fenobarbital_nombre1.jpg): MieszkoM. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Fenobarbital.jpg
+- Flumazenil (flumazenil_nombre1.jpg): James Heilman, MD; Fvasconcellos. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Flumazenil_vial.JPG
+- Furosemida (furosemida_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Furosemid_20mg_vial_white_background.jpg
+- Haloperidol (haloperidol_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Haloperidol_5mg-ml_vial_white_background.jpg
+- Ibuprofeno (ibuprofeno_nombre1.jpg): Mx. Granger. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Amneal_Pharmaceuticals_ibuprofen_tablets.jpg
+- Insulina lispro (insulina_lispro_nombre1.jpg): Sprogz. Licencia CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/).
+  https://commons.wikimedia.org/wiki/File:The_Balancing_Act_of_the_Diabetic,_Insulin_lispro.jpg
+- Ipratropio (ipratropio_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Ipratropium_Bromide_(1).JPG
+- Ketamina (ketamina_nombre1.jpg): Psychonaught. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Ketamine_Vials.jpg
+- Levotiroxina (levotiroxina_nombre1.jpg): NLM/NIH. Dominio público.
+  https://commons.wikimedia.org/wiki/File:007815180lg_Generic_Levothyroxine.jpg
+- Lidocaína (lidocaina_nombre1.jpg): FDA, gobierno de EE. UU.. Dominio público.
+  https://commons.wikimedia.org/wiki/File:RECALLED_%E2%80%93_Lidocaine_HCI_Injection,_USP,_2%25_(14777489864).jpg
+- Lorazepam (lorazepam_nombre1.jpg): Stickpen. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Lorazepam2mgmLvial.jpg
+- Manitol (manitol_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Mannitol_20%25_250ml_white_background.jpg
+- Metoclopramida (metoclopramida_nombre1.jpg): Erich Schulz. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Metoclopramide_ampule.jpg
+- Midazolam (midazolam_nombre1.jpg): James Heilman, MD. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Midazolam.JPG
+- Misoprostol (misoprostol_nombre1.jpg): Guineapigmom. Licencia CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/).
+  https://commons.wikimedia.org/wiki/File:Cytotec_photo.jpg
+- Morfina (morfina_nombre1.jpg): Wesalius. Licencia CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+  https://commons.wikimedia.org/wiki/File:Morphin_1%25_vial_on_white_background.jpg
+- Nitroprusiato de sodio (nitroprusiato_de_sodio_nombre1.jpg): Benjah-bmm27. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Sodium-nitroprusside-sample.jpg
+- Norepinefrina (norepinefrina_nombre1.jpg): FDA, gobierno de EE. UU.. Dominio público.
+  https://commons.wikimedia.org/wiki/File:RECALLED_%E2%80%93_Norepinephrine_Bitartrate_added_to_Sodium_Chloride_(23543139774).jpg
+- Ondansetrón (ondansetron_nombre1.jpg): Telaneo. Licencia CC0 (https://creativecommons.org/publicdomain/zero/1.0/).
+  https://commons.wikimedia.org/wiki/File:Zofran.jpg
+- Oxitocina (oxitocina_nombre1.jpg): Colin. Licencia CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/).
+  https://commons.wikimedia.org/wiki/File:Oxytocin_intravenous_bag.jpg
+- Propofol (propofol_nombre1.jpg): Erich gasboy. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Propofol.jpg
+- Salbutamol (salbutamol_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Albuterol_Sulfate_(1).JPG
+- Sulfato de magnesio (sulfato_de_magnesio_nombre1.jpg): Intropin. Licencia CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).
+  https://commons.wikimedia.org/wiki/File:Magnesium_Sulfate_(1).JPG
+- Sulfato ferroso (sulfato_ferroso_nombre1.jpg): Benjah-bmm27. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Iron(II)-sulfate-heptahydrate-sample.jpg
+- Warfarina (warfarina_nombre1.jpg): FDA, gobierno de EE. UU.. Dominio público.
+  https://commons.wikimedia.org/wiki/File:RECALLED_-_Warfarin_Sodium,_USP,_3mg_Tablets_(5453373829).jpg
+- Ácido acetilsalicílico (acido_acetilsalicilico_nombre1.jpg): Thesmallprint189, Leridant y Friedrich Graf. Dominio público.
+  https://commons.wikimedia.org/wiki/File:Acetylsalicylicacid-crystals.jpg
+
+TEXTOS DE FARMACOLOGÍA
+
+Monografías: Compendio Nacional de Insumos para la Salud, versión 2025. Consejo de Salubridad General.
+Diario Oficial de la Federación, 26/04/2025 (https://www.csg.gob.mx/Comp26042025.pdf). Texto literal.
+Doble verificación: Acciones Esenciales para la Seguridad del Paciente, Acción Esencial 3, DOF 16/06/2023.
+
+TERMINOLOGÍA DE ESTUDIO
+
+Las definiciones marcadas como DeCS son de DeCS/MeSH, Descriptores en Ciencias de la Salud.
+São Paulo: BIREME/OPS/OMS (https://decs.bvsalud.org). Se reproducen sin modificar, sin fines de lucro.
+Los textos de las normas son del Diario Oficial de la Federación (https://dof.gob.mx).
+
+TEXTOS DE ÁREA QUIRÚRGICA
+
+Lista de Verificación para la Seguridad de la Cirugía: Acciones Esenciales para la Seguridad del Paciente,
+Acción Esencial 4, Diario Oficial de la Federación, 16/06/2023.
+Funciones de instrumentista y circulante, y conteo: IMSS, Procedimiento para la atención médico quirúrgica
+del paciente en segundo nivel de atención, clave 2660-003-066.
+Posiciones quirúrgicas: basado en Lopes CMM, Galvão CM. Posicionamiento quirúrgico:
+evidencias para el cuidado de enfermería. Rev. Latino-Am. Enfermagem. 2010;18(2).
+https://revistas.usp.br/rlae/article/view/4153
+
+Tipografías de las láminas: Chewy y Ultra (Apache License 2.0); Questrial, Fredoka, Patrick Hand,
+League Spartan y DM Sans (SIL Open Font License 1.1).

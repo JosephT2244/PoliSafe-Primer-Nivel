@@ -1,0 +1,224 @@
+{
+ "version": 1,
+ "leyenda": "Referencia de la norma; no es un diagnóstico. La decisión clínica es del personal de salud.",
+ "reglas": [
+  {
+   "id": "presion_meta_general",
+   "medida": "presion",
+   "nivel": "fuera_de_meta",
+   "aplica_a": "todos",
+   "no_aplica_a": [
+    "diabetes"
+   ],
+   "condiciones": [
+    {
+     "variable": "sistolica",
+     "op": ">=",
+     "valor": 140
+    },
+    {
+     "variable": "diastolica",
+     "op": ">=",
+     "valor": 90
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Presión arterial fuera de la meta de control: menor de 140/90 mmHg.",
+   "cita": {
+    "nom": "NOM-030-SSA2-2009",
+    "numeral": "3.7",
+    "texto": "3.7 Casos en control, a los pacientes con hipertensión bajo tratamiento en el Sistema Nacional de Salud, con tratamiento y que presentan de manera regular cifras de Presión arterial <140/90 mmHg; si tienen diabetes o enfermedad coronaria < 130/80 mmHg (sistólica/diastólica) y si tiene más de 1.0 gr de proteinuria e insuficiencia renal <125/75 mmHg (sistólica/diastólica)."
+   }
+  },
+  {
+   "id": "presion_meta_diabetes",
+   "medida": "presion",
+   "nivel": "fuera_de_meta",
+   "aplica_a": [
+    "diabetes"
+   ],
+   "no_aplica_a": [],
+   "condiciones": [
+    {
+     "variable": "sistolica",
+     "op": ">=",
+     "valor": 130
+    },
+    {
+     "variable": "diastolica",
+     "op": ">=",
+     "valor": 80
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Presión arterial fuera de la meta de control con diabetes: menor de 130/80 mmHg.",
+   "cita": {
+    "nom": "NOM-030-SSA2-2009",
+    "numeral": "3.7",
+    "texto": "3.7 Casos en control, a los pacientes con hipertensión bajo tratamiento en el Sistema Nacional de Salud, con tratamiento y que presentan de manera regular cifras de Presión arterial <140/90 mmHg; si tienen diabetes o enfermedad coronaria < 130/80 mmHg (sistólica/diastólica) y si tiene más de 1.0 gr de proteinuria e insuficiencia renal <125/75 mmHg (sistólica/diastólica)."
+   }
+  },
+  {
+   "id": "presion_muy_alta",
+   "medida": "presion",
+   "nivel": "alerta",
+   "aplica_a": "todos",
+   "no_aplica_a": [],
+   "condiciones": [
+    {
+     "variable": "sistolica",
+     "op": ">=",
+     "valor": 180
+    },
+    {
+     "variable": "diastolica",
+     "op": ">=",
+     "valor": 110
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Presión arterial en la categoría más alta de la tabla 6.1 (Hipertensión 3). Comunícalo al médico de la unidad.",
+   "cita": {
+    "nom": "NOM-030-SSA2-2009",
+    "numeral": "6.1",
+    "texto": "6.1 La HAS se clasifica, por cifras, de acuerdo a los siguientes criterios: Categoría | Sistólica mmHg. | Diastólica mmHg.: … Hipertensión 2: 160 a 179 | 100 a 109. Hipertensión 3: > 180 | > 110."
+   },
+   "pendiente": "La tabla dice \"> 180\" y \"> 110\"; se incluyen 180 y 110 para no dejar huecos. Confirmar con el asesor."
+  },
+  {
+   "id": "glucemia_ayuno_meta",
+   "medida": "glucemia",
+   "nivel": "fuera_de_meta",
+   "aplica_a": [
+    "diabetes"
+   ],
+   "no_aplica_a": [],
+   "requiere_condicion_glucemia": "ayuno",
+   "condiciones": [
+    {
+     "variable": "glucemia",
+     "op": "<",
+     "valor": 70
+    },
+    {
+     "variable": "glucemia",
+     "op": ">",
+     "valor": 130
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Glucemia en ayuno fuera de la meta de control: entre 70 y 130 mg/dl. La norma se refiere a glucemia plasmática; la capilar es una referencia.",
+   "cita": {
+    "nom": "NOM-015-SSA2-2010",
+    "numeral": "3.10",
+    "texto": "3.10 Caso en control, al paciente bajo tratamiento en el Sistema Nacional de Salud, que presenta de manera regular, niveles de glucemia plasmática en ayuno de entre 70 y 130 mg/dl o de Hemoglobina Glucosilada (HbA1c) por debajo de 7%."
+   }
+  },
+  {
+   "id": "glucemia_muy_baja",
+   "medida": "glucemia",
+   "nivel": "alerta",
+   "aplica_a": "todos",
+   "no_aplica_a": [],
+   "condiciones": [
+    {
+     "variable": "glucemia",
+     "op": "<",
+     "valor": 60
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Glucemia en el rango que la norma describe para hipoglucemia (generalmente menor de 60 a 50 mg/dl). Comunícalo al médico de la unidad.",
+   "cita": {
+    "nom": "NOM-015-SSA2-2010",
+    "numeral": "3.41",
+    "texto": "3.41 Hipoglucemia, al estado agudo en el que se presentan manifestaciones secundarias a descargas adrenérgicas (sudoración fría, temblor, hambre, palpitaciones y ansiedad), o neuroglucopénicas (visión borrosa, debilidad, mareos) debido a valores subnormales de glucosa, generalmente <60-50 mg/dl. Pueden aparecer síntomas sugestivos de hipoglucemia cuando se reducen estados de hiperglucemia sin llegar a descender hasta los 50 mg/dl."
+   }
+  },
+  {
+   "id": "imc_meta_diabetes",
+   "medida": "peso",
+   "nivel": "fuera_de_meta",
+   "aplica_a": [
+    "diabetes"
+   ],
+   "no_aplica_a": [],
+   "condiciones": [
+    {
+     "variable": "imc",
+     "op": ">=",
+     "valor": 25
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "IMC fuera del control ideal de peso: mayor de 18.5 y menor de 25 kg/m².",
+   "cita": {
+    "nom": "NOM-015-SSA2-2010",
+    "numeral": "11.5.3.1",
+    "texto": "11.5.3.1 Se considera que el o la paciente ha logrado un control ideal de peso, si mantiene un IMC >18.5 y <25; se pueden establecer metas intermedias, de acuerdo con lo especificado en el Apéndice Normativo E."
+   }
+  },
+  {
+   "id": "lipidos_meta",
+   "medida": "lipidos",
+   "nivel": "fuera_de_meta",
+   "aplica_a": "todos",
+   "no_aplica_a": [],
+   "condiciones": [
+    {
+     "variable": "colesterol_total",
+     "op": ">=",
+     "valor": 200
+    },
+    {
+     "variable": "trigliceridos",
+     "op": ">=",
+     "valor": 150
+    },
+    {
+     "variable": "hdl",
+     "op": "<=",
+     "valor": 40
+    }
+   ],
+   "combinar": "cualquiera",
+   "texto": "Lípidos fuera de control: colesterol total menor de 200, triglicéridos menor de 150 y HDL mayor de 40 mg/dl.",
+   "cita": {
+    "nom": "NOM-037-SSA2-2012",
+    "numeral": "3.6",
+    "texto": "3.6. Casos en control, paciente con algún tipo de dislipidemia bajo tratamiento en el Sistema Nacional de Salud y que presentan niveles de colesterol total < 200 mg/dL, triglicéridos < 150 mg/dL y C-HDL > 40 mg/dL."
+   }
+  }
+ ],
+ "clasificacion_imc": {
+  "talla_baja_cm": {
+   "hombre": 160,
+   "mujer": 150
+  },
+  "cortes": [
+   {
+    "grupo_edad": "20a59",
+    "talla_baja": false,
+    "sobrepeso": 25.0,
+    "obesidad": 30.0
+   },
+   {
+    "grupo_edad": "20a59",
+    "talla_baja": true,
+    "sobrepeso": 23.0,
+    "obesidad": 25.0
+   },
+   {
+    "grupo_edad": "60mas",
+    "talla_baja": null,
+    "sobrepeso": 28.0,
+    "obesidad": 32.0
+   }
+  ],
+  "cita": {
+   "nom": "NOM-008-SSA3-2017",
+   "numeral": "Apéndice A Informativo, A.1",
+   "texto": "A.1 Puntos de corte de los indicadores antropométricos. 20 a 59 años, Índice de masa corporal de acuerdo con la talla. Sobrepeso: En personas sin talla baja a b: 25.0 a 29.9 kg/m2; En personas con talla baja a b: 23 a 24.9 kg/m2. Obesidad: En personas sin talla baja a b: ≥ 30 kg/m2; En personas con talla baja a b: ≥ 25 kg/m2. ≥ 60 años, Índice de masa corporal: Sobrepeso 28 a 31.9 kg/m2; Obesidad ≥ 32 kg/m2. b Se entiende como talla baja aquella que es menor a 1.60 metros en el varón adulto y menor a 1.50 metros en la mujer adulta."
+  }
+ }
+}

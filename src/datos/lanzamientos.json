@@ -1,0 +1,21 @@
+{
+  "esquema": 2,
+  "actualizadoEn": "2026-11-07",
+  "lanzamientos": [
+    {
+      "id": "android-2-0-0",
+      "plataforma": "android",
+      "canal": "apk",
+      "estado": "disponible",
+      "version": "2.0.0",
+      "build": 2,
+      "fecha": "2026-11-07",
+      "archivo": "PoliSafe-Primer-Nivel-2.0.0-android.apk",
+      "url": "/descargas/archivos/PoliSafe-Primer-Nivel-2.0.0-android.apk",
+      "tamanoBytes": 85861333,
+      "sha256": "ec47997c9e43e2786b30c761f499ad84df5b88278b49863f08f4c3f8347d1939",
+      "requisitos": "Android 7.0 o posterior con procesador ARM (la gran mayoría de los teléfonos). 250 MB libres para instalar.",
+      "notas": "Primera versión completa de PoliSafe Primer Nivel para el Hackathon Jalisco Internacional 2026: seguimiento de enfermedades crónicas por folio con las metas de las normas oficiales, indicador y pendientes de la unidad, resumen en PDF y el panorama de salud de Jalisco, junto con todo PoliSafe. Sin internet y sin datos personales. Versión de prueba firmada con certificado de desarrollo."
+    }
+  ]
+}

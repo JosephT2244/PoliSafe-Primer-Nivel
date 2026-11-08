@@ -1,0 +1,35 @@
+{
+    "name": "PoliSafe Primer Nivel",
+    "short_name": "PoliSafe PN",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FDF7F3",
+    "theme_color": "#660033",
+    "description": "Seguimiento de enfermedades crónicas para la enfermería de primer nivel de Jalisco, con las metas de las normas oficiales, y PoliSafe completo: PAE, cálculos, farmacología, área quirúrgica y estudio. Sin datos personales.",
+    "lang": "es-MX",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

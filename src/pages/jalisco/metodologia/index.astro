@@ -1,0 +1,115 @@
+---
+// Un código de: Joseph Ubaldo Trejo Hernández
+// Metodología de las cifras de Jalisco: fuentes, definiciones, límites y reglas de la app.
+import Base from '../../../layouts/Base.astro';
+import CabeceraPagina from '../../../components/CabeceraPagina.astro';
+import datos from '../../../datos/jalisco.json';
+import { entero, pct, decimal } from '../../../lib/formato';
+import '../../../styles/datos.css';
+
+const r = datos.resumen;
+---
+
+<Base titulo="Metodología" descripcion="Cómo se calcula cada cifra de Jalisco que muestran PoliSafe Primer Nivel y este sitio: fuentes, definiciones, límites y reglas de la app.">
+  <CabeceraPagina
+    antetitulo="Jalisco en datos · Metodología"
+    titulo="Cómo se calcula cada cifra."
+    entrada="Todas las cifras se generan con un solo programa, datos/scripts/pipeline.py, a partir de los archivos originales de cada fuente. Al correrlo dos veces da exactamente el mismo resultado, y sus pruebas verifican que las sumas cuadren entre tablas."
+  />
+
+  <div class="datos">
+    <section class="bloque contenedor" aria-labelledby="t-fuentes">
+      <h2 id="t-fuentes" class="titulo-seccion">Fuentes.</h2>
+      <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Tabla de fuentes">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Dataset del reto</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Institución</th>
+              <th scope="col">Periodo</th>
+              <th scope="col">Cobertura</th>
+              <th scope="col">Para qué se usa</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              datos.fuentes.map((f) => (
+                <tr>
+                  <th scope="row">{f.id === 'complementaria' ? 'Complementaria' : f.id}</th>
+                  <td>{f.nombre}</td>
+                  <td>{f.institucion}</td>
+                  <td>{f.periodo}</td>
+                  <td>{f.cobertura}</td>
+                  <td>{f.uso}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="nota">Los archivos resultantes se descargan en <a href="/jalisco/#datos-abiertos">Datos abiertos</a>.</p>
+    </section>
+
+<section class="bloque contenedor" aria-labelledby="t-def">
+    <h2 id="t-def" class="titulo-seccion">Definiciones.</h2>
+    <div class="texto">
+      <ul>
+        <li>
+          <strong>Defunciones.</strong> Microdatos de defunciones registradas de INEGI de 2023 y 2024, solo de personas residentes en Jalisco, por municipio de
+          residencia. Se presentan como promedio anual de los dos años. {entero(r.defunciones_cronicas_municipio_no_especificado)} defunciones crónicas
+          sin municipio especificado cuentan en el total estatal pero no en los municipios.
+        </li>
+        <li>
+          <strong>Causas crónicas.</strong> Grupos por la causa básica de defunción (CIE-10):{' '}
+          {datos.causas.map((c, i) => `${c.nombre.toLowerCase()} (${c.cie10})${i < datos.causas.length - 1 ? '; ' : '.'}`).join('')}
+        </li>
+        <li>
+          <strong>Edad.</strong> Las tasas se calculan por separado para 18 a 59 años y para 60 años y más, con la población del Censo 2020 como denominador.
+          Tasa estatal de 18 a 59 años: {decimal(r.tasa_estatal_18_59)} por 100 mil; de 60 años y más: {decimal(r.tasa_estatal_60_mas)} por 100 mil.
+        </li>
+        <li>
+          <strong>Unidades públicas de primer nivel.</strong> Establecimientos del catálogo CLUES en operación y de primer nivel de atención, sin servicios
+          privados, Cruz Roja, servicios forenses, Centros de Integración Juvenil, consultorios en centros de trabajo ni oficinas jurisdiccionales.
+          Resultado: {entero(r.unidades_publicas_primer_nivel)} unidades, de las que {r.unidades_moviles} son móviles.
+        </li>
+        <li>
+          <strong>Distancia.</strong> Distancia en línea recta (haversine) de cada localidad del Censo 2020 a la unidad fija más cercana. Se reporta la población
+          a más de 5 y de 10&nbsp;km. En el estado: {pct(r.pct_poblacion_mas_5km, 2)} a más de 5&nbsp;km y {pct(r.pct_poblacion_mas_10km, 2)} a más de 10&nbsp;km.
+        </li>
+        <li>
+          <strong>Jurisdicción sanitaria.</strong> La que el catálogo CLUES asigna a la mayoría de las unidades de la Secretaría de Salud del municipio.
+        </li>
+        <li><strong>Marginación.</strong> Índice y grado de marginación municipal 2020 de CONAPO, sin cambios.</li>
+        <li><strong>Afiliación.</strong> Porcentaje de la población sin afiliación a servicios de salud del Censo 2020 (INEGI).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloque contenedor" aria-labelledby="t-limites">
+    <h2 id="t-limites" class="titulo-seccion">Lo que estos datos no dicen.</h2>
+    <div class="texto">
+      <ul>
+        <li>La mortalidad no es lo mismo que la prevalencia: muestra la carga final, no cuántas personas viven hoy con cada enfermedad.</li>
+        <li>El catálogo CLUES no tiene el número de enfermeras ni de consultas de cada unidad. Esa parte del problema se documenta con entrevistas a enfermería.</li>
+        <li>La distancia en línea recta subestima el tiempo real de traslado en zonas de sierra.</li>
+        <li>Los registros de un año pueden incluir defunciones ocurridas en años anteriores.</li>
+        <li>En municipios pequeños, pocas defunciones cambian mucho las tasas; no conviene ordenar municipios solo por tasa.</li>
+        <li>Nada en esta página ni en la app es un diagnóstico, ni está validado médicamente.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloque contenedor" aria-labelledby="t-app-met">
+    <h2 id="t-app-met" class="titulo-seccion">Cómo decide la app.</h2>
+    <div class="texto">
+      <p>
+        Las metas y umbrales viven como datos, cada uno con su norma, su numeral y el texto literal: presión arterial (NOM-030-SSA2-2009, 3.7 y 6.1),
+        glucemia (NOM-015-SSA2-2010, 3.10 y 3.41), IMC en diabetes (NOM-015, 11.5.3.1), clasificación del IMC (NOM-008-SSA3-2017, Apéndice A) y lípidos
+        (NOM-037-SSA2-2012, 3.6). Lo que debe registrarse en cada visita de una persona con diabetes viene de la NOM-015, 11.11.1.3. Cada regla tiene
+        pruebas automáticas con valores justo debajo, en el límite y arriba.
+      </p>
+    </div>
+  </section>
+  </div>
+</Base>
