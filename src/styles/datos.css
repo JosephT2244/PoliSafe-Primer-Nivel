@@ -41,7 +41,7 @@
 }
 
 .datos .grafica {
-  margin-top: 2rem;
+  margin: 2rem 0 0;
   background: var(--superficie);
   border: 1px solid var(--borde);
   border-radius: var(--r-md);
@@ -141,6 +141,18 @@
 .datos .mapa circle:hover {
   fill-opacity: 1;
   stroke: var(--texto);
+}
+
+/* En pantallas angostas el mapa se reduce a menos de la mitad: los puntos crecen para seguir viéndose y tocándose. */
+@media (max-width: 480px) {
+  .datos .grafica {
+    padding: 1rem 0.75rem;
+  }
+
+  .datos .mapa circle {
+    r: 7px;
+    stroke-width: 2;
+  }
 }
 
 /* Tablas */
