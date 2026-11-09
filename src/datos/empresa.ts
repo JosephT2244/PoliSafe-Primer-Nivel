@@ -56,11 +56,15 @@ export const equipo = [
     rol: 'Cocreador',
     texto: 'Participa en la construcción de PoliSafe y en la revisión de su contenido de enfermería.',
   },
+];
+
+/** Personas que no forman parte del equipo registrado en el concurso, pero sin las que PoliSafe no existiría. */
+export const colaboracion = [
   {
     nombre: 'María Guadalupe Cortés Cano',
     iniciales: 'MC',
-    rol: 'Cocreadora y consultora de enfermería.',
-    texto: 'Participa en la construcción de PoliSafe y en la revisión de su contenido de enfermería.',
+    rol: 'Enfermera. Cotitular de la idea de PoliSafe',
+    texto: 'Fue parte fundamental del proyecto: como enfermera aportó la información y la experiencia de la práctica de la que nacen PoliSafe y su seguimiento de crónicos, por lo que la idea de PoliSafe también es suya. No forma parte del equipo registrado en el Hackathon Jalisco.',
   },
 ];
 

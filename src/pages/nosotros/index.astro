@@ -6,7 +6,7 @@ import { Picture, Image } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import CabeceraPagina from '../../components/CabeceraPagina.astro';
 import { sitio } from '../../datos/sitio';
-import { mision, vision, queHacemos, valores, equipo, trayectoria } from '../../datos/empresa';
+import { mision, vision, queHacemos, valores, equipo, colaboracion, trayectoria } from '../../datos/empresa';
 import { fechaLarga } from '../../lib/lanzamientos.mjs';
 import enfermera from '../../assets/marca/enfermera.png';
 import icono from '../../assets/marca/icono_app.png';
@@ -47,7 +47,7 @@ const personas = equipo.map((p) => ({ '@type': 'Person', name: p.nombre, jobTitl
         </p>
         <p class="entrada">
           Para el reto de Salud y Bienestar de Jalisco partimos de los datos oficiales del estado y de lo que nos contaron
-          enfermeras de primer nivel, y agregamos lo que faltaba: el seguimiento de las enfermedades crónicas con las metas
+          las enfermeras María Guadalupe Cortés Cano y Sofía Cruz García, y agregamos lo que faltaba: el seguimiento de las enfermedades crónicas con las metas
           de las normas y el panorama de cada municipio. Cada cambio empieza con una especificación escrita y pasa una puerta
           de calidad con cientos de pruebas automatizadas.
         </p>
@@ -111,6 +111,21 @@ const personas = equipo.map((p) => ({ '@type': 'Person', name: p.nombre, jobTitl
       <ul class="personas">
         {
           equipo.map((p, i) => (
+            <li data-revelar style={`--orden:${i}`}>
+              <span class="monograma" aria-hidden="true">
+                {p.iniciales}
+              </span>
+              <h3>{p.nombre}</h3>
+              <p class="rol">{p.rol}</p>
+              <p>{p.texto}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <h3 class="subtitulo-colaboracion" data-revelar>Colaboración fundamental.</h3>
+      <ul class="personas">
+        {
+          colaboracion.map((p, i) => (
             <li data-revelar style={`--orden:${i}`}>
               <span class="monograma" aria-hidden="true">
                 {p.iniciales}
@@ -279,6 +294,25 @@ const personas = equipo.map((p) => ({ '@type': 'Person', name: p.nombre, jobTitl
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+  }
+
+  /* El equipo del concurso son cuatro personas: cuatro columnas en pantallas anchas y dos en las medianas. */
+  @media (min-width: 1100px) {
+    .equipo .personas:first-of-type {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 861px) and (max-width: 1099px) {
+    .equipo .personas:first-of-type {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .subtitulo-colaboracion {
+    margin-top: 3.5rem;
+    font-size: var(--t-lg);
+    font-weight: 620;
   }
 
   .personas li {

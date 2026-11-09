@@ -43,6 +43,20 @@ const etapas = [
   { nombre: 'Atiende a quien no ha vuelto', texto: 'El indicador de la unidad y la lista de pendientes dicen a quién buscar primero. El resumen sale en PDF, sin nombres.' },
 ];
 
+// Mapa de fondo de la banda de Jalisco: las mismas unidades y la misma proyección que /jalisco/, en un solo trazo.
+const mapaUnidades = datos.unidades;
+const mLats = mapaUnidades.map((u) => u.lat);
+const mLons = mapaUnidades.map((u) => u.lon);
+const [mLatMin, mLatMax, mLonMin, mLonMax] = [Math.min(...mLats), Math.max(...mLats), Math.min(...mLons), Math.max(...mLons)];
+const mKx = Math.cos((((mLatMin + mLatMax) / 2) * Math.PI) / 180);
+const mapaAncho = 720;
+const mapaMargen = 12;
+const mEscala = (mapaAncho - 2 * mapaMargen) / ((mLonMax - mLonMin) * mKx);
+const mapaAlto = Math.round((mLatMax - mLatMin) * mEscala + 2 * mapaMargen);
+const mapaTrazo = mapaUnidades
+  .map((u) => `M${(mapaMargen + (u.lon - mLonMin) * mKx * mEscala).toFixed(1)} ${(mapaMargen + (mLatMax - u.lat) * mEscala).toFixed(1)}h0`)
+  .join('');
+
 const principal = modulos.find((m) => m.id === 'seguimiento')!;
 const destacados = ['jalisco', 'pae', 'calculos', 'farmacologia', 'estudio', 'perfiles'].map((id) => modulos.find((m) => m.id === id)!);
 const disposicion: Record<string, string> = { jalisco: 'modulo-alto', estudio: 'modulo-ancho' };
@@ -278,6 +292,9 @@ const datosApp = {
   <!-- Por qué en Jalisco -->
   <section class="banda" aria-labelledby="titulo-jalisco">
     <div class="contenedor banda-rejilla">
+      <svg class="banda-mapa" viewBox={`0 0 ${mapaAncho} ${mapaAlto}`} style={`aspect-ratio: ${mapaAncho} / ${mapaAlto}`} aria-hidden="true" focusable="false">
+        <path d={mapaTrazo} />
+      </svg>
       <div>
         <h2 id="titulo-jalisco" class="titulo-seccion" data-revelar>Por qué PoliSafe hace falta en Jalisco.</h2>
         <p class="entrada" data-revelar>
@@ -299,7 +316,7 @@ const datosApp = {
             <div><strong>Hecha para la unidad real</strong><span>Sin internet, sin cuentas y sin nombres de pacientes, en el teléfono que ya se tiene.</span></div>
           </li>
         </ul>
-        <a class="boton boton-claro" href="/jalisco/" data-revelar>
+        <a class="boton boton-claro banda-accion" href="/jalisco/" data-revelar>
           <Icon name="ph:chart-bar-light" aria-hidden="true" />
           Ver Jalisco en datos
         </a>
@@ -1034,6 +1051,35 @@ const datosApp = {
     align-items: center;
   }
 
+  /* Mapa de las 854 unidades públicas de primer nivel detrás de la banda, tenue para no competir con la lectura. */
+  .banda-rejilla {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .banda-mapa {
+    position: absolute;
+    z-index: -1;
+    left: 18%;
+    top: 50%;
+    height: 118%;
+    width: auto;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    path {
+      fill: none;
+      stroke: var(--banda-texto);
+      stroke-width: 6;
+      stroke-linecap: round;
+      opacity: 0.22;
+    }
+  }
+
+  .banda-accion {
+    margin-top: 2.75rem;
+  }
+
   .banda .entrada {
     color: var(--banda-texto-2);
     margin-top: 1.25rem;
@@ -1281,6 +1327,14 @@ const datosApp = {
     .nosotros-rejilla,
     .preguntas-rejilla {
       grid-template-columns: minmax(0, 1fr);
+    }
+
+    .banda-mapa {
+      left: 50%;
+      top: -2rem;
+      height: auto;
+      width: min(135%, 760px);
+      transform: translateX(-50%);
     }
 
     .portada::before {
