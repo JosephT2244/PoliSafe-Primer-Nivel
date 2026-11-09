@@ -76,4 +76,5 @@ export const trayectoria = [
   { fecha: '2026-10-02', titulo: 'Lanzamiento público de PoliSafe', texto: 'Sitio y descargas públicas de PoliSafe para Android y Windows.' },
   { fecha: '2026-10-04', titulo: 'Farmacología con el Compendio oficial', texto: '155 medicamentos con su monografía del Compendio Nacional de Insumos para la Salud 2025 y aviso de doble verificación.' },
   { fecha: '2026-11-07', titulo: 'PoliSafe Primer Nivel 2.0.0', texto: 'Para el Hackathon Jalisco Internacional 2026: seguimiento de crónicos con las metas de las NOM, panorama de Jalisco con datos oficiales y la app sin internet.' },
+  { fecha: '2026-11-09', titulo: 'PoliSafe Primer Nivel 2.0.1', texto: 'Tras las pruebas de estrés: guardado del seguimiento que avisa y se recupera si falla, lectura tolerante a registros dañados y advertencias en el cálculo de volumen por dosis.' },
 ];

@@ -1,21 +1,36 @@
 {
   "esquema": 2,
-  "actualizadoEn": "2026-11-07",
+  "actualizadoEn": "2026-11-09",
   "lanzamientos": [
+    {
+      "id": "android-2-0-1",
+      "plataforma": "android",
+      "canal": "apk",
+      "estado": "disponible",
+      "version": "2.0.1",
+      "build": 3,
+      "fecha": "2026-11-09",
+      "archivo": "PoliSafe-Primer-Nivel-2.0.1-android.apk",
+      "url": "/descargas/archivos/PoliSafe-Primer-Nivel-2.0.1-android.apk",
+      "tamanoBytes": 85877809,
+      "sha256": "afc18ad6d92b6f8ecdde35d27d9a76bf9dd952e9e28786f4fb63b2d5ef79e8b9",
+      "requisitos": "Android 7.0 o posterior con procesador ARM (la gran mayoría de los teléfonos). 250 MB libres para instalar.",
+      "notas": "Corrige el seguimiento de crónicos: si un guardado falla (por ejemplo, sin espacio), la app lo avisa y sigue guardando; un registro dañado ya no bloquea a los demás; la demostración no escribe sobre datos que no se pudieron leer y el folio DEMO- queda reservado. Además, la tarjeta de pendientes de Inicio ya no se desborda con letra grande y el cálculo de volumen por dosis advierte resultados fuera de lo razonable. Versión de prueba firmada con certificado de desarrollo: si tienes instalada la 2.0.0, desinstálala antes de instalar esta."
+    },
     {
       "id": "android-2-0-0",
       "plataforma": "android",
       "canal": "apk",
-      "estado": "disponible",
+      "estado": "retirado",
       "version": "2.0.0",
       "build": 2,
       "fecha": "2026-11-07",
       "archivo": "PoliSafe-Primer-Nivel-2.0.0-android.apk",
-      "url": "/descargas/archivos/PoliSafe-Primer-Nivel-2.0.0-android.apk",
       "tamanoBytes": 85861333,
       "sha256": "ec47997c9e43e2786b30c761f499ad84df5b88278b49863f08f4c3f8347d1939",
       "requisitos": "Android 7.0 o posterior con procesador ARM (la gran mayoría de los teléfonos). 250 MB libres para instalar.",
-      "notas": "Primera versión completa de PoliSafe Primer Nivel para el Hackathon Jalisco Internacional 2026: seguimiento de enfermedades crónicas por folio con las metas de las normas oficiales, indicador y pendientes de la unidad, resumen en PDF y el panorama de salud de Jalisco, junto con todo PoliSafe. Sin internet y sin datos personales. Versión de prueba firmada con certificado de desarrollo."
+      "notas": "Primera versión completa de PoliSafe Primer Nivel para el Hackathon Jalisco Internacional 2026: seguimiento de enfermedades crónicas por folio con las metas de las normas oficiales, indicador y pendientes de la unidad, resumen en PDF y el panorama de salud de Jalisco, junto con todo PoliSafe. Sin internet y sin datos personales. Versión de prueba firmada con certificado de desarrollo.",
+      "motivoRetiro": "Reemplazada por la 2.0.1, que corrige el guardado del seguimiento cuando falla el almacenamiento y la lectura de registros dañados."
     }
   ]
 }
